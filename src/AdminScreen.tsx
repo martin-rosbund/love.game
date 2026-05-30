@@ -85,6 +85,9 @@ export function AdminScreen() {
   const [savingSection, setSavingSection] = useState<EditableContentSection | null>(null);
   const [activeTab, setActiveTab] = useState<AdminTab>("statistics");
   const [cardModeFilter, setCardModeFilter] = useState("alle");
+  const [cardRankFilter, setCardRankFilter] = useState("alle");
+  const [cardCategoryFilter, setCardCategoryFilter] = useState("alle");
+  const [cardFinalFilter, setCardFinalFilter] = useState("alle");
   const [cardSearch, setCardSearch] = useState("");
 
   function loadData() {
@@ -117,6 +120,15 @@ export function AdminScreen() {
     return draft.cards
       .map((card, index) => ({ card, index }))
       .filter(({ card }) => cardModeFilter === "alle" || card.mode === cardModeFilter)
+      .filter(({ card }) => cardRankFilter === "alle" || String(card.intensity) === cardRankFilter)
+      .filter(({ card }) => cardCategoryFilter === "alle" || card.category === cardCategoryFilter)
+      .filter(({ card }) => {
+        if (cardFinalFilter === "alle") {
+          return true;
+        }
+
+        return cardFinalFilter === "final" ? card.finalCard : !card.finalCard;
+      })
       .filter(({ card }) => {
         if (!search) {
           return true;
@@ -124,7 +136,7 @@ export function AdminScreen() {
 
         return [card.id, card.category, card.task].some((value) => value.toLocaleLowerCase("de-DE").includes(search));
       });
-  }, [cardModeFilter, cardSearch, draft]);
+  }, [cardCategoryFilter, cardFinalFilter, cardModeFilter, cardRankFilter, cardSearch, draft]);
 
   const contentStats = useMemo(() => {
     if (!draft) {
@@ -552,6 +564,27 @@ export function AdminScreen() {
                       {mode.label}
                     </option>
                   ))}
+                </select>
+                <select value={cardRankFilter} onChange={(event) => setCardRankFilter(event.target.value)} aria-label="Rang filtern">
+                  <option value="alle">Alle Ränge</option>
+                  {draft.intensities.map((intensity) => (
+                    <option key={intensity.level} value={String(intensity.level)}>
+                      {intensity.label}
+                    </option>
+                  ))}
+                </select>
+                <select value={cardCategoryFilter} onChange={(event) => setCardCategoryFilter(event.target.value)} aria-label="Kategorie filtern">
+                  <option value="alle">Alle Kategorien</option>
+                  {draft.categories.map((category) => (
+                    <option key={category.id} value={category.id}>
+                      {category.name}
+                    </option>
+                  ))}
+                </select>
+                <select value={cardFinalFilter} onChange={(event) => setCardFinalFilter(event.target.value)} aria-label="Finalkarten filtern">
+                  <option value="alle">Alle Karten</option>
+                  <option value="final">Nur Finalkarten</option>
+                  <option value="normal">Ohne Finalkarten</option>
                 </select>
                 <input value={cardSearch} onChange={(event) => setCardSearch(event.target.value)} placeholder="Karten suchen" />
               </div>

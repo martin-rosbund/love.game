@@ -73,5 +73,13 @@
     "modes": [
       "liebespiel"
     ]
+  },
+  {
+    "id": "fantasie",
+    "name": "Fantasie",
+    "color": "#EE9A00",
+    "modes": [
+      "liebespiel"
+    ]
   }
 ]

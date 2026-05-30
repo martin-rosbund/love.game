@@ -1262,7 +1262,7 @@ textarea:focus {
 
 .admin-toolbar {
   display: grid;
-  grid-template-columns: auto minmax(140px, 220px) minmax(180px, 1fr);
+  grid-template-columns: auto repeat(4, minmax(120px, 1fr)) minmax(160px, 1.4fr);
   gap: 10px;
 }
 
