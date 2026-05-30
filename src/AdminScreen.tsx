@@ -4,9 +4,10 @@ import { ArrowLeft, Check, Copy, Plus, RefreshCcw, Save, Trash2 } from "lucide-r
 import { fetchGameData, saveContentSection, type EditableContentSection } from "./api";
 import type { CardSet, Category, GameData, GameLength, MassageCard } from "./types";
 
-type AdminTab = EditableContentSection;
+type AdminTab = "statistics" | EditableContentSection;
 
 const tabs: Array<{ id: AdminTab; label: string }> = [
+  { id: "statistics", label: "Statistik" },
   { id: "cards", label: "Karten" },
   { id: "categories", label: "Kategorien" },
   { id: "gameLengths", label: "Spiellängen" },
@@ -69,12 +70,20 @@ function getCategoriesForMode(categories: Category[], modeId: string) {
   return categories.filter((category) => category.modes.includes(modeId));
 }
 
+function cardMatchesSet(card: MassageCard, cardSet: CardSet) {
+  const matchesMode = cardSet.modeIds.length === 0 || cardSet.modeIds.includes(card.mode);
+  const matchesCategory = cardSet.categoryIds.length === 0 || cardSet.categoryIds.includes(card.category);
+  const matchesMood = cardSet.moodIds.length === 0 || card.moods.some((mood) => cardSet.moodIds.includes(mood));
+
+  return matchesMode && matchesCategory && matchesMood;
+}
+
 export function AdminScreen() {
   const [draft, setDraft] = useState<GameData | null>(null);
   const [loadError, setLoadError] = useState("");
   const [status, setStatus] = useState("");
-  const [savingSection, setSavingSection] = useState<AdminTab | null>(null);
-  const [activeTab, setActiveTab] = useState<AdminTab>("cards");
+  const [savingSection, setSavingSection] = useState<EditableContentSection | null>(null);
+  const [activeTab, setActiveTab] = useState<AdminTab>("statistics");
   const [cardModeFilter, setCardModeFilter] = useState("alle");
   const [cardSearch, setCardSearch] = useState("");
 
@@ -117,7 +126,61 @@ export function AdminScreen() {
       });
   }, [cardModeFilter, cardSearch, draft]);
 
-  function updateSection(section: AdminTab, items: GameData[AdminTab]) {
+  const contentStats = useMemo(() => {
+    if (!draft) {
+      return null;
+    }
+
+    const finalCards = draft.cards.filter((card) => card.finalCard);
+    const ranks = draft.intensities.map((intensity) => {
+      const cards = draft.cards.filter((card) => card.intensity === intensity.level);
+
+      return {
+        ...intensity,
+        total: cards.length,
+        finals: cards.filter((card) => card.finalCard).length,
+        byMode: draft.gameModes.map((mode) => ({
+          id: mode.id,
+          label: mode.label,
+          total: cards.filter((card) => card.mode === mode.id).length
+        }))
+      };
+    });
+    const finalsByMode = draft.gameModes.map((mode) => ({
+      id: mode.id,
+      label: mode.label,
+      total: finalCards.filter((card) => card.mode === mode.id).length
+    }));
+    const decks = draft.cardSets.map((cardSet) => {
+      const cards = draft.cards.filter((card) => cardMatchesSet(card, cardSet));
+
+      return {
+        ...cardSet,
+        total: cards.length,
+        finals: cards.filter((card) => card.finalCard).length,
+        byMode: draft.gameModes.map((mode) => ({
+          id: mode.id,
+          label: mode.label,
+          total: cards.filter((card) => card.mode === mode.id).length
+        })),
+        byRank: draft.intensities.map((intensity) => ({
+          level: intensity.level,
+          label: intensity.label,
+          total: cards.filter((card) => card.intensity === intensity.level).length
+        }))
+      };
+    });
+
+    return {
+      total: draft.cards.length,
+      finals: finalCards.length,
+      ranks,
+      finalsByMode,
+      decks
+    };
+  }, [draft]);
+
+  function updateSection(section: EditableContentSection, items: GameData[EditableContentSection]) {
     setDraft((current) => (current ? { ...current, [section]: items } : current));
   }
 
@@ -288,7 +351,7 @@ export function AdminScreen() {
     );
   }
 
-  async function saveSection(section: AdminTab) {
+  async function saveSection(section: EditableContentSection) {
     if (!draft) {
       return;
     }
@@ -333,6 +396,9 @@ export function AdminScreen() {
     );
   }
 
+  const activeTabLabel = tabs.find((tab) => tab.id === activeTab)?.label ?? "Editor";
+  const editableActiveTab = activeTab === "statistics" ? null : activeTab;
+
   return (
     <main className="admin-shell">
       <header className="admin-header">
@@ -351,6 +417,7 @@ export function AdminScreen() {
 
       <section className="admin-stats" aria-label="Inhaltsübersicht">
         <span>{draft.cards.length} Karten</span>
+        <span>{draft.cards.filter((card) => card.finalCard).length} Finalkarten</span>
         <span>{draft.categories.length} Kategorien</span>
         <span>{draft.gameLengths.length} Spiellängen</span>
         <span>{draft.cardSets.length} Kartensets</span>
@@ -368,14 +435,108 @@ export function AdminScreen() {
         <section className="admin-panel">
           <div className="admin-panel-header">
             <div>
-              <h2>{tabs.find((tab) => tab.id === activeTab)?.label}</h2>
+              <h2>{activeTabLabel}</h2>
               {status && <p>{status}</p>}
             </div>
-            <button type="button" className="admin-save-button" onClick={() => saveSection(activeTab)} disabled={savingSection === activeTab}>
-              {savingSection === activeTab ? <RefreshCcw aria-hidden="true" size={17} /> : <Save aria-hidden="true" size={17} />}
-              Speichern
-            </button>
+            {editableActiveTab && (
+              <button
+                type="button"
+                className="admin-save-button"
+                onClick={() => saveSection(editableActiveTab)}
+                disabled={savingSection === editableActiveTab}
+              >
+                {savingSection === editableActiveTab ? <RefreshCcw aria-hidden="true" size={17} /> : <Save aria-hidden="true" size={17} />}
+                Speichern
+              </button>
+            )}
           </div>
+
+          {activeTab === "statistics" && contentStats && (
+            <div className="admin-stack">
+              <section className="admin-stat-section">
+                <div className="admin-stat-heading">
+                  <h3>Ränge</h3>
+                  <span>{contentStats.total} Karten gesamt</span>
+                </div>
+                <div className="admin-stat-grid">
+                  {contentStats.ranks.map((rank) => (
+                    <article key={rank.level} className="admin-stat-card" style={{ "--stat-accent": rank.color } as React.CSSProperties}>
+                      <span>{rank.label}</span>
+                      <strong>{rank.total}</strong>
+                      <small>{rank.finals} Finale</small>
+                      <div className="admin-meter" aria-hidden="true">
+                        <span style={{ width: `${contentStats.total === 0 ? 0 : (rank.total / contentStats.total) * 100}%` }} />
+                      </div>
+                      <div className="admin-stat-chips">
+                        {rank.byMode.map((mode) => (
+                          <em key={mode.id}>
+                            {mode.label}: {mode.total}
+                          </em>
+                        ))}
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+
+              <section className="admin-stat-section">
+                <div className="admin-stat-heading">
+                  <h3>Finalkarten</h3>
+                  <span>{contentStats.finals} Finale insgesamt</span>
+                </div>
+                <div className="admin-stat-grid compact">
+                  {contentStats.finalsByMode.map((mode) => (
+                    <article key={mode.id} className="admin-stat-card">
+                      <span>{mode.label}</span>
+                      <strong>{mode.total}</strong>
+                      <small>Finalkarten</small>
+                    </article>
+                  ))}
+                </div>
+              </section>
+
+              <section className="admin-stat-section">
+                <div className="admin-stat-heading">
+                  <h3>Decks</h3>
+                  <span>{contentStats.decks.length} Kartensets</span>
+                </div>
+                <div className="admin-deck-list">
+                  {contentStats.decks.map((deck) => (
+                    <article key={deck.id} className="admin-deck-row">
+                      <div>
+                        <strong>{deck.label}</strong>
+                        <small>{deck.description}</small>
+                      </div>
+                      <div className="admin-deck-numbers">
+                        <span>
+                          <b>{deck.total}</b>
+                          Karten
+                        </span>
+                        <span>
+                          <b>{deck.finals}</b>
+                          Finale
+                        </span>
+                      </div>
+                      <div className="admin-stat-chips">
+                        {deck.byMode.map((mode) => (
+                          <em key={mode.id}>
+                            {mode.label}: {mode.total}
+                          </em>
+                        ))}
+                      </div>
+                      <div className="admin-stat-chips">
+                        {deck.byRank.map((rank) => (
+                          <em key={rank.level}>
+                            {rank.label}: {rank.total}
+                          </em>
+                        ))}
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            </div>
+          )}
 
           {activeTab === "cards" && (
             <div className="admin-stack">
@@ -634,7 +795,9 @@ export function AdminScreen() {
 
           <div className="admin-save-footer">
             <Check aria-hidden="true" size={17} />
-            Änderungen werden erst nach Klick auf „Speichern“ in die JSON-Dateien geschrieben.
+            {activeTab === "statistics"
+              ? "Die Statistik aktualisiert sich direkt aus dem aktuellen Editor-Entwurf."
+              : "Änderungen werden erst nach Klick auf „Speichern“ in die JSON-Dateien geschrieben."}
           </div>
         </section>
       </section>

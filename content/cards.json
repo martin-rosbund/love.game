@@ -208,7 +208,7 @@
       "frau",
       "divers"
     ],
-    "task": "Finale Rückenreise: Verbinde Schultern, Rücken und Lendenbereich zu einer langen Zusatzmassage mit ruhigem Anfang, kräftiger Mitte und sehr langsamem Ausklang."
+    "task": "Massiere Schultern, Rücken und Lendenbereich zu einer langen Zusatzmassage mit ruhigem Anfang, kräftiger Mitte und sehr langsamem Ausklang."
   },
   {
     "id": "massage-nacken-01",
@@ -370,7 +370,7 @@
       "frau",
       "divers"
     ],
-    "task": "Baue Spannung auf: zehn Sekunden fester Druck, zehn Sekunden nur fast berühren, dann die Seite wechseln."
+    "task": "Baue Spannung auf: zehn Sekunden fester Druck, zehn Sekunden nur leicht berühren, dann die Seite wechseln."
   },
   {
     "id": "massage-nacken-08",
@@ -695,7 +695,7 @@
       "frau",
       "divers"
     ],
-    "task": "Massiere rund um den Brustkorb mit langsamen, respektvollen Bewegungen und frage nach einer Stelle, die mehr Aufmerksamkeit möchte."
+    "task": "Massiere rund um den Brustkorb mit langsamen Bewegungen und frage nach einer Stelle, die mehr Aufmerksamkeit möchte."
   },
   {
     "id": "massage-brust-06",
@@ -742,7 +742,7 @@
       "frau",
       "divers"
     ],
-    "task": "Verbinde Brustkorb, Schultern und Oberarme in langen Bewegungen, die jedes Mal etwas langsamer werden."
+    "task": "Massiere Brustkorb, Schultern und Oberarme in langen Bewegungen, die jedes Mal etwas langsamer werden."
   },
   {
     "id": "massage-brust-08",
@@ -904,7 +904,7 @@
       "frau",
       "divers"
     ],
-    "task": "Massiere ein Bein kräftig und das andere federleicht; {receiver} darf raten, welche Technik als Nächstes kommt."
+    "task": "Massiere ein Bein kräftig und das andere federleicht; {receiver} darf sagen, welche Technik als Nächstes kommt."
   },
   {
     "id": "massage-beine-07",
@@ -953,7 +953,7 @@
       "frau",
       "divers"
     ],
-    "task": "Finale Beinmassage: Verwöhne Waden, Kniekehlen und Oberschenkel in einer langen Sequenz aus Druck, Wärme und hauchzarten Pausen."
+    "task": "Verwöhne Waden, Kniekehlen und Oberschenkel in einer langen Sequenz aus Druck, Wärme und hauchzarten Pausen."
   },
   {
     "id": "massage-fuesse-01",
@@ -1115,7 +1115,7 @@
       "frau",
       "divers"
     ],
-    "task": "Verbinde Fußsohle, Knöchel und Wade zu einer langsamen, sehr genauen Massagekette."
+    "task": "Massiere Fußsohle, Knöchel und Wade zu einer langsamen, sehr genauen Massagekette."
   },
   {
     "id": "massage-fuesse-08",
@@ -1164,7 +1164,7 @@
       "frau",
       "divers"
     ],
-    "task": "Finale Fußzeremonie: Schenke beiden Füßen eine lange Zusatzmassage mit warmem Halten, tiefem Sohlen-Druck und einem sehr sanften Abschluss."
+    "task": "Schenke beiden Füßen eine lange Zusatzmassage mit warmem Halten, tiefem Sohlen-Druck und einem sehr sanften Abschluss."
   },
   {
     "id": "liebespiel-ruecken-01",
@@ -1187,7 +1187,7 @@
       "frau",
       "divers"
     ],
-    "task": "Streiche {receiver} mit nur zwei Fingerspitzen über den Rücken und lasse jede Linie kurz vor dem Ziel enden."
+    "task": "Streiche {receiver} mit nur zwei Fingerspitzen über den Rücken nach unten und lasse jede Linie kurz vor dem Ziel enden."
   },
   {
     "id": "liebespiel-ruecken-02",
@@ -1210,7 +1210,7 @@
       "frau",
       "divers"
     ],
-    "task": "Schreibe ein geheimes Wort auf den Rücken von {receiver}; wenn es erraten wird, darf {receiver} ein neues wünschen."
+    "task": "Schreibe ein geheimes Wort auf den Rücken von {receiver}; wenn es erraten wird, darf {receiver} eine Massage erhalten."
   },
   {
     "id": "liebespiel-ruecken-03",
@@ -1233,7 +1233,7 @@
       "frau",
       "divers"
     ],
-    "task": "Küsse oder hauche entlang einer Schulterlinie, dann wärme dieselbe Spur mit deiner Hand."
+    "task": "Küsse entlang einer Schulterlinie."
   },
   {
     "id": "liebespiel-ruecken-04",
@@ -1256,7 +1256,7 @@
       "frau",
       "divers"
     ],
-    "task": "Wechsle zwischen Nähe und Abstand: eine Berührung, drei Sekunden Pause, eine tiefere Berührung."
+    "task": "Wechsle zwischen Nähe und Abstand: eine leichte Berührung, drei Sekunden Pause, eine intime Berührung."
   },
   {
     "id": "liebespiel-ruecken-05",
@@ -1279,7 +1279,7 @@
       "frau",
       "divers"
     ],
-    "task": "Ziehe eine langsame Spur vom Nacken bis zum unteren Rücken und frage {receiver}, ob sie wiederholt oder verändert werden soll."
+    "task": "Massiere langsam vom Nacken bis zum unteren Rücken und frage {receiver}, ob die Massage wiederholt oder verändert werden soll."
   },
   {
     "id": "liebespiel-ruecken-06",
@@ -1302,7 +1302,7 @@
       "frau",
       "divers"
     ],
-    "task": "Nutze deinen Atem, deine Handflächen und deine Fingerspitzen nacheinander für dieselbe Rückenstelle."
+    "task": "Nutze deine Handflächen und deine Fingerspitzen nacheinander für dieselbe Rückenstelle."
   },
   {
     "id": "liebespiel-ruecken-07",
@@ -1601,7 +1601,7 @@
       "frau",
       "divers"
     ],
-    "task": "Lass {receiver} die Augen schließen und erraten, ob du mit Fingerkuppe, Handfläche oder Atem berührst."
+    "task": "Lass {receiver} die Augen schließen und erraten, ob du mit Fingerkuppe, Handfläche oder Mund berührst."
   },
   {
     "id": "liebespiel-fuesse-04",
@@ -1718,7 +1718,7 @@
       "frau",
       "divers"
     ],
-    "task": "Finale Füße-und-Beine-Spielerei: Verwöhne Füße, Knöchel und Beine fünf Minuten lang mit Blickkontakt, Pausen und langsam steigender Spannung."
+    "task": "Verwöhne Füße, Knöchel und Beine fünf Minuten lang mit Blickkontakt, Pausen und langsam steigender Spannung."
   },
   {
     "id": "liebespiel-brueste-01",
@@ -1787,7 +1787,7 @@
       "frau",
       "divers"
     ],
-    "task": "Zeichne mit einem Finger einen großen Kreis um die Brüste oder den Brustbereich und frage leise, ob der Kreis kleiner werden darf."
+    "task": "Zeichne mit einem Finger einen großen Kreis um die Brüste oder den Brustbereich und verkleinere Stück für Stück den Kreis."
   },
   {
     "id": "liebespiel-brueste-04",
@@ -1810,7 +1810,7 @@
       "frau",
       "divers"
     ],
-    "task": "Küsse den Bereich oberhalb der Brust langsam und lasse deine Hände nur so weit wandern, wie {receiver} es möchte."
+    "task": "Küsse den Bereich oberhalb der Brust langsam und lasse deine Hände über die brüste von {receiver} wandern."
   },
   {
     "id": "liebespiel-brueste-05",
@@ -1879,7 +1879,7 @@
       "frau",
       "divers"
     ],
-    "task": "Steigere die Nähe sehr langsam: erst außen, dann näher, dann wieder zurück, bis {receiver} dich eindeutig weiterlockt."
+    "task": "Steigere die Nähe sehr langsam mit deiner Zunge: erst außen, dann näher, dann wieder zurück. Dann Küss die Brunstwarzen."
   },
   {
     "id": "liebespiel-brueste-08",
@@ -1902,7 +1902,7 @@
       "frau",
       "divers"
     ],
-    "task": "Verbinde Hals, Schlüsselbein und Brustbereich zu einer langen, sinnlichen Linie mit vielen Pausen."
+    "task": "Massiere Hals, Schlüsselbein und Brustbereich zu einer langen, sinnlichen Linie mit vielen Pausen."
   },
   {
     "id": "liebespiel-brueste-09",
@@ -1927,7 +1927,7 @@
       "frau",
       "divers"
     ],
-    "task": "Finale Brustnähe: Verwöhne Brüste oder Brustbereich lange, langsam und aufmerksam, mit klaren Pausen, Blickkontakt und genau der Intensität, die {receiver} wählt."
+    "task": "Verwöhne Brüste oder Brustbereich lange, langsam und aufmerksam, mit klaren Pausen, Blickkontakt und genau der Intensität, die {receiver} wählt."
   },
   {
     "id": "liebespiel-koerper-01",
@@ -1996,7 +1996,7 @@
       "frau",
       "divers"
     ],
-    "task": "Wähle drei Körperstellen und verwöhne jede mit einer anderen Art von Nähe: halten, streichen, hauchen."
+    "task": "Wähle drei Körperstellen und verwöhne jede mit einer anderen Art von Nähe: halten, streichen, Küssen."
   },
   {
     "id": "liebespiel-koerper-04",
@@ -2088,7 +2088,7 @@
       "frau",
       "divers"
     ],
-    "task": "Spiele mit Erwartung: Berühre nah, aber nicht dort, wo {receiver} es erwartet, und kehre dann warm zurück."
+    "task": "Spiele mit Erwartung: Berühre den Intimbereich, aber nicht dort, wo {receiver} es erwartet, und kehre dann zum Ziel."
   },
   {
     "id": "liebespiel-koerper-08",
@@ -2136,7 +2136,7 @@
       "frau",
       "divers"
     ],
-    "task": "Finale Körperreise: {giver} verwöhnt {receiver} fünf Minuten lang von Kopf bis Fuß, mit einer Mischung aus Nähe, Pausen, Mut und sehr bewusster Zärtlichkeit."
+    "task": "{giver} verwöhnt {receiver} fünf Minuten lang von Kopf bis Fuß, mit einer Mischung aus Nähe, Pausen, Mut und sehr bewusster Zärtlichkeit."
   },
   {
     "id": "liebespiel-mund-01",
@@ -2205,7 +2205,7 @@
       "frau",
       "divers"
     ],
-    "task": "Nähere dich einem Kuss dreimal an, ohne ihn sofort zu geben, und lass {receiver} den Moment bestimmen."
+    "task": "Nähere dich einem Kuss dreimal an, ohne ihn sofort zu geben."
   },
   {
     "id": "liebespiel-mund-04",
@@ -2228,7 +2228,7 @@
       "frau",
       "divers"
     ],
-    "task": "Flüstere {receiver} ein Kompliment ganz nah an den Mund und küsse erst danach, wenn es willkommen ist."
+    "task": "Flüstere {receiver} ein Kompliment ganz nah an den Mund und küsse erst danach."
   },
   {
     "id": "liebespiel-mund-05",
@@ -2322,6 +2322,6 @@
       "frau",
       "divers"
     ],
-    "task": "Finale Mundspielerei: Fünf Minuten Küsse, Flüstern, Atem und Pausen. {receiver} entscheidet mit kleinen Signalen, wann es zarter oder heißer wird."
+    "task": "Fünf Minuten Küsse und Lecken im Intimbereich. {receiver} entscheidet mit kleinen Signalen, wann es zarter oder heißer wird."
   }
 ]
