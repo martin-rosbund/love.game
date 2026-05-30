@@ -1,0 +1,22 @@
+[
+  {
+    "level": 1,
+    "label": "Sanft",
+    "color": "#6A994E"
+  },
+  {
+    "level": 2,
+    "label": "Wärmend",
+    "color": "#2A9D8F"
+  },
+  {
+    "level": 3,
+    "label": "Tief",
+    "color": "#D99535"
+  },
+  {
+    "level": 4,
+    "label": "Intensiv",
+    "color": "#D1495B"
+  }
+]

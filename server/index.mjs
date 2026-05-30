@@ -33,7 +33,7 @@ function validateCategories(categories) {
   }
 }
 
-function validateCards(cards, categoryIds) {
+function validateCards(cards, categoryIds, moodIds) {
   if (!Array.isArray(cards)) {
     throw new Error("cards.json must contain an array.");
   }
@@ -49,6 +49,20 @@ function validateCards(cards, categoryIds) {
 
     if (!isTime(card.time)) {
       throw new Error(`Card "${card.id}" has invalid time "${card.time}". Use mm:ss.`);
+    }
+
+    if (!Number.isInteger(card.intensity) || card.intensity < 1 || card.intensity > 4) {
+      throw new Error(`Card "${card.id}" needs intensity between 1 and 4.`);
+    }
+
+    if (!Array.isArray(card.moods) || card.moods.length === 0) {
+      throw new Error(`Card "${card.id}" needs at least one mood.`);
+    }
+
+    for (const mood of card.moods) {
+      if (!moodIds.has(mood)) {
+        throw new Error(`Card "${card.id}" references unknown mood "${mood}".`);
+      }
     }
   }
 }
@@ -83,20 +97,62 @@ function validateCardOptionCounts(optionCounts) {
   }
 }
 
+function validateMoods(moods) {
+  if (!Array.isArray(moods)) {
+    throw new Error("moods.json must contain an array.");
+  }
+
+  for (const mood of moods) {
+    if (!mood.id || !mood.label || !mood.color) {
+      throw new Error("Each mood needs id, label and color.");
+    }
+  }
+}
+
+function validateIntensities(intensities) {
+  if (!Array.isArray(intensities)) {
+    throw new Error("intensities.json must contain an array.");
+  }
+
+  for (const intensity of intensities) {
+    if (!Number.isInteger(intensity.level) || intensity.level < 1 || intensity.level > 4 || !intensity.label || !intensity.color) {
+      throw new Error("Each intensity needs level between 1 and 4, label and color.");
+    }
+  }
+}
+
+function validateThemes(themes) {
+  if (!Array.isArray(themes)) {
+    throw new Error("themes.json must contain an array.");
+  }
+
+  for (const theme of themes) {
+    if (!theme.id || !theme.label) {
+      throw new Error("Each theme needs id and label.");
+    }
+  }
+}
+
 async function loadGameData() {
-  const [categories, cards, gameLengths, cardOptionCounts] = await Promise.all([
+  const [categories, cards, gameLengths, cardOptionCounts, moods, intensities, themes] = await Promise.all([
     readJson("categories.json"),
     readJson("cards.json"),
     readJson("gameLengths.json"),
-    readJson("cardOptionCounts.json")
+    readJson("cardOptionCounts.json"),
+    readJson("moods.json"),
+    readJson("intensities.json"),
+    readJson("themes.json")
   ]);
 
   validateCategories(categories);
-  validateCards(cards, new Set(categories.map((category) => category.id)));
+  validateMoods(moods);
+  validateCards(cards, new Set(categories.map((category) => category.id)), new Set(moods.map((mood) => mood.id)));
   validateGameLengths(gameLengths);
   validateCardOptionCounts(cardOptionCounts);
+  validateIntensities(intensities);
+  validateThemes(themes);
 
-  return { categories, cards, gameLengths, cardOptionCounts };
+  return { categories, cards, gameLengths, cardOptionCounts, moods, intensities, themes };
 }
 
 app.get("/api/categories", async (_request, response, next) => {
@@ -130,6 +186,33 @@ app.get("/api/card-option-counts", async (_request, response, next) => {
   try {
     const { cardOptionCounts } = await loadGameData();
     response.json(cardOptionCounts);
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.get("/api/moods", async (_request, response, next) => {
+  try {
+    const { moods } = await loadGameData();
+    response.json(moods);
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.get("/api/intensities", async (_request, response, next) => {
+  try {
+    const { intensities } = await loadGameData();
+    response.json(intensities);
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.get("/api/themes", async (_request, response, next) => {
+  try {
+    const { themes } = await loadGameData();
+    response.json(themes);
   } catch (error) {
     next(error);
   }

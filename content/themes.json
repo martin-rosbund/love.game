@@ -1,0 +1,18 @@
+[
+  {
+    "id": "warm",
+    "label": "Warm"
+  },
+  {
+    "id": "dunkel",
+    "label": "Dunkel"
+  },
+  {
+    "id": "minimal",
+    "label": "Minimal"
+  },
+  {
+    "id": "luxurioes",
+    "label": "Luxuriös"
+  }
+]

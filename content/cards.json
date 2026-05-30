@@ -4,6 +4,11 @@
     "category": "ruecken",
     "time": "02:00",
     "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
     "task": "Streiche mit beiden Handflächen langsam vom unteren Rücken bis zu den Schultern und wieder zurück."
   },
   {
@@ -11,6 +16,11 @@
     "category": "ruecken",
     "time": "02:30",
     "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
     "task": "Massiere rechts und links neben der Wirbelsäule in kleinen Kreisen, ohne direkt auf die Wirbelsäule zu drücken."
   },
   {
@@ -18,6 +28,12 @@
     "category": "ruecken",
     "time": "03:00",
     "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
     "task": "Knete die Schulterblätter sanft mit Daumen und Handballen, langsam und gleichmäßig."
   },
   {
@@ -25,6 +41,12 @@
     "category": "ruecken",
     "time": "02:00",
     "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
     "task": "Lege die Hände warm auf den Rücken und lasse jede Bewegung mit ruhigem Druck aus den Handballen starten."
   },
   {
@@ -32,6 +54,12 @@
     "category": "ruecken",
     "time": "02:45",
     "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
     "task": "Ziehe mit den Fingerspitzen lange Linien von den Schultern bis zur Taille und variiere den Druck."
   },
   {
@@ -39,6 +67,11 @@
     "category": "ruecken",
     "time": "03:30",
     "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
     "task": "Arbeite den oberen Rücken mit langsamen, breiten Kreisbewegungen aus, bis die Schultern weich werden."
   },
   {
@@ -46,6 +79,11 @@
     "category": "nacken",
     "time": "01:30",
     "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
     "task": "Streiche vom Haaransatz zu den Schultern und halte den Druck ruhig und leicht."
   },
   {
@@ -53,6 +91,11 @@
     "category": "nacken",
     "time": "02:00",
     "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
     "task": "Massiere die Nackenmuskeln mit Daumen und Zeigefingern in kleinen, langsamen Kreisen."
   },
   {
@@ -60,6 +103,12 @@
     "category": "nacken",
     "time": "02:30",
     "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
     "task": "Halte beide Hände an den Seiten des Nackens und löse die Spannung mit sanftem, warmem Druck."
   },
   {
@@ -67,6 +116,12 @@
     "category": "nacken",
     "time": "01:45",
     "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
     "task": "Gleite langsam über die obere Schulterlinie und bleibe kurz an Stellen, die sich fest anfühlen."
   },
   {
@@ -74,6 +129,12 @@
     "category": "nacken",
     "time": "02:00",
     "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
     "task": "Wechsle zwischen sanftem Kneten und langen Ausstreichungen vom Nacken zu den Schultern."
   },
   {
@@ -81,6 +142,11 @@
     "category": "nacken",
     "time": "02:15",
     "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
     "task": "Zeichne mit den Fingerspitzen langsame Halbkreise am Haaransatz entlang."
   },
   {
@@ -88,6 +154,11 @@
     "category": "kopf",
     "time": "02:00",
     "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
     "task": "Massiere die Kopfhaut mit allen Fingerspitzen in kleinen Kreisbewegungen."
   },
   {
@@ -95,6 +166,11 @@
     "category": "kopf",
     "time": "01:30",
     "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
     "task": "Streiche langsam von der Stirn zu den Schläfen und halte an den Schläfen kurz inne."
   },
   {
@@ -102,6 +178,12 @@
     "category": "kopf",
     "time": "02:15",
     "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
     "task": "Kämme mit den Fingern durch das Haar und lasse jede Bewegung ruhig auslaufen."
   },
   {
@@ -109,6 +191,12 @@
     "category": "kopf",
     "time": "01:45",
     "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
     "task": "Massiere die Kieferlinie ganz sanft mit kleinen Kreisen und achte auf entspannten Druck."
   },
   {
@@ -116,6 +204,12 @@
     "category": "kopf",
     "time": "02:00",
     "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
     "task": "Lege beide Hände seitlich an den Kopf und bewege die Finger langsam Richtung Hinterkopf."
   },
   {
@@ -123,6 +217,11 @@
     "category": "kopf",
     "time": "02:30",
     "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
     "task": "Verbinde Kopfhaut, Schläfen und Haaransatz zu einer ruhigen Massagefolge."
   },
   {
@@ -130,6 +229,11 @@
     "category": "brust",
     "time": "02:00",
     "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
     "task": "Streiche mit flachen Händen sanft über den oberen Brustkorb Richtung Schultern."
   },
   {
@@ -137,6 +241,11 @@
     "category": "brust",
     "time": "01:45",
     "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
     "task": "Massiere den Bereich unterhalb der Schlüsselbeine mit sehr leichtem Druck nach außen."
   },
   {
@@ -144,6 +253,12 @@
     "category": "brust",
     "time": "02:15",
     "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
     "task": "Arbeite vom Brustbein nach außen zu den Schultern und bleibe weich in den Handgelenken."
   },
   {
@@ -151,6 +266,12 @@
     "category": "brust",
     "time": "02:00",
     "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
     "task": "Halte eine Hand ruhig auf dem oberen Brustkorb, während die andere langsam Richtung Schulter streicht."
   },
   {
@@ -158,6 +279,12 @@
     "category": "brust",
     "time": "02:30",
     "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
     "task": "Massiere die obere Brustmuskulatur mit breiten, langsamen Bewegungen und sanftem Druck."
   },
   {
@@ -165,6 +292,11 @@
     "category": "brust",
     "time": "01:30",
     "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
     "task": "Lasse beide Hände in ruhigen, symmetrischen Bewegungen vom Brustkorb zu den Schultern gleiten."
   },
   {
@@ -172,6 +304,11 @@
     "category": "beine",
     "time": "02:30",
     "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
     "task": "Streiche langsam vom Knie Richtung Hüfte und wieder zurück, erst rechts, dann links."
   },
   {
@@ -179,6 +316,11 @@
     "category": "beine",
     "time": "03:00",
     "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
     "task": "Knete die Waden mit beiden Händen und halte den Druck weich und gleichmäßig."
   },
   {
@@ -186,6 +328,12 @@
     "category": "beine",
     "time": "02:00",
     "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
     "task": "Massiere die Oberschenkel mit langen, langsamen Bahnen und wechsle zwischen Handfläche und Fingerspitzen."
   },
   {
@@ -193,6 +341,12 @@
     "category": "beine",
     "time": "02:45",
     "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
     "task": "Arbeite die Außenseiten der Beine mit sanftem Druck von unten nach oben aus."
   },
   {
@@ -200,6 +354,12 @@
     "category": "beine",
     "time": "02:15",
     "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
     "task": "Halte kurz an den Waden inne und lasse die Hände dann langsam Richtung Knie gleiten."
   },
   {
@@ -207,6 +367,11 @@
     "category": "beine",
     "time": "03:30",
     "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
     "task": "Verbinde Waden und Oberschenkel zu einer ruhigen Massage mit langen Übergängen."
   },
   {
@@ -214,6 +379,11 @@
     "category": "fuesse",
     "time": "02:00",
     "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
     "task": "Massiere die Fußsohle mit beiden Daumen in langsamen Linien von der Ferse zu den Zehen."
   },
   {
@@ -221,6 +391,11 @@
     "category": "fuesse",
     "time": "02:30",
     "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
     "task": "Kreise jeden Zeh einzeln ganz sanft und streiche danach den ganzen Fuß aus."
   },
   {
@@ -228,6 +403,12 @@
     "category": "fuesse",
     "time": "02:15",
     "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
     "task": "Massiere den Fußrücken mit flachen Daumenbewegungen Richtung Knöchel."
   },
   {
@@ -235,6 +416,12 @@
     "category": "fuesse",
     "time": "03:00",
     "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
     "task": "Drücke die Ferse sanft zwischen beiden Händen und löse den Druck langsam wieder."
   },
   {
@@ -242,6 +429,12 @@
     "category": "fuesse",
     "time": "02:00",
     "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
     "task": "Streiche vom Knöchel über den Fußrücken bis zu den Zehen und lasse jede Bewegung ruhig enden."
   },
   {
@@ -249,6 +442,11 @@
     "category": "fuesse",
     "time": "02:45",
     "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
     "task": "Wechsle zwischen Daumenkreisen an der Fußsohle und langen Ausstreichungen über den ganzen Fuß."
   },
   {
@@ -256,6 +454,13 @@
     "category": "ruecken",
     "time": "08:00",
     "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
     "task": "Finale: Wähle den Bereich, der sich am besten angefühlt hat, und schenke dort eine lange, ruhige Zusatzmassage."
   },
   {
@@ -263,6 +468,13 @@
     "category": "nacken",
     "time": "10:00",
     "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
     "task": "Finale: Verbinde Nacken, Schultern und oberen Rücken zu einer langsamen Zusatzmassage mit warmen Händen."
   },
   {
@@ -270,6 +482,13 @@
     "category": "fuesse",
     "time": "07:00",
     "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
     "task": "Finale: Massiere beide Füße nacheinander besonders langsam und lasse die letzte Minute nur ausstreichen."
   }
 ]

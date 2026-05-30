@@ -16,6 +16,8 @@ export type MassageCard = {
   category: string;
   time: string;
   finalCard: boolean;
+  intensity: number;
+  moods: string[];
   task: string;
 };
 
@@ -31,11 +33,31 @@ export type CardOptionCount = {
   cards: number;
 };
 
+export type Mood = {
+  id: string;
+  label: string;
+  color: string;
+};
+
+export type Intensity = {
+  level: number;
+  label: string;
+  color: string;
+};
+
+export type Theme = {
+  id: string;
+  label: string;
+};
+
 export type GameData = {
   categories: Category[];
   cards: MassageCard[];
   gameLengths: GameLength[];
   cardOptionCounts: CardOptionCount[];
+  moods: Mood[];
+  intensities: Intensity[];
+  themes: Theme[];
 };
 
 export type ActiveCard = MassageCard & {

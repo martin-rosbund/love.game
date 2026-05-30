@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
-import { ArrowRight, Pause, Play, RefreshCcw, RotateCw } from "lucide-react";
+import { ArrowRight, Flame, Heart, Palette, Pause, Play, RefreshCcw, Sparkles } from "lucide-react";
 import { fetchGameData } from "./api";
-import type { ActiveCard, Category, GameData, Gender, MassageCard, Player } from "./types";
+import type { ActiveCard, Category, GameData, Gender, Intensity, MassageCard, Mood, Player } from "./types";
 
 const genderOptions: Array<{ id: Gender; label: string }> = [
   { id: "frau", label: "Frau" },
@@ -31,6 +31,15 @@ function shuffle<T>(items: T[]) {
   return copy;
 }
 
+function desiredIntensityForRound(roundIndex: number, totalRounds: number) {
+  if (roundIndex >= totalRounds - 1) {
+    return 4;
+  }
+
+  const progress = totalRounds <= 1 ? 1 : roundIndex / Math.max(1, totalRounds - 2);
+  return Math.min(4, Math.max(1, Math.floor(progress * 4) + 1));
+}
+
 function pickCardOptions(pool: MassageCard[], fallbackPool: MassageCard[], count: number) {
   const primary = shuffle(pool);
 
@@ -43,16 +52,61 @@ function pickCardOptions(pool: MassageCard[], fallbackPool: MassageCard[], count
   return [...primary, ...fallback].slice(0, count);
 }
 
-function buildRoundOptions(cards: MassageCard[], availableCards: MassageCard[], roundIndex: number, totalRounds: number, count: number) {
+function buildRoundOptions(
+  cards: MassageCard[],
+  availableCards: MassageCard[],
+  roundIndex: number,
+  totalRounds: number,
+  count: number,
+  moodId: string
+) {
   const regularCards = cards.filter((card) => !card.finalCard);
   const finalCards = cards.filter((card) => card.finalCard);
   const isFinalRound = roundIndex === totalRounds - 1;
+  const targetIntensity = desiredIntensityForRound(roundIndex, totalRounds);
 
   if (isFinalRound && finalCards.length > 0) {
     return pickCardOptions(finalCards, finalCards, count);
   }
 
-  return pickCardOptions(availableCards, regularCards, count);
+  const moodCards = availableCards.filter((card) => card.moods.includes(moodId));
+  const exactMoodCards = moodCards.filter((card) => card.intensity === targetIntensity);
+  const nearMoodCards = moodCards.filter((card) => card.intensity <= targetIntensity);
+  const exactAnyMoodCards = availableCards.filter((card) => card.intensity === targetIntensity);
+  const relaxedAnyMoodCards = availableCards.filter((card) => card.intensity <= targetIntensity);
+  const fallbackPool = regularCards.filter((card) => card.moods.includes(moodId));
+
+  return pickCardOptions(
+    exactMoodCards.length > 0
+      ? exactMoodCards
+      : nearMoodCards.length > 0
+        ? nearMoodCards
+        : exactAnyMoodCards.length > 0
+          ? exactAnyMoodCards
+          : relaxedAnyMoodCards.length > 0
+            ? relaxedAnyMoodCards
+            : availableCards,
+    fallbackPool.length > 0 ? fallbackPool : regularCards,
+    count
+  );
+}
+
+function personalizeTask(task: string, activeCard: ActiveCard) {
+  const giver = activeCard.giver.name.trim();
+  const receiver = activeCard.receiver.name.trim();
+
+  if (task.includes("{giver}") || task.includes("{receiver}")) {
+    return task.replaceAll("{giver}", giver).replaceAll("{receiver}", receiver);
+  }
+
+  const firstLetter = task.charAt(0).toLocaleLowerCase("de-DE");
+  return `${giver}, für ${receiver}: ${firstLetter}${task.slice(1)}`;
+}
+
+function triggerHaptic(pattern: number | number[]) {
+  if ("vibrate" in navigator) {
+    navigator.vibrate(pattern);
+  }
 }
 
 function colorWithAlpha(hex: string, alpha: number) {
@@ -104,7 +158,7 @@ function SetupScreen({
   onStart
 }: {
   data: GameData;
-  onStart: (players: [Player, Player], gameLengthId: string, optionCountId: string) => void;
+  onStart: (players: [Player, Player], gameLengthId: string, optionCountId: string, moodId: string, themeId: string) => void;
 }) {
   const [playerOne, setPlayerOne] = useState<Player>({ name: "Alex", gender: "divers" });
   const [playerTwo, setPlayerTwo] = useState<Player>({ name: "Sam", gender: "divers" });
@@ -112,12 +166,19 @@ function SetupScreen({
   const [selectedOptionCount, setSelectedOptionCount] = useState(
     data.cardOptionCounts[2]?.id ?? data.cardOptionCounts[0]?.id ?? ""
   );
+  const [selectedMood, setSelectedMood] = useState(data.moods[0]?.id ?? "");
+  const [selectedTheme, setSelectedTheme] = useState(data.themes[0]?.id ?? "warm");
 
   const canStart =
-    playerOne.name.trim().length > 0 && playerTwo.name.trim().length > 0 && selectedLength && selectedOptionCount;
+    playerOne.name.trim().length > 0 &&
+    playerTwo.name.trim().length > 0 &&
+    selectedLength &&
+    selectedOptionCount &&
+    selectedMood &&
+    selectedTheme;
 
   return (
-    <main className="app-shell setup-layout">
+    <main className="app-shell setup-layout" data-theme={selectedTheme}>
       <section className="setup-copy" aria-labelledby="app-title">
         <p className="eyebrow">Massagekarten</p>
         <h1 id="app-title">Ein ruhiges Kartenspiel für zwei</h1>
@@ -168,11 +229,46 @@ function SetupScreen({
           </div>
         </fieldset>
 
+        <fieldset className="length-panel">
+          <legend>Stimmung</legend>
+          <div className="option-grid option-grid-four">
+            {data.moods.map((mood) => (
+              <button
+                key={mood.id}
+                type="button"
+                className={selectedMood === mood.id ? "active" : ""}
+                onClick={() => setSelectedMood(mood.id)}
+                style={{ "--option-accent": mood.color } as React.CSSProperties}
+              >
+                <Sparkles aria-hidden="true" size={17} strokeWidth={2.8} />
+                <span>{mood.label}</span>
+              </button>
+            ))}
+          </div>
+        </fieldset>
+
+        <fieldset className="length-panel">
+          <legend>Theme</legend>
+          <div className="option-grid option-grid-four">
+            {data.themes.map((theme) => (
+              <button
+                key={theme.id}
+                type="button"
+                className={selectedTheme === theme.id ? "active" : ""}
+                onClick={() => setSelectedTheme(theme.id)}
+              >
+                <Palette aria-hidden="true" size={17} strokeWidth={2.8} />
+                <span>{theme.label}</span>
+              </button>
+            ))}
+          </div>
+        </fieldset>
+
         <button
           type="button"
           className="primary-action"
           disabled={!canStart}
-          onClick={() => onStart([playerOne, playerTwo], selectedLength, selectedOptionCount)}
+          onClick={() => onStart([playerOne, playerTwo], selectedLength, selectedOptionCount, selectedMood, selectedTheme)}
         >
           <Play aria-hidden="true" size={18} strokeWidth={2.8} />
           Spiel starten
@@ -214,120 +310,14 @@ function Timer({
   );
 }
 
-function MassageCardView({
-  activeCard,
-  category,
-  index,
-  total,
-  isRevealed,
-  remainingSeconds,
-  isRunning,
-  onReveal,
-  onToggleTimer,
-  onResetTimer,
-  onNext
-}: {
-  activeCard: ActiveCard;
-  category: Category;
-  index: number;
-  total: number;
-  isRevealed: boolean;
-  remainingSeconds: number;
-  isRunning: boolean;
-  onReveal: () => void;
-  onToggleTimer: () => void;
-  onResetTimer: () => void;
-  onNext: () => void;
-}) {
-  const totalSeconds = parseTime(activeCard.time);
-  const isDone = remainingSeconds === 0;
-  const accentColor = category.color;
-  const style = {
-    "--accent": accentColor,
-    "--accent-soft": colorWithAlpha(accentColor, 0.16),
-    "--accent-mist": colorWithAlpha(accentColor, 0.08)
-  } as React.CSSProperties;
-
-  return (
-    <main className="app-shell game-layout" style={style}>
-      <nav className="game-topbar" aria-label="Spielstatus">
-        <button type="button" className="ghost-button" onClick={() => window.location.reload()}>
-          <RefreshCcw aria-hidden="true" size={16} strokeWidth={2.8} />
-          Neu
-        </button>
-        <div className="progress-copy">
-          <span>Karte {index + 1} von {total}</span>
-          <div className="progress-line">
-            <span style={{ width: `${((index + 1) / total) * 100}%` }} />
-          </div>
-        </div>
-      </nav>
-
-      <section className="table-scene" aria-live="polite">
-        <div className={`card-stage ${isRevealed ? "is-revealed" : ""}`}>
-          <article className="massage-card" aria-label={isRevealed ? activeCard.task : "Verdeckte Karte"}>
-            <div className="card-face card-back">
-              <div className="deck-mark">M</div>
-              <div className="back-lines">
-                <span />
-                <span />
-                <span />
-              </div>
-              <button type="button" className="reveal-button" onClick={onReveal}>
-                <RotateCw aria-hidden="true" size={18} strokeWidth={2.8} />
-                Karte drehen
-              </button>
-            </div>
-
-            <div className="card-face card-front">
-              <header className="card-header">
-                <span className="category-pill">{category.name}</span>
-                {activeCard.finalCard && <span className="final-pill">Finale</span>}
-              </header>
-
-              <div className="role-strip">
-                <span>{activeCard.giver.name.trim()}</span>
-                <small>massiert</small>
-                <span>{activeCard.receiver.name.trim()}</span>
-              </div>
-
-              <p className="task-text">{activeCard.task}</p>
-
-              <Timer totalSeconds={totalSeconds} remainingSeconds={remainingSeconds} accentColor={accentColor} />
-
-              <div className="card-actions">
-                <button type="button" onClick={onToggleTimer}>
-                  {isRunning ? (
-                    <Pause aria-hidden="true" size={18} strokeWidth={2.8} />
-                  ) : isDone ? (
-                    <RefreshCcw aria-hidden="true" size={18} strokeWidth={2.8} />
-                  ) : (
-                    <Play aria-hidden="true" size={18} strokeWidth={2.8} />
-                  )}
-                  {isRunning ? "Pause" : isDone ? "Nochmal" : "Start"}
-                </button>
-                <button type="button" onClick={onResetTimer}>
-                  <RefreshCcw aria-hidden="true" size={18} strokeWidth={2.8} />
-                  Reset
-                </button>
-                <button type="button" className="next-button" onClick={onNext}>
-                  <ArrowRight aria-hidden="true" size={18} strokeWidth={2.8} />
-                  {index + 1 === total ? "Abschluss" : "Nächste"}
-                </button>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
-  );
-}
-
 function MassageOptionsView({
   activeCard,
   cardOptions,
   categoryById,
   fallbackCategory,
+  mood,
+  intensity,
+  themeId,
   selectedCardId,
   index,
   total,
@@ -343,6 +333,9 @@ function MassageOptionsView({
   cardOptions: MassageCard[];
   categoryById: Map<string, Category>;
   fallbackCategory: Category;
+  mood: Mood;
+  intensity: Intensity;
+  themeId: string;
   selectedCardId: string | null;
   index: number;
   total: number;
@@ -360,6 +353,7 @@ function MassageOptionsView({
   const totalSeconds = activeCard ? parseTime(activeCard.time) : 0;
   const isDone = remainingSeconds === 0;
   const accentColor = selectedCategory.color;
+  const taskText = activeCard ? personalizeTask(activeCard.task, activeCard) : "";
   const selectedIndex = cardOptions.findIndex((card) => card.id === selectedCardId);
   const optionOffsets =
     cardOptions.length === 1
@@ -376,7 +370,7 @@ function MassageOptionsView({
   } as React.CSSProperties;
 
   return (
-    <main className="app-shell game-layout" style={style}>
+    <main className="app-shell game-layout" data-theme={themeId} style={style}>
       <nav className="game-topbar" aria-label="Spielstatus">
         <button type="button" className="ghost-button" onClick={() => window.location.reload()}>
           <RefreshCcw aria-hidden="true" size={16} strokeWidth={2.8} />
@@ -392,12 +386,32 @@ function MassageOptionsView({
         </div>
       </nav>
 
+      <div className="round-meta" aria-label="Rundenmodus">
+        <span style={{ "--meta-accent": mood.color } as React.CSSProperties}>
+          <Heart aria-hidden="true" size={15} strokeWidth={2.8} />
+          {mood.label}
+        </span>
+        <span style={{ "--meta-accent": intensity.color } as React.CSSProperties}>
+          <Flame aria-hidden="true" size={15} strokeWidth={2.8} />
+          {intensity.label}
+        </span>
+        <span>
+          <RefreshCcw aria-hidden="true" size={15} strokeWidth={2.8} />
+          Abwechselnd
+        </span>
+      </div>
+
       <section className="table-scene" aria-live="polite">
         <div
           className={`choice-stage choices-${cardOptions.length} ${selectedCardId ? "has-selection" : ""} ${
             isRevealed ? "is-revealed" : ""
           }`}
         >
+          <div className={`deck-stack ${selectedCardId ? "is-hidden" : ""}`} aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </div>
           {cardOptions.map((card, optionIndex) => {
             const category = categoryById.get(card.category) ?? fallbackCategory;
             const isSelected = card.id === selectedCardId;
@@ -410,7 +424,8 @@ function MassageOptionsView({
               "--tilt": optionTilts[optionIndex] ?? "0deg",
               "--fly-x": flyDirection < 0 ? "-78vw" : "78vw",
               "--fly-y": optionIndex % 2 === 0 ? "-46px" : "42px",
-              "--fly-rotate": `${flyDirection * (18 + optionIndex * 4)}deg`
+              "--fly-rotate": `${flyDirection * (18 + optionIndex * 4)}deg`,
+              "--deal-delay": `${optionIndex * 90}ms`
             } as React.CSSProperties;
 
             return (
@@ -430,6 +445,7 @@ function MassageOptionsView({
                   >
                     <span className="back-category-pill">{category.name}</span>
                     {card.finalCard && <span className="back-final-pill">Finale</span>}
+                    <span className="back-intensity-pill">Stufe {card.intensity}</span>
                     <div className="deck-mark">M</div>
                     <span className="choice-hint">Auswählen</span>
                   </button>
@@ -439,6 +455,7 @@ function MassageOptionsView({
                       <>
                         <header className="card-header">
                           <span className="category-pill">{category.name}</span>
+                          <span className="intensity-pill">{intensity.label}</span>
                           {activeCard.finalCard && <span className="final-pill">Finale</span>}
                         </header>
 
@@ -448,7 +465,7 @@ function MassageOptionsView({
                           <span>{activeCard.receiver.name.trim()}</span>
                         </div>
 
-                        <p className="task-text">{activeCard.task}</p>
+                        <p className="task-text">{taskText}</p>
 
                         <Timer totalSeconds={totalSeconds} remainingSeconds={remainingSeconds} accentColor={accentColor} />
 
@@ -485,9 +502,9 @@ function MassageOptionsView({
   );
 }
 
-function FinishedScreen({ onRestart }: { onRestart: () => void }) {
+function FinishedScreen({ onRestart, themeId = "warm" }: { onRestart: () => void; themeId?: string }) {
   return (
-    <main className="app-shell finish-layout">
+    <main className="app-shell finish-layout" data-theme={themeId}>
       <section className="finish-panel">
         <p className="eyebrow">Fertig</p>
         <h1>Das Spiel ist rund ausgestrichen.</h1>
@@ -510,6 +527,8 @@ export default function App() {
   const [availableCards, setAvailableCards] = useState<MassageCard[]>([]);
   const [optionCount, setOptionCount] = useState(3);
   const [totalRounds, setTotalRounds] = useState(0);
+  const [activeMoodId, setActiveMoodId] = useState("entspannend");
+  const [activeThemeId, setActiveThemeId] = useState("warm");
   const [cardIndex, setCardIndex] = useState(0);
   const [isRevealed, setIsRevealed] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
@@ -526,6 +545,14 @@ export default function App() {
 
   const categoryById = useMemo(() => {
     return new Map(data?.categories.map((category) => [category.id, category]) ?? []);
+  }, [data]);
+
+  const moodById = useMemo(() => {
+    return new Map(data?.moods.map((mood) => [mood.id, mood]) ?? []);
+  }, [data]);
+
+  const intensityByLevel = useMemo(() => {
+    return new Map(data?.intensities.map((intensity) => [intensity.level, intensity]) ?? []);
   }, [data]);
 
   const activeCard = useMemo<ActiveCard | null>(() => {
@@ -556,6 +583,7 @@ export default function App() {
     const revealTimeout = window.setTimeout(() => {
       setIsRevealed(true);
       setIsRunning(true);
+      triggerHaptic([14, 30, 18]);
     }, 520);
 
     return () => window.clearTimeout(revealTimeout);
@@ -576,10 +604,20 @@ export default function App() {
   useEffect(() => {
     if (remainingSeconds === 0) {
       setIsRunning(false);
-    }
-  }, [remainingSeconds]);
 
-  function startGame(nextPlayers: [Player, Player], gameLengthId: string, optionCountId: string) {
+      if (selectedCard && isRevealed) {
+        triggerHaptic([30, 40, 30]);
+      }
+    }
+  }, [isRevealed, remainingSeconds, selectedCard]);
+
+  function startGame(
+    nextPlayers: [Player, Player],
+    gameLengthId: string,
+    optionCountId: string,
+    moodId: string,
+    themeId: string
+  ) {
     if (!data) {
       return;
     }
@@ -591,11 +629,13 @@ export default function App() {
     const nextAvailableCards = shuffle(data.cards.filter((card) => !card.finalCard));
     setPlayers(nextPlayers);
     setAvailableCards(nextAvailableCards);
-    setCardOptions(buildRoundOptions(data.cards, nextAvailableCards, 0, nextTotalRounds, nextOptionCount));
+    setCardOptions(buildRoundOptions(data.cards, nextAvailableCards, 0, nextTotalRounds, nextOptionCount, moodId));
     setSelectedCard(null);
     setSelectedCardId(null);
     setOptionCount(nextOptionCount);
     setTotalRounds(nextTotalRounds);
+    setActiveMoodId(moodId);
+    setActiveThemeId(themeId);
     setCardIndex(0);
     setIsFinished(false);
   }
@@ -605,6 +645,7 @@ export default function App() {
       return;
     }
 
+    triggerHaptic(18);
     setSelectedCard(card);
     setSelectedCardId(card.id);
   }
@@ -647,7 +688,7 @@ export default function App() {
       ? availableCards
       : availableCards.filter((card) => card.id !== selectedCard.id);
     setAvailableCards(nextAvailableCards);
-    setCardOptions(buildRoundOptions(data.cards, nextAvailableCards, nextIndex, totalRounds, optionCount));
+    setCardOptions(buildRoundOptions(data.cards, nextAvailableCards, nextIndex, totalRounds, optionCount, activeMoodId));
     setSelectedCard(null);
     setSelectedCardId(null);
     setIsRevealed(false);
@@ -678,12 +719,16 @@ export default function App() {
   }
 
   if (isFinished) {
-    return <FinishedScreen onRestart={() => setIsFinished(false)} />;
+    return <FinishedScreen themeId={activeThemeId} onRestart={() => setIsFinished(false)} />;
   }
 
   if (!players || totalRounds === 0 || cardOptions.length === 0) {
     return <SetupScreen data={data} onStart={startGame} />;
   }
+
+  const activeMood = moodById.get(activeMoodId) ?? data.moods[0];
+  const roundIntensity =
+    intensityByLevel.get(activeCard?.intensity ?? desiredIntensityForRound(cardIndex, totalRounds)) ?? data.intensities[0];
 
   return (
     <MassageOptionsView
@@ -691,6 +736,9 @@ export default function App() {
       cardOptions={cardOptions}
       categoryById={categoryById}
       fallbackCategory={data.categories[0]}
+      mood={activeMood}
+      intensity={roundIntensity}
+      themeId={activeThemeId}
       selectedCardId={selectedCardId}
       index={cardIndex}
       total={totalRounds}

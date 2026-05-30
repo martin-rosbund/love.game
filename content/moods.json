@@ -1,0 +1,22 @@
+[
+  {
+    "id": "entspannend",
+    "label": "Entspannend",
+    "color": "#4F7CAC"
+  },
+  {
+    "id": "verspielt",
+    "label": "Verspielt",
+    "color": "#D99535"
+  },
+  {
+    "id": "romantisch",
+    "label": "Romantisch",
+    "color": "#D1495B"
+  },
+  {
+    "id": "heiss",
+    "label": "Heiß",
+    "color": "#B3203A"
+  }
+]
