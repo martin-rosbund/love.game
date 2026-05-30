@@ -62,10 +62,20 @@ export type GameMode = {
   color: string;
 };
 
+export type CardSet = {
+  id: string;
+  label: string;
+  description: string;
+  modeIds: string[];
+  categoryIds: string[];
+  moodIds: string[];
+};
+
 export type GameData = {
   gameModes: GameMode[];
   categories: Category[];
   cards: MassageCard[];
+  cardSets: CardSet[];
   gameLengths: GameLength[];
   cardOptionCounts: CardOptionCount[];
   moods: Mood[];

@@ -1,5 +1,5 @@
 import express from "express";
-import { readFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -9,13 +9,25 @@ const contentDir = path.join(root, "content");
 const distDir = path.join(root, "dist");
 const port = Number(process.env.PORT ?? 5174);
 const allowedGenders = new Set(["mann", "frau", "divers"]);
+const editableSections = new Map([
+  ["cards", "cards.json"],
+  ["categories", "categories.json"],
+  ["gameLengths", "gameLengths.json"],
+  ["cardSets", "cardSets.json"]
+]);
 
 const app = express();
+app.use(express.json({ limit: "4mb" }));
 
 async function readJson(fileName) {
   const filePath = path.join(contentDir, fileName);
   const raw = await readFile(filePath, "utf8");
   return JSON.parse(raw);
+}
+
+async function writeJson(fileName, data) {
+  const filePath = path.join(contentDir, fileName);
+  await writeFile(filePath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
 }
 
 function isTime(value) {
@@ -127,6 +139,43 @@ function validateGameLengths(lengths) {
   }
 }
 
+function validateReferenceList(owner, values, fieldName, allowedValues, label) {
+  if (!Array.isArray(values)) {
+    throw new Error(`${owner} needs ${fieldName} as an array.`);
+  }
+
+  for (const value of values) {
+    if (!allowedValues.has(value)) {
+      throw new Error(`${owner} references unknown ${label} "${value}".`);
+    }
+  }
+}
+
+function validateCardSets(cardSets, categoryById, moodIds, modeIds) {
+  if (!Array.isArray(cardSets)) {
+    throw new Error("cardSets.json must contain an array.");
+  }
+
+  for (const cardSet of cardSets) {
+    if (!cardSet.id || !cardSet.label || typeof cardSet.description !== "string") {
+      throw new Error("Each card set needs id, label and description.");
+    }
+
+    validateReferenceList(`Card set "${cardSet.id}"`, cardSet.modeIds, "modeIds", modeIds, "mode");
+    validateReferenceList(`Card set "${cardSet.id}"`, cardSet.categoryIds, "categoryIds", new Set(categoryById.keys()), "category");
+    validateReferenceList(`Card set "${cardSet.id}"`, cardSet.moodIds, "moodIds", moodIds, "mood");
+
+    for (const categoryId of cardSet.categoryIds) {
+      const category = categoryById.get(categoryId);
+      const canUseCategory = cardSet.modeIds.length === 0 || category.modes.some((mode) => cardSet.modeIds.includes(mode));
+
+      if (!canUseCategory) {
+        throw new Error(`Card set "${cardSet.id}" uses category "${categoryId}" outside its modes.`);
+      }
+    }
+  }
+}
+
 function validateCardOptionCounts(optionCounts) {
   if (!Array.isArray(optionCounts)) {
     throw new Error("cardOptionCounts.json must contain an array.");
@@ -181,11 +230,12 @@ function validateThemes(themes) {
   }
 }
 
-async function loadGameData() {
-  const [gameModes, categories, cards, gameLengths, cardOptionCounts, moods, intensities, themes] = await Promise.all([
+async function loadRawGameData() {
+  const [gameModes, categories, cards, cardSets, gameLengths, cardOptionCounts, moods, intensities, themes] = await Promise.all([
     readJson("gameModes.json"),
     readJson("categories.json"),
     readJson("cards.json"),
+    readJson("cardSets.json"),
     readJson("gameLengths.json"),
     readJson("cardOptionCounts.json"),
     readJson("moods.json"),
@@ -193,21 +243,34 @@ async function loadGameData() {
     readJson("themes.json")
   ]);
 
-  validateGameModes(gameModes);
-  validateCategories(categories, new Set(gameModes.map((mode) => mode.id)));
-  validateMoods(moods);
-  validateCards(
-    cards,
-    new Map(categories.map((category) => [category.id, category])),
-    new Set(moods.map((mood) => mood.id)),
-    new Set(gameModes.map((mode) => mode.id))
-  );
-  validateGameLengths(gameLengths);
-  validateCardOptionCounts(cardOptionCounts);
-  validateIntensities(intensities);
-  validateThemes(themes);
+  return { gameModes, categories, cards, cardSets, gameLengths, cardOptionCounts, moods, intensities, themes };
+}
 
-  return { gameModes, categories, cards, gameLengths, cardOptionCounts, moods, intensities, themes };
+function validateGameData(data) {
+  const modeIds = new Set(data.gameModes.map((mode) => mode.id));
+  const moodIds = new Set(data.moods.map((mood) => mood.id));
+  const categoryById = new Map(data.categories.map((category) => [category.id, category]));
+
+  validateGameModes(data.gameModes);
+  validateCategories(data.categories, modeIds);
+  validateMoods(data.moods);
+  validateCards(
+    data.cards,
+    categoryById,
+    moodIds,
+    modeIds
+  );
+  validateCardSets(data.cardSets, categoryById, moodIds, modeIds);
+  validateGameLengths(data.gameLengths);
+  validateCardOptionCounts(data.cardOptionCounts);
+  validateIntensities(data.intensities);
+  validateThemes(data.themes);
+
+  return data;
+}
+
+async function loadGameData() {
+  return validateGameData(await loadRawGameData());
 }
 
 app.get("/api/game-modes", async (_request, response, next) => {
@@ -232,6 +295,15 @@ app.get("/api/cards", async (_request, response, next) => {
   try {
     const { cards } = await loadGameData();
     response.json(cards);
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.get("/api/card-sets", async (_request, response, next) => {
+  try {
+    const { cardSets } = await loadGameData();
+    response.json(cardSets);
   } catch (error) {
     next(error);
   }
@@ -284,6 +356,31 @@ app.get("/api/themes", async (_request, response, next) => {
 
 app.get("/api/game-data", async (_request, response, next) => {
   try {
+    response.json(await loadGameData());
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.put("/api/admin/:section", async (request, response, next) => {
+  try {
+    const section = request.params.section;
+    const fileName = editableSections.get(section);
+
+    if (!fileName) {
+      response.status(404).json({ message: `Unknown editable section "${section}".` });
+      return;
+    }
+
+    if (!Array.isArray(request.body)) {
+      response.status(400).json({ message: `Section "${section}" must be saved as an array.` });
+      return;
+    }
+
+    const nextData = await loadRawGameData();
+    nextData[section] = request.body;
+    validateGameData(nextData);
+    await writeJson(fileName, request.body);
     response.json(await loadGameData());
   } catch (error) {
     next(error);

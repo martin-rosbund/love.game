@@ -1699,11 +1699,13 @@
     "id": "liebespiel-fuesse-08",
     "mode": "liebespiel",
     "category": "fuesse",
-    "time": "03:00",
-    "finalCard": false,
+    "time": "05:00",
+    "finalCard": true,
     "intensity": 4,
     "moods": [
+      "entspannend",
       "verspielt",
+      "romantisch",
       "heiss"
     ],
     "receiverGenders": [
@@ -1716,7 +1718,7 @@
       "frau",
       "divers"
     ],
-    "task": "Halte Blickkontakt, während du die Füße mit überraschend langsamen, präzisen Berührungen verwöhnst."
+    "task": "Finale Füße-und-Beine-Spielerei: Verwöhne Füße, Knöchel und Beine fünf Minuten lang mit Blickkontakt, Pausen und langsam steigender Spannung."
   },
   {
     "id": "liebespiel-brueste-01",

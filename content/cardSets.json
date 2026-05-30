@@ -1,0 +1,61 @@
+[
+  {
+    "id": "entspannung",
+    "label": "Entspannung",
+    "description": "Ruhige Karten mit sanftem Tempo und viel Atem.",
+    "modeIds": [
+      "massage",
+      "liebespiel"
+    ],
+    "categoryIds": [],
+    "moodIds": [
+      "entspannend",
+      "romantisch"
+    ]
+  },
+  {
+    "id": "after-work",
+    "label": "After Work",
+    "description": "Schulter, Kopf, Rücken und Füße zum Runterkommen nach einem langen Tag.",
+    "modeIds": [
+      "massage",
+      "liebespiel"
+    ],
+    "categoryIds": [
+      "ruecken",
+      "nacken",
+      "kopf",
+      "fuesse",
+      "koerper"
+    ],
+    "moodIds": [
+      "entspannend",
+      "romantisch"
+    ]
+  },
+  {
+    "id": "ganzkoerper",
+    "label": "Ganzkörper",
+    "description": "Breite Mischung über alle passenden Körperbereiche.",
+    "modeIds": [
+      "massage",
+      "liebespiel"
+    ],
+    "categoryIds": [],
+    "moodIds": []
+  },
+  {
+    "id": "fuesse-beine",
+    "label": "Füße & Beine",
+    "description": "Fokussiertes Set für Beine, Waden, Füße und viel langsame Spannung.",
+    "modeIds": [
+      "massage",
+      "liebespiel"
+    ],
+    "categoryIds": [
+      "beine",
+      "fuesse"
+    ],
+    "moodIds": []
+  }
+]
