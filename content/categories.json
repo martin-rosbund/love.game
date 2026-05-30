@@ -2,31 +2,76 @@
   {
     "id": "ruecken",
     "name": "Rücken",
-    "color": "#4F7CAC"
+    "color": "#4F7CAC",
+    "modes": [
+      "massage",
+      "liebespiel"
+    ]
   },
   {
     "id": "nacken",
     "name": "Nacken",
-    "color": "#7B61FF"
+    "color": "#7B61FF",
+    "modes": [
+      "massage"
+    ]
   },
   {
     "id": "kopf",
     "name": "Kopf",
-    "color": "#D99535"
+    "color": "#D99535",
+    "modes": [
+      "massage"
+    ]
   },
   {
     "id": "brust",
     "name": "Brust",
-    "color": "#D1495B"
+    "color": "#D1495B",
+    "modes": [
+      "massage"
+    ]
   },
   {
     "id": "beine",
     "name": "Beine",
-    "color": "#2A9D8F"
+    "color": "#2A9D8F",
+    "modes": [
+      "massage",
+      "liebespiel"
+    ]
   },
   {
     "id": "fuesse",
     "name": "Füße",
-    "color": "#6A994E"
+    "color": "#6A994E",
+    "modes": [
+      "massage",
+      "liebespiel"
+    ]
+  },
+  {
+    "id": "brueste",
+    "name": "Brüste",
+    "color": "#C85572",
+    "modes": [
+      "liebespiel"
+    ]
+  },
+  {
+    "id": "koerper",
+    "name": "Körper",
+    "color": "#8E6C88",
+    "modes": [
+      "liebespiel"
+    ]
+  },
+  {
+    "id": "mund",
+    "name": "Mund",
+    "color": "#B3203A",
+    "modes": [
+      "liebespiel"
+    ]
   }
 ]

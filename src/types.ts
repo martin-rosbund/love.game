@@ -9,15 +9,19 @@ export type Category = {
   id: string;
   name: string;
   color: string;
+  modes: string[];
 };
 
 export type MassageCard = {
   id: string;
+  mode: string;
   category: string;
   time: string;
   finalCard: boolean;
   intensity: number;
   moods: string[];
+  receiverGenders: Gender[];
+  giverGenders: Gender[];
   task: string;
 };
 
@@ -50,7 +54,16 @@ export type Theme = {
   label: string;
 };
 
+export type GameMode = {
+  id: string;
+  label: string;
+  description: string;
+  verb: string;
+  color: string;
+};
+
 export type GameData = {
+  gameModes: GameMode[];
   categories: Category[];
   cards: MassageCard[];
   gameLengths: GameLength[];

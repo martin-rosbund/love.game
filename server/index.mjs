@@ -8,6 +8,7 @@ const root = path.resolve(__dirname, "..");
 const contentDir = path.join(root, "content");
 const distDir = path.join(root, "dist");
 const port = Number(process.env.PORT ?? 5174);
+const allowedGenders = new Set(["mann", "frau", "divers"]);
 
 const app = express();
 
@@ -21,7 +22,31 @@ function isTime(value) {
   return typeof value === "string" && /^\d{1,2}:[0-5]\d$/.test(value);
 }
 
-function validateCategories(categories) {
+function validateGenderList(card, fieldName) {
+  if (!Array.isArray(card[fieldName]) || card[fieldName].length === 0) {
+    throw new Error(`Card "${card.id}" needs a non-empty ${fieldName} list.`);
+  }
+
+  for (const gender of card[fieldName]) {
+    if (!allowedGenders.has(gender)) {
+      throw new Error(`Card "${card.id}" has invalid ${fieldName} entry "${gender}".`);
+    }
+  }
+}
+
+function validateGameModes(gameModes) {
+  if (!Array.isArray(gameModes)) {
+    throw new Error("gameModes.json must contain an array.");
+  }
+
+  for (const mode of gameModes) {
+    if (!mode.id || !mode.label || !mode.description || !mode.verb || !mode.color) {
+      throw new Error("Each game mode needs id, label, description, verb and color.");
+    }
+  }
+}
+
+function validateCategories(categories, modeIds) {
   if (!Array.isArray(categories)) {
     throw new Error("categories.json must contain an array.");
   }
@@ -30,10 +55,20 @@ function validateCategories(categories) {
     if (!category.id || !category.name || !category.color) {
       throw new Error("Each category needs id, name and color.");
     }
+
+    if (!Array.isArray(category.modes) || category.modes.length === 0) {
+      throw new Error(`Category "${category.id}" needs at least one mode.`);
+    }
+
+    for (const mode of category.modes) {
+      if (!modeIds.has(mode)) {
+        throw new Error(`Category "${category.id}" references unknown mode "${mode}".`);
+      }
+    }
   }
 }
 
-function validateCards(cards, categoryIds, moodIds) {
+function validateCards(cards, categoryById, moodIds, modeIds) {
   if (!Array.isArray(cards)) {
     throw new Error("cards.json must contain an array.");
   }
@@ -43,8 +78,18 @@ function validateCards(cards, categoryIds, moodIds) {
       throw new Error("Each card needs id, task and finalCard.");
     }
 
-    if (!categoryIds.has(card.category)) {
+    if (!modeIds.has(card.mode)) {
+      throw new Error(`Card "${card.id}" references unknown mode "${card.mode}".`);
+    }
+
+    const category = categoryById.get(card.category);
+
+    if (!category) {
       throw new Error(`Card "${card.id}" references unknown category "${card.category}".`);
+    }
+
+    if (!category.modes.includes(card.mode)) {
+      throw new Error(`Card "${card.id}" uses category "${card.category}" outside mode "${card.mode}".`);
     }
 
     if (!isTime(card.time)) {
@@ -58,6 +103,9 @@ function validateCards(cards, categoryIds, moodIds) {
     if (!Array.isArray(card.moods) || card.moods.length === 0) {
       throw new Error(`Card "${card.id}" needs at least one mood.`);
     }
+
+    validateGenderList(card, "receiverGenders");
+    validateGenderList(card, "giverGenders");
 
     for (const mood of card.moods) {
       if (!moodIds.has(mood)) {
@@ -134,7 +182,8 @@ function validateThemes(themes) {
 }
 
 async function loadGameData() {
-  const [categories, cards, gameLengths, cardOptionCounts, moods, intensities, themes] = await Promise.all([
+  const [gameModes, categories, cards, gameLengths, cardOptionCounts, moods, intensities, themes] = await Promise.all([
+    readJson("gameModes.json"),
     readJson("categories.json"),
     readJson("cards.json"),
     readJson("gameLengths.json"),
@@ -144,16 +193,31 @@ async function loadGameData() {
     readJson("themes.json")
   ]);
 
-  validateCategories(categories);
+  validateGameModes(gameModes);
+  validateCategories(categories, new Set(gameModes.map((mode) => mode.id)));
   validateMoods(moods);
-  validateCards(cards, new Set(categories.map((category) => category.id)), new Set(moods.map((mood) => mood.id)));
+  validateCards(
+    cards,
+    new Map(categories.map((category) => [category.id, category])),
+    new Set(moods.map((mood) => mood.id)),
+    new Set(gameModes.map((mode) => mode.id))
+  );
   validateGameLengths(gameLengths);
   validateCardOptionCounts(cardOptionCounts);
   validateIntensities(intensities);
   validateThemes(themes);
 
-  return { categories, cards, gameLengths, cardOptionCounts, moods, intensities, themes };
+  return { gameModes, categories, cards, gameLengths, cardOptionCounts, moods, intensities, themes };
 }
+
+app.get("/api/game-modes", async (_request, response, next) => {
+  try {
+    const { gameModes } = await loadGameData();
+    response.json(gameModes);
+  } catch (error) {
+    next(error);
+  }
+});
 
 app.get("/api/categories", async (_request, response, next) => {
   try {

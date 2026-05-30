@@ -1,82 +1,8 @@
 [
   {
-    "id": "ruecken-01",
+    "id": "massage-ruecken-01",
+    "mode": "massage",
     "category": "ruecken",
-    "time": "02:00",
-    "finalCard": false,
-    "intensity": 1,
-    "moods": [
-      "entspannend",
-      "romantisch"
-    ],
-    "task": "Streiche mit beiden Handflächen langsam vom unteren Rücken bis zu den Schultern und wieder zurück."
-  },
-  {
-    "id": "ruecken-02",
-    "category": "ruecken",
-    "time": "02:30",
-    "finalCard": false,
-    "intensity": 1,
-    "moods": [
-      "entspannend",
-      "romantisch"
-    ],
-    "task": "Massiere rechts und links neben der Wirbelsäule in kleinen Kreisen, ohne direkt auf die Wirbelsäule zu drücken."
-  },
-  {
-    "id": "ruecken-03",
-    "category": "ruecken",
-    "time": "03:00",
-    "finalCard": false,
-    "intensity": 2,
-    "moods": [
-      "entspannend",
-      "verspielt",
-      "romantisch"
-    ],
-    "task": "Knete die Schulterblätter sanft mit Daumen und Handballen, langsam und gleichmäßig."
-  },
-  {
-    "id": "ruecken-04",
-    "category": "ruecken",
-    "time": "02:00",
-    "finalCard": false,
-    "intensity": 2,
-    "moods": [
-      "entspannend",
-      "verspielt",
-      "romantisch"
-    ],
-    "task": "Lege die Hände warm auf den Rücken und lasse jede Bewegung mit ruhigem Druck aus den Handballen starten."
-  },
-  {
-    "id": "ruecken-05",
-    "category": "ruecken",
-    "time": "02:45",
-    "finalCard": false,
-    "intensity": 3,
-    "moods": [
-      "verspielt",
-      "romantisch",
-      "heiss"
-    ],
-    "task": "Ziehe mit den Fingerspitzen lange Linien von den Schultern bis zur Taille und variiere den Druck."
-  },
-  {
-    "id": "ruecken-06",
-    "category": "ruecken",
-    "time": "03:30",
-    "finalCard": false,
-    "intensity": 4,
-    "moods": [
-      "romantisch",
-      "heiss"
-    ],
-    "task": "Arbeite den oberen Rücken mit langsamen, breiten Kreisbewegungen aus, bis die Schultern weich werden."
-  },
-  {
-    "id": "nacken-01",
-    "category": "nacken",
     "time": "01:30",
     "finalCard": false,
     "intensity": 1,
@@ -84,375 +10,186 @@
       "entspannend",
       "romantisch"
     ],
-    "task": "Streiche vom Haaransatz zu den Schultern und halte den Druck ruhig und leicht."
-  },
-  {
-    "id": "nacken-02",
-    "category": "nacken",
-    "time": "02:00",
-    "finalCard": false,
-    "intensity": 1,
-    "moods": [
-      "entspannend",
-      "romantisch"
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
     ],
-    "task": "Massiere die Nackenmuskeln mit Daumen und Zeigefingern in kleinen, langsamen Kreisen."
-  },
-  {
-    "id": "nacken-03",
-    "category": "nacken",
-    "time": "02:30",
-    "finalCard": false,
-    "intensity": 2,
-    "moods": [
-      "entspannend",
-      "verspielt",
-      "romantisch"
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
     ],
-    "task": "Halte beide Hände an den Seiten des Nackens und löse die Spannung mit sanftem, warmem Druck."
+    "task": "Streiche mit warmen Handflächen langsam vom unteren Rücken bis zu den Schultern und finde ein Tempo, bei dem {receiver} tiefer ausatmet."
   },
   {
-    "id": "nacken-04",
-    "category": "nacken",
-    "time": "01:45",
-    "finalCard": false,
-    "intensity": 2,
-    "moods": [
-      "entspannend",
-      "verspielt",
-      "romantisch"
-    ],
-    "task": "Gleite langsam über die obere Schulterlinie und bleibe kurz an Stellen, die sich fest anfühlen."
-  },
-  {
-    "id": "nacken-05",
-    "category": "nacken",
-    "time": "02:00",
-    "finalCard": false,
-    "intensity": 3,
-    "moods": [
-      "verspielt",
-      "romantisch",
-      "heiss"
-    ],
-    "task": "Wechsle zwischen sanftem Kneten und langen Ausstreichungen vom Nacken zu den Schultern."
-  },
-  {
-    "id": "nacken-06",
-    "category": "nacken",
-    "time": "02:15",
-    "finalCard": false,
-    "intensity": 4,
-    "moods": [
-      "romantisch",
-      "heiss"
-    ],
-    "task": "Zeichne mit den Fingerspitzen langsame Halbkreise am Haaransatz entlang."
-  },
-  {
-    "id": "kopf-01",
-    "category": "kopf",
-    "time": "02:00",
-    "finalCard": false,
-    "intensity": 1,
-    "moods": [
-      "entspannend",
-      "romantisch"
-    ],
-    "task": "Massiere die Kopfhaut mit allen Fingerspitzen in kleinen Kreisbewegungen."
-  },
-  {
-    "id": "kopf-02",
-    "category": "kopf",
-    "time": "01:30",
-    "finalCard": false,
-    "intensity": 1,
-    "moods": [
-      "entspannend",
-      "romantisch"
-    ],
-    "task": "Streiche langsam von der Stirn zu den Schläfen und halte an den Schläfen kurz inne."
-  },
-  {
-    "id": "kopf-03",
-    "category": "kopf",
-    "time": "02:15",
-    "finalCard": false,
-    "intensity": 2,
-    "moods": [
-      "entspannend",
-      "verspielt",
-      "romantisch"
-    ],
-    "task": "Kämme mit den Fingern durch das Haar und lasse jede Bewegung ruhig auslaufen."
-  },
-  {
-    "id": "kopf-04",
-    "category": "kopf",
-    "time": "01:45",
-    "finalCard": false,
-    "intensity": 2,
-    "moods": [
-      "entspannend",
-      "verspielt",
-      "romantisch"
-    ],
-    "task": "Massiere die Kieferlinie ganz sanft mit kleinen Kreisen und achte auf entspannten Druck."
-  },
-  {
-    "id": "kopf-05",
-    "category": "kopf",
-    "time": "02:00",
-    "finalCard": false,
-    "intensity": 3,
-    "moods": [
-      "verspielt",
-      "romantisch",
-      "heiss"
-    ],
-    "task": "Lege beide Hände seitlich an den Kopf und bewege die Finger langsam Richtung Hinterkopf."
-  },
-  {
-    "id": "kopf-06",
-    "category": "kopf",
-    "time": "02:30",
-    "finalCard": false,
-    "intensity": 4,
-    "moods": [
-      "romantisch",
-      "heiss"
-    ],
-    "task": "Verbinde Kopfhaut, Schläfen und Haaransatz zu einer ruhigen Massagefolge."
-  },
-  {
-    "id": "brust-01",
-    "category": "brust",
-    "time": "02:00",
-    "finalCard": false,
-    "intensity": 1,
-    "moods": [
-      "entspannend",
-      "romantisch"
-    ],
-    "task": "Streiche mit flachen Händen sanft über den oberen Brustkorb Richtung Schultern."
-  },
-  {
-    "id": "brust-02",
-    "category": "brust",
-    "time": "01:45",
-    "finalCard": false,
-    "intensity": 1,
-    "moods": [
-      "entspannend",
-      "romantisch"
-    ],
-    "task": "Massiere den Bereich unterhalb der Schlüsselbeine mit sehr leichtem Druck nach außen."
-  },
-  {
-    "id": "brust-03",
-    "category": "brust",
-    "time": "02:15",
-    "finalCard": false,
-    "intensity": 2,
-    "moods": [
-      "entspannend",
-      "verspielt",
-      "romantisch"
-    ],
-    "task": "Arbeite vom Brustbein nach außen zu den Schultern und bleibe weich in den Handgelenken."
-  },
-  {
-    "id": "brust-04",
-    "category": "brust",
-    "time": "02:00",
-    "finalCard": false,
-    "intensity": 2,
-    "moods": [
-      "entspannend",
-      "verspielt",
-      "romantisch"
-    ],
-    "task": "Halte eine Hand ruhig auf dem oberen Brustkorb, während die andere langsam Richtung Schulter streicht."
-  },
-  {
-    "id": "brust-05",
-    "category": "brust",
-    "time": "02:30",
-    "finalCard": false,
-    "intensity": 3,
-    "moods": [
-      "verspielt",
-      "romantisch",
-      "heiss"
-    ],
-    "task": "Massiere die obere Brustmuskulatur mit breiten, langsamen Bewegungen und sanftem Druck."
-  },
-  {
-    "id": "brust-06",
-    "category": "brust",
-    "time": "01:30",
-    "finalCard": false,
-    "intensity": 4,
-    "moods": [
-      "romantisch",
-      "heiss"
-    ],
-    "task": "Lasse beide Hände in ruhigen, symmetrischen Bewegungen vom Brustkorb zu den Schultern gleiten."
-  },
-  {
-    "id": "beine-01",
-    "category": "beine",
-    "time": "02:30",
-    "finalCard": false,
-    "intensity": 1,
-    "moods": [
-      "entspannend",
-      "romantisch"
-    ],
-    "task": "Streiche langsam vom Knie Richtung Hüfte und wieder zurück, erst rechts, dann links."
-  },
-  {
-    "id": "beine-02",
-    "category": "beine",
-    "time": "03:00",
-    "finalCard": false,
-    "intensity": 1,
-    "moods": [
-      "entspannend",
-      "romantisch"
-    ],
-    "task": "Knete die Waden mit beiden Händen und halte den Druck weich und gleichmäßig."
-  },
-  {
-    "id": "beine-03",
-    "category": "beine",
-    "time": "02:00",
-    "finalCard": false,
-    "intensity": 2,
-    "moods": [
-      "entspannend",
-      "verspielt",
-      "romantisch"
-    ],
-    "task": "Massiere die Oberschenkel mit langen, langsamen Bahnen und wechsle zwischen Handfläche und Fingerspitzen."
-  },
-  {
-    "id": "beine-04",
-    "category": "beine",
-    "time": "02:45",
-    "finalCard": false,
-    "intensity": 2,
-    "moods": [
-      "entspannend",
-      "verspielt",
-      "romantisch"
-    ],
-    "task": "Arbeite die Außenseiten der Beine mit sanftem Druck von unten nach oben aus."
-  },
-  {
-    "id": "beine-05",
-    "category": "beine",
-    "time": "02:15",
-    "finalCard": false,
-    "intensity": 3,
-    "moods": [
-      "verspielt",
-      "romantisch",
-      "heiss"
-    ],
-    "task": "Halte kurz an den Waden inne und lasse die Hände dann langsam Richtung Knie gleiten."
-  },
-  {
-    "id": "beine-06",
-    "category": "beine",
-    "time": "03:30",
-    "finalCard": false,
-    "intensity": 4,
-    "moods": [
-      "romantisch",
-      "heiss"
-    ],
-    "task": "Verbinde Waden und Oberschenkel zu einer ruhigen Massage mit langen Übergängen."
-  },
-  {
-    "id": "fuesse-01",
-    "category": "fuesse",
-    "time": "02:00",
-    "finalCard": false,
-    "intensity": 1,
-    "moods": [
-      "entspannend",
-      "romantisch"
-    ],
-    "task": "Massiere die Fußsohle mit beiden Daumen in langsamen Linien von der Ferse zu den Zehen."
-  },
-  {
-    "id": "fuesse-02",
-    "category": "fuesse",
-    "time": "02:30",
-    "finalCard": false,
-    "intensity": 1,
-    "moods": [
-      "entspannend",
-      "romantisch"
-    ],
-    "task": "Kreise jeden Zeh einzeln ganz sanft und streiche danach den ganzen Fuß aus."
-  },
-  {
-    "id": "fuesse-03",
-    "category": "fuesse",
-    "time": "02:15",
-    "finalCard": false,
-    "intensity": 2,
-    "moods": [
-      "entspannend",
-      "verspielt",
-      "romantisch"
-    ],
-    "task": "Massiere den Fußrücken mit flachen Daumenbewegungen Richtung Knöchel."
-  },
-  {
-    "id": "fuesse-04",
-    "category": "fuesse",
-    "time": "03:00",
-    "finalCard": false,
-    "intensity": 2,
-    "moods": [
-      "entspannend",
-      "verspielt",
-      "romantisch"
-    ],
-    "task": "Drücke die Ferse sanft zwischen beiden Händen und löse den Druck langsam wieder."
-  },
-  {
-    "id": "fuesse-05",
-    "category": "fuesse",
-    "time": "02:00",
-    "finalCard": false,
-    "intensity": 3,
-    "moods": [
-      "verspielt",
-      "romantisch",
-      "heiss"
-    ],
-    "task": "Streiche vom Knöchel über den Fußrücken bis zu den Zehen und lasse jede Bewegung ruhig enden."
-  },
-  {
-    "id": "fuesse-06",
-    "category": "fuesse",
-    "time": "02:45",
-    "finalCard": false,
-    "intensity": 4,
-    "moods": [
-      "romantisch",
-      "heiss"
-    ],
-    "task": "Wechsle zwischen Daumenkreisen an der Fußsohle und langen Ausstreichungen über den ganzen Fuß."
-  },
-  {
-    "id": "final-ruhe-01",
+    "id": "massage-ruecken-02",
+    "mode": "massage",
     "category": "ruecken",
-    "time": "08:00",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege beide Hände für einen Moment still auf den Rücken von {receiver}, bevor du mit breiten, ruhigen Kreisen beginnst."
+  },
+  {
+    "id": "massage-ruecken-03",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere rechts und links neben der Wirbelsäule in kleinen Spiralen, ohne direkt auf die Wirbelsäule zu drücken."
+  },
+  {
+    "id": "massage-ruecken-04",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Zeichne mit den Fingerspitzen eine langsame Linie über den Rücken und folge ihr danach mit kräftigeren Handballenbewegungen."
+  },
+  {
+    "id": "massage-ruecken-05",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Knete die Schulterblätter mit Daumen und Handballen, erst sanft, dann etwas tiefer, wenn {receiver} es mag."
+  },
+  {
+    "id": "massage-ruecken-06",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wechsle zwischen festen Druckpunkten und federleichten Berührungen, sodass {receiver} nie ganz weiß, was als Nächstes kommt."
+  },
+  {
+    "id": "massage-ruecken-07",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Arbeite dich in drei langsamen Wellen vom Kreuzbein bis zum Nacken hoch und halte nach jeder Welle einen Moment inne."
+  },
+  {
+    "id": "massage-ruecken-08",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Bitte {receiver}, drei Stellen am Rücken zu nennen; massiere jede Stelle mit einer anderen Technik: kreisen, kneten, streichen."
+  },
+  {
+    "id": "massage-ruecken-09",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "06:00",
     "finalCard": true,
     "intensity": 4,
     "moods": [
@@ -461,26 +198,743 @@
       "romantisch",
       "heiss"
     ],
-    "task": "Finale: Wähle den Bereich, der sich am besten angefühlt hat, und schenke dort eine lange, ruhige Zusatzmassage."
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Finale Rückenreise: Verbinde Schultern, Rücken und Lendenbereich zu einer langen Zusatzmassage mit ruhigem Anfang, kräftiger Mitte und sehr langsamem Ausklang."
   },
   {
-    "id": "final-ruhe-02",
+    "id": "massage-nacken-01",
+    "mode": "massage",
     "category": "nacken",
-    "time": "10:00",
-    "finalCard": true,
-    "intensity": 4,
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
     "moods": [
       "entspannend",
-      "verspielt",
-      "romantisch",
-      "heiss"
+      "romantisch"
     ],
-    "task": "Finale: Verbinde Nacken, Schultern und oberen Rücken zu einer langsamen Zusatzmassage mit warmen Händen."
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege die Fingerspitzen an den Haaransatz und streiche langsam bis zu den Schultern hinunter."
   },
   {
-    "id": "final-ruhe-03",
-    "category": "fuesse",
-    "time": "07:00",
+    "id": "massage-nacken-02",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere den Nacken mit winzigen Kreisen und lasse jede Bewegung weich in die Schultern auslaufen."
+  },
+  {
+    "id": "massage-nacken-03",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wechsle zwischen Daumendruck und zarten Fingerkuppen, während {receiver} entscheidet, ob links oder rechts mehr Aufmerksamkeit bekommt."
+  },
+  {
+    "id": "massage-nacken-04",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Ziehe mit beiden Daumen langsame Bahnen vom Nackenansatz nach außen und lasse die Schultern danach fallen."
+  },
+  {
+    "id": "massage-nacken-05",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere knapp unterhalb des Haaransatzes und streiche danach hauchzart über dieselbe Stelle."
+  },
+  {
+    "id": "massage-nacken-06",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Bitte {receiver}, den Kopf langsam zu drehen; begleite die Bewegung mit sanftem Druck entlang der Nackenmuskeln."
+  },
+  {
+    "id": "massage-nacken-07",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Baue Spannung auf: zehn Sekunden fester Druck, zehn Sekunden nur fast berühren, dann die Seite wechseln."
+  },
+  {
+    "id": "massage-nacken-08",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere den Nacken so langsam, dass jede Bewegung wie ein einzelner, bewusster Satz wirkt."
+  },
+  {
+    "id": "massage-kopf-01",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Kreise mit allen Fingerspitzen über die Kopfhaut, als würdest du Shampoo ganz langsam einmassieren."
+  },
+  {
+    "id": "massage-kopf-02",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche von der Stirn über die Schläfen bis hinter die Ohren und halte dort kurz warmen Kontakt."
+  },
+  {
+    "id": "massage-kopf-03",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Zupfe ganz sanft an einzelnen Haarsträhnen oder streiche über die Kopfhaut, je nachdem, was {receiver} lieber mag."
+  },
+  {
+    "id": "massage-kopf-04",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere die Schläfen in ruhigen Kreisen und synchronisiere dein Tempo mit dem Atem von {receiver}."
+  },
+  {
+    "id": "massage-kopf-05",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche mit den Daumen langsam über Stirn und Schläfen, während die übrigen Finger den Hinterkopf halten."
+  },
+  {
+    "id": "massage-kopf-06",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Führe eine Mini-Kopfreise aus: Stirn, Schläfen, Ohren, Hinterkopf, jede Station zwanzig Sekunden."
+  },
+  {
+    "id": "massage-kopf-07",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere den Kopf mit wechselndem Druck und lasse deine Hände am Ende sehr langsam bis zum Nacken sinken."
+  },
+  {
+    "id": "massage-kopf-08",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Halte den Kopf von {receiver} sanft in deinen Händen und bewege nur die Daumen in fast hypnotischen Kreisen."
+  },
+  {
+    "id": "massage-brust-01",
+    "mode": "massage",
+    "category": "brust",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege eine Hand oberhalb des Brustbeins auf und streiche mit der anderen langsam zu den Schultern aus."
+  },
+  {
+    "id": "massage-brust-02",
+    "mode": "massage",
+    "category": "brust",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere den oberen Brustbereich mit flachen Händen, ruhig und weit, ohne Druck auf empfindliche Stellen."
+  },
+  {
+    "id": "massage-brust-03",
+    "mode": "massage",
+    "category": "brust",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Zeichne mit zwei Fingern langsame Halbkreise vom Schlüsselbein nach außen und lasse {receiver} das Tempo bestimmen."
+  },
+  {
+    "id": "massage-brust-04",
+    "mode": "massage",
+    "category": "brust",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche vom Brustbein über die Rippenbögen nach außen und wechsle zwischen Wärme und federleichtem Kontakt."
+  },
+  {
+    "id": "massage-brust-05",
+    "mode": "massage",
+    "category": "brust",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere rund um den Brustkorb mit langsamen, respektvollen Bewegungen und frage nach einer Stelle, die mehr Aufmerksamkeit möchte."
+  },
+  {
+    "id": "massage-brust-06",
+    "mode": "massage",
+    "category": "brust",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Nutze nur die Rückseite deiner Finger, um den Brustbereich in weichen Linien zu erkunden."
+  },
+  {
+    "id": "massage-brust-07",
+    "mode": "massage",
+    "category": "brust",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Verbinde Brustkorb, Schultern und Oberarme in langen Bewegungen, die jedes Mal etwas langsamer werden."
+  },
+  {
+    "id": "massage-brust-08",
+    "mode": "massage",
+    "category": "brust",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Bitte {receiver}, beim Ausatmen die Schultern loszulassen, und begleite jedes Ausatmen mit einer breiten, warmen Streichung."
+  },
+  {
+    "id": "massage-beine-01",
+    "mode": "massage",
+    "category": "beine",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche mit beiden Händen vom Knie Richtung Hüfte und zurück, langsam wie eine gleichmäßige Welle."
+  },
+  {
+    "id": "massage-beine-02",
+    "mode": "massage",
+    "category": "beine",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere die Waden mit langen Bahnen und halte die Knöchel zwischendurch kurz warm in deinen Händen."
+  },
+  {
+    "id": "massage-beine-03",
+    "mode": "massage",
+    "category": "beine",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Ziehe mit den Fingerspitzen eine unsichtbare Landkarte über ein Bein und massiere danach die spannendste Route."
+  },
+  {
+    "id": "massage-beine-04",
+    "mode": "massage",
+    "category": "beine",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Knete die Oberschenkelmuskeln seitlich mit ruhigem Druck und lasse jede Bewegung weich ausgleiten."
+  },
+  {
+    "id": "massage-beine-05",
+    "mode": "massage",
+    "category": "beine",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Arbeite dich langsam von den Waden zu den Oberschenkeln hoch und kehre immer wieder überraschend zurück."
+  },
+  {
+    "id": "massage-beine-06",
+    "mode": "massage",
+    "category": "beine",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere ein Bein kräftig und das andere federleicht; {receiver} darf raten, welche Technik als Nächstes kommt."
+  },
+  {
+    "id": "massage-beine-07",
+    "mode": "massage",
+    "category": "beine",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Setze langsame Druckpunkte entlang der Waden und löse sie mit langen Streichungen bis zum Knie auf."
+  },
+  {
+    "id": "massage-beine-08",
+    "mode": "massage",
+    "category": "beine",
+    "time": "06:00",
     "finalCard": true,
     "intensity": 4,
     "moods": [
@@ -489,6 +943,1383 @@
       "romantisch",
       "heiss"
     ],
-    "task": "Finale: Massiere beide Füße nacheinander besonders langsam und lasse die letzte Minute nur ausstreichen."
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Finale Beinmassage: Verwöhne Waden, Kniekehlen und Oberschenkel in einer langen Sequenz aus Druck, Wärme und hauchzarten Pausen."
+  },
+  {
+    "id": "massage-fuesse-01",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Halte einen Fuß mit beiden Händen und streiche langsam von der Ferse zu den Zehen."
+  },
+  {
+    "id": "massage-fuesse-02",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere die Fußsohle mit dem Daumen in kleinen Kreisen und bleibe bei jeder angenehmen Stelle länger."
+  },
+  {
+    "id": "massage-fuesse-03",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Ziehe jeden Zeh sanft einzeln lang und beende jeden mit einer kleinen Kreisbewegung."
+  },
+  {
+    "id": "massage-fuesse-04",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Knete die Fußgewölbe mit beiden Daumen und lass {receiver} per Handzeichen mehr oder weniger Druck wünschen."
+  },
+  {
+    "id": "massage-fuesse-05",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wechsle zwischen kräftigem Druck an der Ferse und sehr leichten Linien über den Spann."
+  },
+  {
+    "id": "massage-fuesse-06",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere beide Füße abwechselnd so, dass nie klar ist, welcher als Nächstes Aufmerksamkeit bekommt."
+  },
+  {
+    "id": "massage-fuesse-07",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Verbinde Fußsohle, Knöchel und Wade zu einer langsamen, sehr genauen Massagekette."
+  },
+  {
+    "id": "massage-fuesse-08",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Suche drei empfindliche Punkte am Fuß und massiere jeden mit einem anderen Rhythmus."
+  },
+  {
+    "id": "massage-fuesse-09",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "06:00",
+    "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Finale Fußzeremonie: Schenke beiden Füßen eine lange Zusatzmassage mit warmem Halten, tiefem Sohlen-Druck und einem sehr sanften Abschluss."
+  },
+  {
+    "id": "liebespiel-ruecken-01",
+    "mode": "liebespiel",
+    "category": "ruecken",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "romantisch",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche {receiver} mit nur zwei Fingerspitzen über den Rücken und lasse jede Linie kurz vor dem Ziel enden."
+  },
+  {
+    "id": "liebespiel-ruecken-02",
+    "mode": "liebespiel",
+    "category": "ruecken",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "romantisch",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Schreibe ein geheimes Wort auf den Rücken von {receiver}; wenn es erraten wird, darf {receiver} ein neues wünschen."
+  },
+  {
+    "id": "liebespiel-ruecken-03",
+    "mode": "liebespiel",
+    "category": "ruecken",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Küsse oder hauche entlang einer Schulterlinie, dann wärme dieselbe Spur mit deiner Hand."
+  },
+  {
+    "id": "liebespiel-ruecken-04",
+    "mode": "liebespiel",
+    "category": "ruecken",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wechsle zwischen Nähe und Abstand: eine Berührung, drei Sekunden Pause, eine tiefere Berührung."
+  },
+  {
+    "id": "liebespiel-ruecken-05",
+    "mode": "liebespiel",
+    "category": "ruecken",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Ziehe eine langsame Spur vom Nacken bis zum unteren Rücken und frage {receiver}, ob sie wiederholt oder verändert werden soll."
+  },
+  {
+    "id": "liebespiel-ruecken-06",
+    "mode": "liebespiel",
+    "category": "ruecken",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Nutze deinen Atem, deine Handflächen und deine Fingerspitzen nacheinander für dieselbe Rückenstelle."
+  },
+  {
+    "id": "liebespiel-ruecken-07",
+    "mode": "liebespiel",
+    "category": "ruecken",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Drücke {receiver} sanft näher an dich und verwöhne den Rücken mit langsamen, fordernden und dann wieder ganz leichten Berührungen."
+  },
+  {
+    "id": "liebespiel-ruecken-08",
+    "mode": "liebespiel",
+    "category": "ruecken",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lass {receiver} eine Rückenstelle wählen, die du eine Minute lang so intensiv und langsam wie möglich verwöhnst."
+  },
+  {
+    "id": "liebespiel-beine-01",
+    "mode": "liebespiel",
+    "category": "beine",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "romantisch",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche über ein Bein von außen nach innen, halte kurz inne und beginne dann wieder weiter unten."
+  },
+  {
+    "id": "liebespiel-beine-02",
+    "mode": "liebespiel",
+    "category": "beine",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "romantisch",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege eine Hand an den Knöchel und eine ans Knie und bewege beide langsam aufeinander zu."
+  },
+  {
+    "id": "liebespiel-beine-03",
+    "mode": "liebespiel",
+    "category": "beine",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Ziehe mit deinen Fingern einen Weg über die Beine und lass {receiver} mit einem Blick bestimmen, ob du weitergehst."
+  },
+  {
+    "id": "liebespiel-beine-04",
+    "mode": "liebespiel",
+    "category": "beine",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Küsse oder berühre die Knie und wandere danach langsam an den Oberschenkeln entlang, ohne Eile."
+  },
+  {
+    "id": "liebespiel-beine-05",
+    "mode": "liebespiel",
+    "category": "beine",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Spiele mit Richtung: dreimal nach oben, einmal überraschend zurück, dann eine lange Pause mit warmer Hand."
+  },
+  {
+    "id": "liebespiel-beine-06",
+    "mode": "liebespiel",
+    "category": "beine",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Verwöhne die Innenseite der Beine nur mit federleichten Berührungen und bleibe aufmerksam bei jeder Reaktion."
+  },
+  {
+    "id": "liebespiel-beine-07",
+    "mode": "liebespiel",
+    "category": "beine",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Baue langsam Spannung auf, indem du nah an empfindliche Stellen kommst, aber immer wieder elegant ausweichst."
+  },
+  {
+    "id": "liebespiel-beine-08",
+    "mode": "liebespiel",
+    "category": "beine",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lass {receiver} ein Bein über deine Hand legen und verwöhne es mit festen, langsamen und sehr bewussten Bewegungen."
+  },
+  {
+    "id": "liebespiel-fuesse-01",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "romantisch",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Halte einen Fuß von {receiver} und zeichne mit dem Daumen einen langsamen Kreis auf die Sohle."
+  },
+  {
+    "id": "liebespiel-fuesse-02",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "romantisch",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Küsse oder streiche über den Spann, wenn {receiver} das mag, und halte danach den Fuß warm in beiden Händen."
+  },
+  {
+    "id": "liebespiel-fuesse-03",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lass {receiver} die Augen schließen und erraten, ob du mit Fingerkuppe, Handfläche oder Atem berührst."
+  },
+  {
+    "id": "liebespiel-fuesse-04",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wandere von den Zehen zum Knöchel und zurück, jedes Mal einen Hauch langsamer."
+  },
+  {
+    "id": "liebespiel-fuesse-05",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Mache aus jedem Zeh eine kleine eigene Szene: halten, streichen, Pause, nächster Zeh."
+  },
+  {
+    "id": "liebespiel-fuesse-06",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Verwöhne den Fuß und die Wade als eine einzige Linie, die du nie ganz zu Ende führst."
+  },
+  {
+    "id": "liebespiel-fuesse-07",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lass {receiver} entscheiden, ob diese Runde zart, frech oder langsam gefährlich werden soll, und bleibe bei dieser Stimmung."
+  },
+  {
+    "id": "liebespiel-fuesse-08",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Halte Blickkontakt, während du die Füße mit überraschend langsamen, präzisen Berührungen verwöhnst."
+  },
+  {
+    "id": "liebespiel-brueste-01",
+    "mode": "liebespiel",
+    "category": "brueste",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "romantisch",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche um den Brustbereich von {receiver} herum und lasse die Mitte bewusst warten."
+  },
+  {
+    "id": "liebespiel-brueste-02",
+    "mode": "liebespiel",
+    "category": "brueste",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "romantisch",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege eine warme Hand auf den oberen Brustbereich und bewege die andere in langsamen Kreisen über Schultern und Rippen."
+  },
+  {
+    "id": "liebespiel-brueste-03",
+    "mode": "liebespiel",
+    "category": "brueste",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Zeichne mit einem Finger einen großen Kreis um die Brüste oder den Brustbereich und frage leise, ob der Kreis kleiner werden darf."
+  },
+  {
+    "id": "liebespiel-brueste-04",
+    "mode": "liebespiel",
+    "category": "brueste",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Küsse den Bereich oberhalb der Brust langsam und lasse deine Hände nur so weit wandern, wie {receiver} es möchte."
+  },
+  {
+    "id": "liebespiel-brueste-05",
+    "mode": "liebespiel",
+    "category": "brueste",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Verwöhne den Brustbereich mit wechselnden Texturen: Handfläche, Fingerknöchel, Atem, dann wieder Wärme."
+  },
+  {
+    "id": "liebespiel-brueste-06",
+    "mode": "liebespiel",
+    "category": "brueste",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Bitte {receiver}, eine Stelle am Brustbereich zu zeigen, die heute besonders viel Aufmerksamkeit bekommen darf."
+  },
+  {
+    "id": "liebespiel-brueste-07",
+    "mode": "liebespiel",
+    "category": "brueste",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Steigere die Nähe sehr langsam: erst außen, dann näher, dann wieder zurück, bis {receiver} dich eindeutig weiterlockt."
+  },
+  {
+    "id": "liebespiel-brueste-08",
+    "mode": "liebespiel",
+    "category": "brueste",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Verbinde Hals, Schlüsselbein und Brustbereich zu einer langen, sinnlichen Linie mit vielen Pausen."
+  },
+  {
+    "id": "liebespiel-brueste-09",
+    "mode": "liebespiel",
+    "category": "brueste",
+    "time": "05:00",
+    "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Finale Brustnähe: Verwöhne Brüste oder Brustbereich lange, langsam und aufmerksam, mit klaren Pausen, Blickkontakt und genau der Intensität, die {receiver} wählt."
+  },
+  {
+    "id": "liebespiel-koerper-01",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "romantisch",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege dich oder setze dich nah zu {receiver} und halte zehn Atemzüge lang warmen Körperkontakt."
+  },
+  {
+    "id": "liebespiel-koerper-02",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "romantisch",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Zeichne mit deiner Hand eine langsame Acht auf eine beliebige Körperstelle, die {receiver} dir anbietet."
+  },
+  {
+    "id": "liebespiel-koerper-03",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wähle drei Körperstellen und verwöhne jede mit einer anderen Art von Nähe: halten, streichen, hauchen."
+  },
+  {
+    "id": "liebespiel-koerper-04",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lass {receiver} per Handzeichen entscheiden: näher, langsamer oder frecher."
+  },
+  {
+    "id": "liebespiel-koerper-05",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Verwöhne {receiver} von den Schultern bis zur Hüfte in einer einzigen, nicht unterbrochenen Bewegung."
+  },
+  {
+    "id": "liebespiel-koerper-06",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Mache eine Berührung so langsam, dass sie fast stillsteht, und ändere nur alle zehn Sekunden den Druck."
+  },
+  {
+    "id": "liebespiel-koerper-07",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Spiele mit Erwartung: Berühre nah, aber nicht dort, wo {receiver} es erwartet, und kehre dann warm zurück."
+  },
+  {
+    "id": "liebespiel-koerper-08",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Ziehe {receiver} für eine lange Umarmung an dich und verwandle sie langsam in ein sinnliches Erkunden."
+  },
+  {
+    "id": "liebespiel-koerper-09",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "05:00",
+    "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Finale Körperreise: {giver} verwöhnt {receiver} fünf Minuten lang von Kopf bis Fuß, mit einer Mischung aus Nähe, Pausen, Mut und sehr bewusster Zärtlichkeit."
+  },
+  {
+    "id": "liebespiel-mund-01",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "romantisch",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Halte das Gesicht von {receiver} sanft und gib drei langsame Küsse auf Stirn, Wange oder Mund."
+  },
+  {
+    "id": "liebespiel-mund-02",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "romantisch",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Küsse {receiver} so langsam, dass jeder Kuss eine eigene kleine Pause bekommt."
+  },
+  {
+    "id": "liebespiel-mund-03",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Nähere dich einem Kuss dreimal an, ohne ihn sofort zu geben, und lass {receiver} den Moment bestimmen."
+  },
+  {
+    "id": "liebespiel-mund-04",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Flüstere {receiver} ein Kompliment ganz nah an den Mund und küsse erst danach, wenn es willkommen ist."
+  },
+  {
+    "id": "liebespiel-mund-05",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wechsle zwischen Mund, Wange und Hals, aber halte jeden Wechsel überraschend langsam."
+  },
+  {
+    "id": "liebespiel-mund-06",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Küsse intensiver, dann langsamer, dann nur noch fast; {receiver} darf mit einem Wort das Tempo ändern."
+  },
+  {
+    "id": "liebespiel-mund-07",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lass einen Kuss wachsen: erst zart, dann mutiger, dann wieder so leicht, dass {receiver} dir folgen muss."
+  },
+  {
+    "id": "liebespiel-mund-08",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "05:00",
+    "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Finale Mundspielerei: Fünf Minuten Küsse, Flüstern, Atem und Pausen. {receiver} entscheidet mit kleinen Signalen, wann es zarter oder heißer wird."
   }
 ]

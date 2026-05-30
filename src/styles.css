@@ -136,12 +136,14 @@ button:disabled {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 520px);
   gap: clamp(28px, 6vw, 96px);
-  align-items: center;
+  align-items: start;
   background: var(--setup-bg);
 }
 
 .setup-copy {
+  align-self: start;
   max-width: 760px;
+  padding-top: clamp(4px, 1.5vw, 18px);
 }
 
 .eyebrow {
@@ -294,6 +296,47 @@ input:focus {
   display: grid;
   gap: 8px;
   margin-top: 14px;
+}
+
+.mode-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.mode-grid button {
+  display: grid;
+  gap: 6px;
+  min-height: 76px;
+  align-content: center;
+  justify-items: start;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: var(--control-bg);
+  color: var(--app-text);
+  font-weight: 900;
+  text-align: left;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.mode-grid button:hover {
+  transform: translateY(-1px);
+}
+
+.mode-grid button.active {
+  background: var(--control-active);
+  color: var(--control-active-text);
+  box-shadow: 0 14px 24px color-mix(in srgb, var(--option-accent), transparent 72%);
+}
+
+.mode-grid small {
+  color: currentColor;
+  font-size: 0.78rem;
+  font-weight: 750;
+  opacity: 0.78;
 }
 
 .option-grid-four {

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { ArrowRight, Flame, Heart, Palette, Pause, Play, RefreshCcw, Sparkles } from "lucide-react";
 import { fetchGameData } from "./api";
-import type { ActiveCard, Category, GameData, Gender, Intensity, MassageCard, Mood, Player } from "./types";
+import type { ActiveCard, Category, GameData, GameMode, Gender, Intensity, MassageCard, Mood, Player } from "./types";
 
 const genderOptions: Array<{ id: Gender; label: string }> = [
   { id: "frau", label: "Frau" },
@@ -52,29 +52,40 @@ function pickCardOptions(pool: MassageCard[], fallbackPool: MassageCard[], count
   return [...primary, ...fallback].slice(0, count);
 }
 
+function canUseCard(card: MassageCard, giverGender: Gender, receiverGender: Gender) {
+  return card.giverGenders.includes(giverGender) && card.receiverGenders.includes(receiverGender);
+}
+
 function buildRoundOptions(
   cards: MassageCard[],
   availableCards: MassageCard[],
   roundIndex: number,
   totalRounds: number,
   count: number,
-  moodId: string
+  moodId: string,
+  giverGender: Gender,
+  receiverGender: Gender
 ) {
   const regularCards = cards.filter((card) => !card.finalCard);
+  const eligibleRegularCards = regularCards.filter((card) => canUseCard(card, giverGender, receiverGender));
+  const eligibleAvailableCards = availableCards.filter((card) => canUseCard(card, giverGender, receiverGender));
   const finalCards = cards.filter((card) => card.finalCard);
+  const eligibleFinalCards = finalCards.filter((card) => canUseCard(card, giverGender, receiverGender));
   const isFinalRound = roundIndex === totalRounds - 1;
   const targetIntensity = desiredIntensityForRound(roundIndex, totalRounds);
 
-  if (isFinalRound && finalCards.length > 0) {
-    return pickCardOptions(finalCards, finalCards, count);
+  if (isFinalRound && eligibleFinalCards.length > 0) {
+    return pickCardOptions(eligibleFinalCards, eligibleFinalCards, count);
   }
 
-  const moodCards = availableCards.filter((card) => card.moods.includes(moodId));
+  const selectionPool = eligibleAvailableCards.length > 0 ? eligibleAvailableCards : eligibleRegularCards;
+  const regularFallbackPool = eligibleRegularCards;
+  const moodCards = selectionPool.filter((card) => card.moods.includes(moodId));
   const exactMoodCards = moodCards.filter((card) => card.intensity === targetIntensity);
   const nearMoodCards = moodCards.filter((card) => card.intensity <= targetIntensity);
-  const exactAnyMoodCards = availableCards.filter((card) => card.intensity === targetIntensity);
-  const relaxedAnyMoodCards = availableCards.filter((card) => card.intensity <= targetIntensity);
-  const fallbackPool = regularCards.filter((card) => card.moods.includes(moodId));
+  const exactAnyMoodCards = selectionPool.filter((card) => card.intensity === targetIntensity);
+  const relaxedAnyMoodCards = selectionPool.filter((card) => card.intensity <= targetIntensity);
+  const fallbackPool = regularFallbackPool.filter((card) => card.moods.includes(moodId));
 
   return pickCardOptions(
     exactMoodCards.length > 0
@@ -85,8 +96,8 @@ function buildRoundOptions(
           ? exactAnyMoodCards
           : relaxedAnyMoodCards.length > 0
             ? relaxedAnyMoodCards
-            : availableCards,
-    fallbackPool.length > 0 ? fallbackPool : regularCards,
+            : selectionPool,
+    fallbackPool.length > 0 ? fallbackPool : regularFallbackPool,
     count
   );
 }
@@ -158,10 +169,18 @@ function SetupScreen({
   onStart
 }: {
   data: GameData;
-  onStart: (players: [Player, Player], gameLengthId: string, optionCountId: string, moodId: string, themeId: string) => void;
+  onStart: (
+    players: [Player, Player],
+    gameModeId: string,
+    gameLengthId: string,
+    optionCountId: string,
+    moodId: string,
+    themeId: string
+  ) => void;
 }) {
   const [playerOne, setPlayerOne] = useState<Player>({ name: "Alex", gender: "divers" });
   const [playerTwo, setPlayerTwo] = useState<Player>({ name: "Sam", gender: "divers" });
+  const [selectedMode, setSelectedMode] = useState(data.gameModes[0]?.id ?? "massage");
   const [selectedLength, setSelectedLength] = useState(data.gameLengths[1]?.id ?? data.gameLengths[0]?.id ?? "");
   const [selectedOptionCount, setSelectedOptionCount] = useState(
     data.cardOptionCounts[2]?.id ?? data.cardOptionCounts[0]?.id ?? ""
@@ -172,18 +191,21 @@ function SetupScreen({
   const canStart =
     playerOne.name.trim().length > 0 &&
     playerTwo.name.trim().length > 0 &&
+    selectedMode &&
     selectedLength &&
     selectedOptionCount &&
     selectedMood &&
     selectedTheme;
+  const selectedGameMode = data.gameModes.find((mode) => mode.id === selectedMode) ?? data.gameModes[0];
+  const visibleCategories = data.categories.filter((category) => category.modes.includes(selectedMode));
 
   return (
     <main className="app-shell setup-layout" data-theme={selectedTheme}>
       <section className="setup-copy" aria-labelledby="app-title">
-        <p className="eyebrow">Massagekarten</p>
+        <p className="eyebrow">{selectedGameMode?.label ?? "Kartenspiel"}</p>
         <h1 id="app-title">Ein ruhiges Kartenspiel für zwei</h1>
         <div className="category-ribbon" aria-label="Kategorien">
-          {data.categories.map((category) => (
+          {visibleCategories.map((category) => (
             <span key={category.id} style={{ "--accent": category.color } as React.CSSProperties}>
               {category.name}
             </span>
@@ -194,6 +216,24 @@ function SetupScreen({
       <section className="setup-form" aria-label="Spiel vorbereiten">
         <PlayerForm label="Person 1" player={playerOne} onChange={setPlayerOne} />
         <PlayerForm label="Person 2" player={playerTwo} onChange={setPlayerTwo} />
+
+        <fieldset className="length-panel">
+          <legend>Spielmodus</legend>
+          <div className="mode-grid">
+            {data.gameModes.map((mode) => (
+              <button
+                key={mode.id}
+                type="button"
+                className={selectedMode === mode.id ? "active" : ""}
+                onClick={() => setSelectedMode(mode.id)}
+                style={{ "--option-accent": mode.color } as React.CSSProperties}
+              >
+                <span>{mode.label}</span>
+                <small>{mode.description}</small>
+              </button>
+            ))}
+          </div>
+        </fieldset>
 
         <fieldset className="length-panel">
           <legend>Spiellänge</legend>
@@ -268,7 +308,7 @@ function SetupScreen({
           type="button"
           className="primary-action"
           disabled={!canStart}
-          onClick={() => onStart([playerOne, playerTwo], selectedLength, selectedOptionCount, selectedMood, selectedTheme)}
+          onClick={() => onStart([playerOne, playerTwo], selectedMode, selectedLength, selectedOptionCount, selectedMood, selectedTheme)}
         >
           <Play aria-hidden="true" size={18} strokeWidth={2.8} />
           Spiel starten
@@ -315,6 +355,7 @@ function MassageOptionsView({
   cardOptions,
   categoryById,
   fallbackCategory,
+  gameMode,
   mood,
   intensity,
   themeId,
@@ -333,6 +374,7 @@ function MassageOptionsView({
   cardOptions: MassageCard[];
   categoryById: Map<string, Category>;
   fallbackCategory: Category;
+  gameMode: GameMode;
   mood: Mood;
   intensity: Intensity;
   themeId: string;
@@ -394,6 +436,10 @@ function MassageOptionsView({
         <span style={{ "--meta-accent": intensity.color } as React.CSSProperties}>
           <Flame aria-hidden="true" size={15} strokeWidth={2.8} />
           {intensity.label}
+        </span>
+        <span>
+          <Sparkles aria-hidden="true" size={15} strokeWidth={2.8} />
+          {gameMode.label}
         </span>
         <span>
           <RefreshCcw aria-hidden="true" size={15} strokeWidth={2.8} />
@@ -461,7 +507,7 @@ function MassageOptionsView({
 
                         <div className="role-strip">
                           <span>{activeCard.giver.name.trim()}</span>
-                          <small>massiert</small>
+                          <small>{gameMode.verb}</small>
                           <span>{activeCard.receiver.name.trim()}</span>
                         </div>
 
@@ -527,6 +573,7 @@ export default function App() {
   const [availableCards, setAvailableCards] = useState<MassageCard[]>([]);
   const [optionCount, setOptionCount] = useState(3);
   const [totalRounds, setTotalRounds] = useState(0);
+  const [activeGameModeId, setActiveGameModeId] = useState("massage");
   const [activeMoodId, setActiveMoodId] = useState("entspannend");
   const [activeThemeId, setActiveThemeId] = useState("warm");
   const [cardIndex, setCardIndex] = useState(0);
@@ -549,6 +596,10 @@ export default function App() {
 
   const moodById = useMemo(() => {
     return new Map(data?.moods.map((mood) => [mood.id, mood]) ?? []);
+  }, [data]);
+
+  const gameModeById = useMemo(() => {
+    return new Map(data?.gameModes.map((mode) => [mode.id, mode]) ?? []);
   }, [data]);
 
   const intensityByLevel = useMemo(() => {
@@ -613,6 +664,7 @@ export default function App() {
 
   function startGame(
     nextPlayers: [Player, Player],
+    gameModeId: string,
     gameLengthId: string,
     optionCountId: string,
     moodId: string,
@@ -626,14 +678,29 @@ export default function App() {
     const selectedOptionCount = data.cardOptionCounts.find((count) => count.id === optionCountId);
     const nextTotalRounds = selectedLength?.cards ?? 10;
     const nextOptionCount = selectedOptionCount?.cards ?? 3;
-    const nextAvailableCards = shuffle(data.cards.filter((card) => !card.finalCard));
+    const modeCards = data.cards.filter((card) => card.mode === gameModeId);
+    const nextAvailableCards = shuffle(modeCards.filter((card) => !card.finalCard));
+    const firstGiver = nextPlayers[0];
+    const firstReceiver = nextPlayers[1];
     setPlayers(nextPlayers);
     setAvailableCards(nextAvailableCards);
-    setCardOptions(buildRoundOptions(data.cards, nextAvailableCards, 0, nextTotalRounds, nextOptionCount, moodId));
+    setCardOptions(
+      buildRoundOptions(
+        modeCards,
+        nextAvailableCards,
+        0,
+        nextTotalRounds,
+        nextOptionCount,
+        moodId,
+        firstGiver.gender,
+        firstReceiver.gender
+      )
+    );
     setSelectedCard(null);
     setSelectedCardId(null);
     setOptionCount(nextOptionCount);
     setTotalRounds(nextTotalRounds);
+    setActiveGameModeId(gameModeId);
     setActiveMoodId(moodId);
     setActiveThemeId(themeId);
     setCardIndex(0);
@@ -670,7 +737,7 @@ export default function App() {
   }
 
   function goNext() {
-    if (!data || !selectedCard) {
+    if (!data || !selectedCard || !players) {
       return;
     }
 
@@ -687,8 +754,22 @@ export default function App() {
     const nextAvailableCards = selectedCard.finalCard
       ? availableCards
       : availableCards.filter((card) => card.id !== selectedCard.id);
+    const modeCards = data.cards.filter((card) => card.mode === activeGameModeId);
+    const nextGiver = nextIndex % 2 === 0 ? players[0] : players[1];
+    const nextReceiver = nextIndex % 2 === 0 ? players[1] : players[0];
     setAvailableCards(nextAvailableCards);
-    setCardOptions(buildRoundOptions(data.cards, nextAvailableCards, nextIndex, totalRounds, optionCount, activeMoodId));
+    setCardOptions(
+      buildRoundOptions(
+        modeCards,
+        nextAvailableCards,
+        nextIndex,
+        totalRounds,
+        optionCount,
+        activeMoodId,
+        nextGiver.gender,
+        nextReceiver.gender
+      )
+    );
     setSelectedCard(null);
     setSelectedCardId(null);
     setIsRevealed(false);
@@ -726,16 +807,20 @@ export default function App() {
     return <SetupScreen data={data} onStart={startGame} />;
   }
 
+  const activeGameMode = gameModeById.get(activeGameModeId) ?? data.gameModes[0];
   const activeMood = moodById.get(activeMoodId) ?? data.moods[0];
   const roundIntensity =
     intensityByLevel.get(activeCard?.intensity ?? desiredIntensityForRound(cardIndex, totalRounds)) ?? data.intensities[0];
+  const fallbackCategory =
+    data.categories.find((category) => category.modes.includes(activeGameModeId)) ?? data.categories[0];
 
   return (
     <MassageOptionsView
       activeCard={activeCard}
       cardOptions={cardOptions}
       categoryById={categoryById}
-      fallbackCategory={data.categories[0]}
+      fallbackCategory={fallbackCategory}
+      gameMode={activeGameMode}
       mood={activeMood}
       intensity={roundIntensity}
       themeId={activeThemeId}

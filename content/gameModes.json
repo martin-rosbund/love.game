@@ -1,0 +1,16 @@
+[
+  {
+    "id": "massage",
+    "label": "Massage",
+    "description": "Ruhige und kreative Karten für achtsame gegenseitige Massage.",
+    "verb": "massiert",
+    "color": "#D1495B"
+  },
+  {
+    "id": "liebespiel",
+    "label": "Liebesspiel",
+    "description": "Sinnliche Karten für Rücken, Beine, Füße, Brüste, Körper und Mund.",
+    "verb": "verwöhnt",
+    "color": "#B3203A"
+  }
+]
