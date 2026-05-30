@@ -1,0 +1,51 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Server",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/server/index.mjs",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "node",
+      "env": {
+        "PORT": "5174"
+      },
+      "console": "integratedTerminal",
+      "restart": true,
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Debug Frontend (Edge)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://127.0.0.1:5173",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "vite: dev",
+      "sourceMaps": true,
+      "smartStep": true
+    },
+    {
+      "name": "Debug Frontend (Chrome)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://127.0.0.1:5173",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "vite: dev",
+      "sourceMaps": true,
+      "smartStep": true
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Debug App (Server + Edge)",
+      "configurations": ["Debug Server", "Debug Frontend (Edge)"],
+      "stopAll": true
+    },
+    {
+      "name": "Debug App (Server + Chrome)",
+      "configurations": ["Debug Server", "Debug Frontend (Chrome)"],
+      "stopAll": true
+    }
+  ]
+}

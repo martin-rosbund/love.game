@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ruecken",
+    "name": "Rücken",
+    "color": "#4F7CAC"
+  },
+  {
+    "id": "nacken",
+    "name": "Nacken",
+    "color": "#7B61FF"
+  },
+  {
+    "id": "kopf",
+    "name": "Kopf",
+    "color": "#D99535"
+  },
+  {
+    "id": "brust",
+    "name": "Brust",
+    "color": "#D1495B"
+  },
+  {
+    "id": "beine",
+    "name": "Beine",
+    "color": "#2A9D8F"
+  },
+  {
+    "id": "fuesse",
+    "name": "Füße",
+    "color": "#6A994E"
+  }
+]

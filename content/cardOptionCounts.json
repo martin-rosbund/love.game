@@ -1,0 +1,17 @@
+[
+  {
+    "id": "eins",
+    "label": "1 Karte",
+    "cards": 1
+  },
+  {
+    "id": "zwei",
+    "label": "2 Karten",
+    "cards": 2
+  },
+  {
+    "id": "drei",
+    "label": "3 Karten",
+    "cards": 3
+  }
+]

@@ -1,0 +1,275 @@
+[
+  {
+    "id": "ruecken-01",
+    "category": "ruecken",
+    "time": "02:00",
+    "finalCard": false,
+    "task": "Streiche mit beiden Handflächen langsam vom unteren Rücken bis zu den Schultern und wieder zurück."
+  },
+  {
+    "id": "ruecken-02",
+    "category": "ruecken",
+    "time": "02:30",
+    "finalCard": false,
+    "task": "Massiere rechts und links neben der Wirbelsäule in kleinen Kreisen, ohne direkt auf die Wirbelsäule zu drücken."
+  },
+  {
+    "id": "ruecken-03",
+    "category": "ruecken",
+    "time": "03:00",
+    "finalCard": false,
+    "task": "Knete die Schulterblätter sanft mit Daumen und Handballen, langsam und gleichmäßig."
+  },
+  {
+    "id": "ruecken-04",
+    "category": "ruecken",
+    "time": "02:00",
+    "finalCard": false,
+    "task": "Lege die Hände warm auf den Rücken und lasse jede Bewegung mit ruhigem Druck aus den Handballen starten."
+  },
+  {
+    "id": "ruecken-05",
+    "category": "ruecken",
+    "time": "02:45",
+    "finalCard": false,
+    "task": "Ziehe mit den Fingerspitzen lange Linien von den Schultern bis zur Taille und variiere den Druck."
+  },
+  {
+    "id": "ruecken-06",
+    "category": "ruecken",
+    "time": "03:30",
+    "finalCard": false,
+    "task": "Arbeite den oberen Rücken mit langsamen, breiten Kreisbewegungen aus, bis die Schultern weich werden."
+  },
+  {
+    "id": "nacken-01",
+    "category": "nacken",
+    "time": "01:30",
+    "finalCard": false,
+    "task": "Streiche vom Haaransatz zu den Schultern und halte den Druck ruhig und leicht."
+  },
+  {
+    "id": "nacken-02",
+    "category": "nacken",
+    "time": "02:00",
+    "finalCard": false,
+    "task": "Massiere die Nackenmuskeln mit Daumen und Zeigefingern in kleinen, langsamen Kreisen."
+  },
+  {
+    "id": "nacken-03",
+    "category": "nacken",
+    "time": "02:30",
+    "finalCard": false,
+    "task": "Halte beide Hände an den Seiten des Nackens und löse die Spannung mit sanftem, warmem Druck."
+  },
+  {
+    "id": "nacken-04",
+    "category": "nacken",
+    "time": "01:45",
+    "finalCard": false,
+    "task": "Gleite langsam über die obere Schulterlinie und bleibe kurz an Stellen, die sich fest anfühlen."
+  },
+  {
+    "id": "nacken-05",
+    "category": "nacken",
+    "time": "02:00",
+    "finalCard": false,
+    "task": "Wechsle zwischen sanftem Kneten und langen Ausstreichungen vom Nacken zu den Schultern."
+  },
+  {
+    "id": "nacken-06",
+    "category": "nacken",
+    "time": "02:15",
+    "finalCard": false,
+    "task": "Zeichne mit den Fingerspitzen langsame Halbkreise am Haaransatz entlang."
+  },
+  {
+    "id": "kopf-01",
+    "category": "kopf",
+    "time": "02:00",
+    "finalCard": false,
+    "task": "Massiere die Kopfhaut mit allen Fingerspitzen in kleinen Kreisbewegungen."
+  },
+  {
+    "id": "kopf-02",
+    "category": "kopf",
+    "time": "01:30",
+    "finalCard": false,
+    "task": "Streiche langsam von der Stirn zu den Schläfen und halte an den Schläfen kurz inne."
+  },
+  {
+    "id": "kopf-03",
+    "category": "kopf",
+    "time": "02:15",
+    "finalCard": false,
+    "task": "Kämme mit den Fingern durch das Haar und lasse jede Bewegung ruhig auslaufen."
+  },
+  {
+    "id": "kopf-04",
+    "category": "kopf",
+    "time": "01:45",
+    "finalCard": false,
+    "task": "Massiere die Kieferlinie ganz sanft mit kleinen Kreisen und achte auf entspannten Druck."
+  },
+  {
+    "id": "kopf-05",
+    "category": "kopf",
+    "time": "02:00",
+    "finalCard": false,
+    "task": "Lege beide Hände seitlich an den Kopf und bewege die Finger langsam Richtung Hinterkopf."
+  },
+  {
+    "id": "kopf-06",
+    "category": "kopf",
+    "time": "02:30",
+    "finalCard": false,
+    "task": "Verbinde Kopfhaut, Schläfen und Haaransatz zu einer ruhigen Massagefolge."
+  },
+  {
+    "id": "brust-01",
+    "category": "brust",
+    "time": "02:00",
+    "finalCard": false,
+    "task": "Streiche mit flachen Händen sanft über den oberen Brustkorb Richtung Schultern."
+  },
+  {
+    "id": "brust-02",
+    "category": "brust",
+    "time": "01:45",
+    "finalCard": false,
+    "task": "Massiere den Bereich unterhalb der Schlüsselbeine mit sehr leichtem Druck nach außen."
+  },
+  {
+    "id": "brust-03",
+    "category": "brust",
+    "time": "02:15",
+    "finalCard": false,
+    "task": "Arbeite vom Brustbein nach außen zu den Schultern und bleibe weich in den Handgelenken."
+  },
+  {
+    "id": "brust-04",
+    "category": "brust",
+    "time": "02:00",
+    "finalCard": false,
+    "task": "Halte eine Hand ruhig auf dem oberen Brustkorb, während die andere langsam Richtung Schulter streicht."
+  },
+  {
+    "id": "brust-05",
+    "category": "brust",
+    "time": "02:30",
+    "finalCard": false,
+    "task": "Massiere die obere Brustmuskulatur mit breiten, langsamen Bewegungen und sanftem Druck."
+  },
+  {
+    "id": "brust-06",
+    "category": "brust",
+    "time": "01:30",
+    "finalCard": false,
+    "task": "Lasse beide Hände in ruhigen, symmetrischen Bewegungen vom Brustkorb zu den Schultern gleiten."
+  },
+  {
+    "id": "beine-01",
+    "category": "beine",
+    "time": "02:30",
+    "finalCard": false,
+    "task": "Streiche langsam vom Knie Richtung Hüfte und wieder zurück, erst rechts, dann links."
+  },
+  {
+    "id": "beine-02",
+    "category": "beine",
+    "time": "03:00",
+    "finalCard": false,
+    "task": "Knete die Waden mit beiden Händen und halte den Druck weich und gleichmäßig."
+  },
+  {
+    "id": "beine-03",
+    "category": "beine",
+    "time": "02:00",
+    "finalCard": false,
+    "task": "Massiere die Oberschenkel mit langen, langsamen Bahnen und wechsle zwischen Handfläche und Fingerspitzen."
+  },
+  {
+    "id": "beine-04",
+    "category": "beine",
+    "time": "02:45",
+    "finalCard": false,
+    "task": "Arbeite die Außenseiten der Beine mit sanftem Druck von unten nach oben aus."
+  },
+  {
+    "id": "beine-05",
+    "category": "beine",
+    "time": "02:15",
+    "finalCard": false,
+    "task": "Halte kurz an den Waden inne und lasse die Hände dann langsam Richtung Knie gleiten."
+  },
+  {
+    "id": "beine-06",
+    "category": "beine",
+    "time": "03:30",
+    "finalCard": false,
+    "task": "Verbinde Waden und Oberschenkel zu einer ruhigen Massage mit langen Übergängen."
+  },
+  {
+    "id": "fuesse-01",
+    "category": "fuesse",
+    "time": "02:00",
+    "finalCard": false,
+    "task": "Massiere die Fußsohle mit beiden Daumen in langsamen Linien von der Ferse zu den Zehen."
+  },
+  {
+    "id": "fuesse-02",
+    "category": "fuesse",
+    "time": "02:30",
+    "finalCard": false,
+    "task": "Kreise jeden Zeh einzeln ganz sanft und streiche danach den ganzen Fuß aus."
+  },
+  {
+    "id": "fuesse-03",
+    "category": "fuesse",
+    "time": "02:15",
+    "finalCard": false,
+    "task": "Massiere den Fußrücken mit flachen Daumenbewegungen Richtung Knöchel."
+  },
+  {
+    "id": "fuesse-04",
+    "category": "fuesse",
+    "time": "03:00",
+    "finalCard": false,
+    "task": "Drücke die Ferse sanft zwischen beiden Händen und löse den Druck langsam wieder."
+  },
+  {
+    "id": "fuesse-05",
+    "category": "fuesse",
+    "time": "02:00",
+    "finalCard": false,
+    "task": "Streiche vom Knöchel über den Fußrücken bis zu den Zehen und lasse jede Bewegung ruhig enden."
+  },
+  {
+    "id": "fuesse-06",
+    "category": "fuesse",
+    "time": "02:45",
+    "finalCard": false,
+    "task": "Wechsle zwischen Daumenkreisen an der Fußsohle und langen Ausstreichungen über den ganzen Fuß."
+  },
+  {
+    "id": "final-ruhe-01",
+    "category": "ruecken",
+    "time": "08:00",
+    "finalCard": true,
+    "task": "Finale: Wähle den Bereich, der sich am besten angefühlt hat, und schenke dort eine lange, ruhige Zusatzmassage."
+  },
+  {
+    "id": "final-ruhe-02",
+    "category": "nacken",
+    "time": "10:00",
+    "finalCard": true,
+    "task": "Finale: Verbinde Nacken, Schultern und oberen Rücken zu einer langsamen Zusatzmassage mit warmen Händen."
+  },
+  {
+    "id": "final-ruhe-03",
+    "category": "fuesse",
+    "time": "07:00",
+    "finalCard": true,
+    "task": "Finale: Massiere beide Füße nacheinander besonders langsam und lasse die letzte Minute nur ausstreichen."
+  }
+]

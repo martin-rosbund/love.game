@@ -1,0 +1,17 @@
+[
+  {
+    "id": "kurz",
+    "label": "Kurz",
+    "cards": 10
+  },
+  {
+    "id": "mittel",
+    "label": "Mittel",
+    "cards": 20
+  },
+  {
+    "id": "lang",
+    "label": "Lang",
+    "cards": 30
+  }
+]
