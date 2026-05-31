@@ -1463,7 +1463,7 @@
       "frau",
       "divers"
     ],
-    "task": "Spiele mit Richtung: dreimal nach oben, einmal überraschend zurück, dann eine lange Pause mit warmer Hand."
+    "task": "Massiere die Beine von ganz oben nach ganz unten, dreimal immer langsamer werdend."
   },
   {
     "id": "liebespiel-beine-06",
@@ -1870,7 +1870,6 @@
       "heiss"
     ],
     "receiverGenders": [
-      "mann",
       "frau",
       "divers"
     ],
@@ -1879,7 +1878,7 @@
       "frau",
       "divers"
     ],
-    "task": "Steigere die Nähe sehr langsam mit deiner Zunge: erst den Po, dann den intimbereich, dann wieder zurück."
+    "task": "Steigere die Nähe langsam mit deiner Zunge: erst die Brüste, dann den intimbereich, dann wieder zurück."
   },
   {
     "id": "liebespiel-brueste-08",
@@ -1887,7 +1886,7 @@
     "category": "brueste",
     "time": "03:00",
     "finalCard": false,
-    "intensity": 4,
+    "intensity": 2,
     "moods": [
       "verspielt",
       "heiss"
@@ -1902,7 +1901,7 @@
       "frau",
       "divers"
     ],
-    "task": "Massiere Hals, Schlüsselbein und Brustbereich zu einer langen, sinnlichen Linie mit vielen Pausen."
+    "task": "Massiere Hals, Nacken und Brustbereich zu einer langen, sinnlichen Linie mit vielen Pausen."
   },
   {
     "id": "liebespiel-brueste-09",
@@ -3555,14 +3554,14 @@
     "entspannend"
     ],
     "receiverGenders": [
-    "mann",
-    "frau",
-    "divers"
+      "mann",
+      "frau",
+      "divers"
     ],
     "giverGenders": [
-    "mann",
-    "frau",
-    "divers"
+      "mann",
+      "frau",
+      "divers"
     ],
     "task": "Edging: Bringe {receiver} mehrmals bis kurz vor dem Orgasmus, ohne diesen jetzt zu gewähren. {receiver} muss es dir rechtzeitig mitteilen."
   },
@@ -3577,7 +3576,7 @@
     "romantisch",
     "heiss"
     ],
-      "receiverGenders": [
+    "receiverGenders": [
       "mann",
       "frau",
       "divers"
@@ -3600,7 +3599,7 @@
     "romantisch",
     "heiss"
     ],
-      "receiverGenders": [
+    "receiverGenders": [
       "frau",
       "divers"
     ],
@@ -3622,7 +3621,7 @@
     "romantisch",
     "heiss"
     ],
-      "receiverGenders": [
+    "receiverGenders": [
       "mann",
       "divers"
     ],
@@ -3644,7 +3643,7 @@
     "romantisch",
     "heiss"
     ],
-      "receiverGenders": [
+    "receiverGenders": [
       "mann",
       "divers"
     ],
@@ -3666,7 +3665,7 @@
     "romantisch",
     "heiss"
     ],
-      "receiverGenders": [
+    "receiverGenders": [
       "frau",
       "mann",
       "divers"
@@ -3688,7 +3687,7 @@
     "romantisch",
     "heiss"
     ],
-      "receiverGenders": [
+    "receiverGenders": [
       "mann",
       "divers"
     ],
@@ -3710,7 +3709,7 @@
     "romantisch",
     "heiss"
     ],
-      "receiverGenders": [
+    "receiverGenders": [
       "frau",
       "divers"
     ],
@@ -3732,7 +3731,7 @@
     "romantisch",
     "heiss"
     ],
-      "receiverGenders": [
+    "receiverGenders": [
       "frau",
       "mann",
       "divers"
@@ -3743,5 +3742,119 @@
       "divers"
     ],
     "task": "Presse deinen Fuß gegen den Intimbereich von {receiver} und reibe deinen Fuß leicht hin und her."
+  },
+  {
+    "id": "libesspiel-experiment-68",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "3:00",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+    "romantisch",
+    "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "task": "Lege deinen Kopf auf den Bauch von {receiver} und lutsche und Sauge an seinem Penis."
+  },
+  {
+    "id": "libesspiel-experiment-69",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "3:00",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+    "romantisch",
+    "heiss"
+    ],
+    "receiverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "task": "Lege deinen Kopf auf den Bauch von {receiver} und weise {receiver} sich selbst zu berühren während du genüsslich zuschaust."
+  },
+  {
+    "id": "libesspiel-experiment-70",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "2:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+    "romantisch",
+    "heiss"
+    ],
+    "receiverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "task": "Lassie dir von {receiver} zeigen, welche Berührungen {receiver} am liebsten mag, und mit welchem Körperteil."
+  },
+  {
+    "id": "libesspiel-experiment-70",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "4:00",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+    "romantisch",
+    "heiss"
+    ],
+    "receiverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "task": "Spielt mit all euren vier Händen im Intimbereich von {receiver}."
+  },
+  {
+    "id": "libesspiel-experiment-71",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "4:00",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+    "romantisch",
+    "heiss"
+    ],
+    "receiverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "task": "Legt einen Fuß in den Intimberiech des jeweils anderen und testet aus wie der jeweils andere reagiert."
   }
 ]

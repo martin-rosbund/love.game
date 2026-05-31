@@ -187,15 +187,15 @@ function SetupScreen({
     themeId: string
   ) => void;
 }) {
-  const [playerOne, setPlayerOne] = useState<Player>({ name: "Alex", gender: "divers" });
-  const [playerTwo, setPlayerTwo] = useState<Player>({ name: "Sam", gender: "divers" });
-  const [selectedMode, setSelectedMode] = useState(data.gameModes[0]?.id ?? "massage");
-  const [selectedCardSet, setSelectedCardSet] = useState(data.cardSets[0]?.id ?? "");
+  const [playerOne, setPlayerOne] = useState<Player>({ name: "Christne", gender: "frau" });
+  const [playerTwo, setPlayerTwo] = useState<Player>({ name: "Martin", gender: "mann" });
+  const [selectedMode, setSelectedMode] = useState(data.gameModes[1]?.id ?? "liebesspiel");
+  const [selectedCardSet, setSelectedCardSet] = useState(data.cardSets[2]?.id ?? "");
   const [selectedLength, setSelectedLength] = useState(data.gameLengths[1]?.id ?? data.gameLengths[0]?.id ?? "");
   const [selectedOptionCount, setSelectedOptionCount] = useState(
-    data.cardOptionCounts[2]?.id ?? data.cardOptionCounts[0]?.id ?? ""
+    data.cardOptionCounts[1]?.id ?? data.cardOptionCounts[0]?.id ?? ""
   );
-  const [selectedTheme, setSelectedTheme] = useState(data.themes[0]?.id ?? "warm");
+  const [selectedTheme, setSelectedTheme] = useState(data.themes[3]?.id ?? "luxurioes");
 
   const canStart =
     playerOne.name.trim().length > 0 &&
