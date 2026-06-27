@@ -1,0 +1,188 @@
+[
+  {
+    "id": "massage-kopf-01",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Kreise mit allen Fingerspitzen über die Kopfhaut, als würdest du Shampoo ganz langsam einmassieren."
+  },
+  {
+    "id": "massage-kopf-02",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche von der Stirn über die Schläfen bis hinter die Ohren und halte dort kurz warmen Kontakt."
+  },
+  {
+    "id": "massage-kopf-03",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Zupfe ganz sanft an einzelnen Haarsträhnen oder streiche über die Kopfhaut, je nachdem, was {receiver} lieber mag."
+  },
+  {
+    "id": "massage-kopf-04",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere die Schläfen in ruhigen Kreisen und synchronisiere dein Tempo mit dem Atem von {receiver}."
+  },
+  {
+    "id": "massage-kopf-05",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche mit den Daumen langsam über Stirn und Schläfen, während die übrigen Finger den Hinterkopf halten."
+  },
+  {
+    "id": "massage-kopf-06",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Führe eine Mini-Kopfreise aus: Stirn, Schläfen, Ohren, Hinterkopf, jede Station zwanzig Sekunden."
+  },
+  {
+    "id": "massage-kopf-07",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere den Kopf mit wechselndem Druck und lasse deine Hände am Ende sehr langsam bis zum Nacken sinken."
+  },
+  {
+    "id": "massage-kopf-08",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Halte den Kopf von {receiver} sanft in deinen Händen und bewege nur die Daumen in fast hypnotischen Kreisen."
+  }
+]

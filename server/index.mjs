@@ -1,16 +1,16 @@
 import express from "express";
-import { readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
 const contentDir = path.join(root, "content");
+const cardsDir = path.join(contentDir, "cards");
 const distDir = path.join(root, "dist");
 const port = Number(process.env.PORT ?? 5174);
 const allowedGenders = new Set(["mann", "frau", "divers"]);
 const editableSections = new Map([
-  ["cards", "cards.json"],
   ["categories", "categories.json"],
   ["gameLengths", "gameLengths.json"],
   ["cardSets", "cardSets.json"]
@@ -28,6 +28,64 @@ async function readJson(fileName) {
 async function writeJson(fileName, data) {
   const filePath = path.join(contentDir, fileName);
   await writeFile(filePath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
+}
+
+function cardFilePath(categoryId) {
+  return path.join(cardsDir, categoryId, "cards.json");
+}
+
+async function readCardsForCategory(categoryId) {
+  try {
+    const raw = await readFile(cardFilePath(categoryId), "utf8");
+    return JSON.parse(raw);
+  } catch (error) {
+    if (error?.code === "ENOENT") {
+      return [];
+    }
+
+    throw error;
+  }
+}
+
+async function readCardsByCategories(categories) {
+  const categoryCards = await Promise.all(categories.map((category) => readCardsForCategory(category.id)));
+  const cards = categoryCards.flat();
+
+  if (cards.length > 0) {
+    return cards;
+  }
+
+  try {
+    return await readJson("cards.json");
+  } catch (error) {
+    if (error?.code === "ENOENT") {
+      return [];
+    }
+
+    throw error;
+  }
+}
+
+async function writeCardsForCategory(categoryId, cards) {
+  const categoryDir = path.join(cardsDir, categoryId);
+  await mkdir(categoryDir, { recursive: true });
+  await writeFile(cardFilePath(categoryId), `${JSON.stringify(cards, null, 2)}\n`, "utf8");
+}
+
+async function writeCardsForCategories(categoryIds, cards) {
+  const cardsByCategory = new Map();
+
+  for (const categoryId of categoryIds) {
+    cardsByCategory.set(categoryId, []);
+  }
+
+  for (const card of cards) {
+    if (cardsByCategory.has(card.category)) {
+      cardsByCategory.get(card.category).push(card);
+    }
+  }
+
+  await Promise.all([...cardsByCategory].map(([categoryId, categoryCards]) => writeCardsForCategory(categoryId, categoryCards)));
 }
 
 function isTime(value) {
@@ -231,10 +289,9 @@ function validateThemes(themes) {
 }
 
 async function loadRawGameData() {
-  const [gameModes, categories, cards, cardSets, gameLengths, cardOptionCounts, moods, intensities, themes] = await Promise.all([
+  const [gameModes, categories, cardSets, gameLengths, cardOptionCounts, moods, intensities, themes] = await Promise.all([
     readJson("gameModes.json"),
     readJson("categories.json"),
-    readJson("cards.json"),
     readJson("cardSets.json"),
     readJson("gameLengths.json"),
     readJson("cardOptionCounts.json"),
@@ -242,6 +299,7 @@ async function loadRawGameData() {
     readJson("intensities.json"),
     readJson("themes.json")
   ]);
+  const cards = await readCardsByCategories(categories);
 
   return { gameModes, categories, cards, cardSets, gameLengths, cardOptionCounts, moods, intensities, themes };
 }
@@ -271,6 +329,91 @@ function validateGameData(data) {
 
 async function loadGameData() {
   return validateGameData(await loadRawGameData());
+}
+
+function cardMatchesSet(card, cardSet) {
+  const matchesMode = cardSet.modeIds.length === 0 || cardSet.modeIds.includes(card.mode);
+  const matchesCategory = cardSet.categoryIds.length === 0 || cardSet.categoryIds.includes(card.category);
+  const matchesMood = cardSet.moodIds.length === 0 || card.moods.some((mood) => cardSet.moodIds.includes(mood));
+
+  return matchesMode && matchesCategory && matchesMood;
+}
+
+function buildCardStats(data) {
+  const finalCards = data.cards.filter((card) => card.finalCard);
+  const ranks = data.intensities.map((intensity) => {
+    const cards = data.cards.filter((card) => card.intensity === intensity.level);
+
+    return {
+      ...intensity,
+      total: cards.length,
+      finals: cards.filter((card) => card.finalCard).length,
+      byMode: data.gameModes.map((mode) => ({
+        id: mode.id,
+        label: mode.label,
+        total: cards.filter((card) => card.mode === mode.id).length
+      }))
+    };
+  });
+  const finalsByMode = data.gameModes.map((mode) => ({
+    id: mode.id,
+    label: mode.label,
+    total: finalCards.filter((card) => card.mode === mode.id).length
+  }));
+  const decks = data.cardSets.map((cardSet) => {
+    const cards = data.cards.filter((card) => cardMatchesSet(card, cardSet));
+
+    return {
+      ...cardSet,
+      total: cards.length,
+      finals: cards.filter((card) => card.finalCard).length,
+      byMode: data.gameModes.map((mode) => ({
+        id: mode.id,
+        label: mode.label,
+        total: cards.filter((card) => card.mode === mode.id).length
+      })),
+      byRank: data.intensities.map((intensity) => ({
+        level: intensity.level,
+        label: intensity.label,
+        total: cards.filter((card) => card.intensity === intensity.level).length
+      }))
+    };
+  });
+
+  return {
+    total: data.cards.length,
+    finals: finalCards.length,
+    ranks,
+    finalsByMode,
+    decks
+  };
+}
+
+function buildCardSummaries(data) {
+  return data.categories.map((category) => {
+    const cards = data.cards.filter((card) => card.category === category.id);
+
+    return {
+      categoryId: category.id,
+      total: cards.length,
+      finals: cards.filter((card) => card.finalCard).length
+    };
+  });
+}
+
+function buildAdminGameData(data) {
+  return {
+    ...data,
+    cards: [],
+    cardSummaries: buildCardSummaries(data),
+    cardStats: buildCardStats(data)
+  };
+}
+
+function validateCategoryId(categoryId, categories) {
+  if (!categories.some((category) => category.id === categoryId)) {
+    throw new Error(`Unknown category "${categoryId}".`);
+  }
 }
 
 app.get("/api/game-modes", async (_request, response, next) => {
@@ -362,6 +505,53 @@ app.get("/api/game-data", async (_request, response, next) => {
   }
 });
 
+app.get("/api/admin/game-data", async (_request, response, next) => {
+  try {
+    response.json(buildAdminGameData(await loadGameData()));
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.get("/api/admin/cards/:categoryId", async (request, response, next) => {
+  try {
+    const data = await loadGameData();
+    validateCategoryId(request.params.categoryId, data.categories);
+    response.json(data.cards.filter((card) => card.category === request.params.categoryId));
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.put("/api/admin/cards/:categoryId", async (request, response, next) => {
+  try {
+    const categoryId = request.params.categoryId;
+
+    if (!Array.isArray(request.body)) {
+      response.status(400).json({ message: `Category "${categoryId}" must be saved as an array.` });
+      return;
+    }
+
+    const nextData = await loadRawGameData();
+    validateCategoryId(categoryId, nextData.categories);
+
+    const touchedCategoryIds = new Set([categoryId]);
+
+    for (const card of request.body) {
+      if (typeof card?.category === "string") {
+        touchedCategoryIds.add(card.category);
+      }
+    }
+
+    nextData.cards = [...nextData.cards.filter((card) => card.category !== categoryId), ...request.body];
+    validateGameData(nextData);
+    await writeCardsForCategories(touchedCategoryIds, nextData.cards);
+    response.json(buildAdminGameData(await loadGameData()));
+  } catch (error) {
+    next(error);
+  }
+});
+
 app.put("/api/admin/:section", async (request, response, next) => {
   try {
     const section = request.params.section;
@@ -381,7 +571,7 @@ app.put("/api/admin/:section", async (request, response, next) => {
     nextData[section] = request.body;
     validateGameData(nextData);
     await writeJson(fileName, request.body);
-    response.json(await loadGameData());
+    response.json(buildAdminGameData(await loadGameData()));
   } catch (error) {
     next(error);
   }

@@ -1,0 +1,188 @@
+[
+  {
+    "id": "massage-brust-01",
+    "mode": "massage",
+    "category": "brust",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege eine Hand oberhalb des Brustbeins auf und streiche mit der anderen langsam zu den Schultern aus."
+  },
+  {
+    "id": "massage-brust-02",
+    "mode": "massage",
+    "category": "brust",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere den oberen Brustbereich mit flachen Händen, ruhig und weit, ohne Druck auf empfindliche Stellen."
+  },
+  {
+    "id": "massage-brust-03",
+    "mode": "massage",
+    "category": "brust",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Zeichne mit zwei Fingern langsame Halbkreise vom Schlüsselbein nach außen und lasse {receiver} das Tempo bestimmen."
+  },
+  {
+    "id": "massage-brust-04",
+    "mode": "massage",
+    "category": "brust",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche vom Brustbein über die Rippenbögen nach außen und wechsle zwischen Wärme und federleichtem Kontakt."
+  },
+  {
+    "id": "massage-brust-05",
+    "mode": "massage",
+    "category": "brust",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere rund um den Brustkorb mit langsamen Bewegungen und frage nach einer Stelle, die mehr Aufmerksamkeit möchte."
+  },
+  {
+    "id": "massage-brust-06",
+    "mode": "massage",
+    "category": "brust",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Nutze nur die Rückseite deiner Finger, um den Brustbereich in weichen Linien zu erkunden."
+  },
+  {
+    "id": "massage-brust-07",
+    "mode": "massage",
+    "category": "brust",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere Brustkorb, Schultern und Oberarme in langen Bewegungen, die jedes Mal etwas langsamer werden."
+  },
+  {
+    "id": "massage-brust-08",
+    "mode": "massage",
+    "category": "brust",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Bitte {receiver}, beim Ausatmen die Schultern loszulassen, und begleite jedes Ausatmen mit einer breiten, warmen Streichung."
+  }
+]

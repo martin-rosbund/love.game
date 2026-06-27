@@ -1,8 +1,15 @@
 import { useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import { ArrowLeft, Check, Copy, Plus, RefreshCcw, Save, Trash2 } from "lucide-react";
-import { fetchGameData, saveContentSection, type EditableContentSection } from "./api";
-import type { CardSet, Category, GameData, GameLength, MassageCard } from "./types";
+import {
+  fetchAdminGameData,
+  fetchCardsByCategory,
+  saveCardsByCategory,
+  saveContentSection,
+  type AdminGameData,
+  type EditableContentSection
+} from "./api";
+import type { CardSet, Category, GameLength, MassageCard } from "./types";
 
 type AdminTab = "statistics" | EditableContentSection;
 
@@ -70,36 +77,36 @@ function getCategoriesForMode(categories: Category[], modeId: string) {
   return categories.filter((category) => category.modes.includes(modeId));
 }
 
-function cardMatchesSet(card: MassageCard, cardSet: CardSet) {
-  const matchesMode = cardSet.modeIds.length === 0 || cardSet.modeIds.includes(card.mode);
-  const matchesCategory = cardSet.categoryIds.length === 0 || cardSet.categoryIds.includes(card.category);
-  const matchesMood = cardSet.moodIds.length === 0 || card.moods.some((mood) => cardSet.moodIds.includes(mood));
-
-  return matchesMode && matchesCategory && matchesMood;
-}
-
 export function AdminScreen() {
-  const [draft, setDraft] = useState<GameData | null>(null);
+  const [draft, setDraft] = useState<AdminGameData | null>(null);
   const [loadError, setLoadError] = useState("");
   const [status, setStatus] = useState("");
   const [savingSection, setSavingSection] = useState<EditableContentSection | null>(null);
   const [activeTab, setActiveTab] = useState<AdminTab>("statistics");
   const [cardModeFilter, setCardModeFilter] = useState("alle");
   const [cardRankFilter, setCardRankFilter] = useState("alle");
-  const [cardCategoryFilter, setCardCategoryFilter] = useState("alle");
+  const [cardCategoryFilter, setCardCategoryFilter] = useState("");
   const [cardFinalFilter, setCardFinalFilter] = useState("alle");
   const [cardSearch, setCardSearch] = useState("");
+  const [cardsLoading, setCardsLoading] = useState(false);
+  const [cardDraftDirty, setCardDraftDirty] = useState(false);
 
-  function loadData() {
+  async function loadData() {
     setLoadError("");
-    fetchGameData()
-      .then((data) => {
-        setDraft(data);
-        setStatus("Inhalte geladen.");
-      })
-      .catch((error: unknown) => {
-        setLoadError(error instanceof Error ? error.message : "Inhalte konnten nicht geladen werden.");
-      });
+
+    try {
+      const data = await fetchAdminGameData();
+      const categoryId = data.categories.some((category) => category.id === cardCategoryFilter)
+        ? cardCategoryFilter
+        : data.categories[0]?.id ?? "";
+      const cards = categoryId ? await fetchCardsByCategory(categoryId) : [];
+      setDraft({ ...data, cards });
+      setCardCategoryFilter(categoryId);
+      setCardDraftDirty(false);
+      setStatus("Inhalte geladen.");
+    } catch (error: unknown) {
+      setLoadError(error instanceof Error ? error.message : "Inhalte konnten nicht geladen werden.");
+    }
   }
 
   useEffect(() => {
@@ -109,6 +116,9 @@ export function AdminScreen() {
   const moodOptions = useMemo(() => draft?.moods.map((mood) => ({ id: mood.id, label: mood.label })) ?? [], [draft]);
   const modeOptions = useMemo(() => draft?.gameModes.map((mode) => ({ id: mode.id, label: mode.label })) ?? [], [draft]);
   const categoryOptions = useMemo(() => draft?.categories.map((category) => ({ id: category.id, label: category.name })) ?? [], [draft]);
+  const cardSummaryByCategory = useMemo(() => {
+    return new Map(draft?.cardSummaries.map((summary) => [summary.categoryId, summary]) ?? []);
+  }, [draft]);
 
   const visibleCards = useMemo(() => {
     if (!draft) {
@@ -121,7 +131,6 @@ export function AdminScreen() {
       .map((card, index) => ({ card, index }))
       .filter(({ card }) => cardModeFilter === "alle" || card.mode === cardModeFilter)
       .filter(({ card }) => cardRankFilter === "alle" || String(card.intensity) === cardRankFilter)
-      .filter(({ card }) => cardCategoryFilter === "alle" || card.category === cardCategoryFilter)
       .filter(({ card }) => {
         if (cardFinalFilter === "alle") {
           return true;
@@ -136,64 +145,17 @@ export function AdminScreen() {
 
         return [card.id, card.category, card.task].some((value) => value.toLocaleLowerCase("de-DE").includes(search));
       });
-  }, [cardCategoryFilter, cardFinalFilter, cardModeFilter, cardRankFilter, cardSearch, draft]);
+  }, [cardFinalFilter, cardModeFilter, cardRankFilter, cardSearch, draft]);
 
-  const contentStats = useMemo(() => {
-    if (!draft) {
-      return null;
-    }
+  const contentStats = draft?.cardStats ?? null;
 
-    const finalCards = draft.cards.filter((card) => card.finalCard);
-    const ranks = draft.intensities.map((intensity) => {
-      const cards = draft.cards.filter((card) => card.intensity === intensity.level);
-
-      return {
-        ...intensity,
-        total: cards.length,
-        finals: cards.filter((card) => card.finalCard).length,
-        byMode: draft.gameModes.map((mode) => ({
-          id: mode.id,
-          label: mode.label,
-          total: cards.filter((card) => card.mode === mode.id).length
-        }))
-      };
-    });
-    const finalsByMode = draft.gameModes.map((mode) => ({
-      id: mode.id,
-      label: mode.label,
-      total: finalCards.filter((card) => card.mode === mode.id).length
-    }));
-    const decks = draft.cardSets.map((cardSet) => {
-      const cards = draft.cards.filter((card) => cardMatchesSet(card, cardSet));
-
-      return {
-        ...cardSet,
-        total: cards.length,
-        finals: cards.filter((card) => card.finalCard).length,
-        byMode: draft.gameModes.map((mode) => ({
-          id: mode.id,
-          label: mode.label,
-          total: cards.filter((card) => card.mode === mode.id).length
-        })),
-        byRank: draft.intensities.map((intensity) => ({
-          level: intensity.level,
-          label: intensity.label,
-          total: cards.filter((card) => card.intensity === intensity.level).length
-        }))
-      };
-    });
-
-    return {
-      total: draft.cards.length,
-      finals: finalCards.length,
-      ranks,
-      finalsByMode,
-      decks
-    };
-  }, [draft]);
-
-  function updateSection(section: EditableContentSection, items: GameData[EditableContentSection]) {
+  function updateSection(section: EditableContentSection, items: AdminGameData[EditableContentSection]) {
     setDraft((current) => (current ? { ...current, [section]: items } : current));
+  }
+
+  function updateCards(cards: MassageCard[]) {
+    updateSection("cards", cards);
+    setCardDraftDirty(true);
   }
 
   function updateCard(index: number, patch: Partial<MassageCard>) {
@@ -202,7 +164,7 @@ export function AdminScreen() {
     }
 
     const nextCards = draft.cards.map((card, cardIndex) => (cardIndex === index ? { ...card, ...patch } : card));
-    updateSection("cards", nextCards);
+    updateCards(nextCards);
   }
 
   function addCard() {
@@ -210,8 +172,12 @@ export function AdminScreen() {
       return;
     }
 
-    const mode = draft.gameModes[0]?.id ?? "massage";
-    const category = getCategoriesForMode(draft.categories, mode)[0]?.id ?? draft.categories[0]?.id ?? "";
+    const activeCategory = draft.categories.find((category) => category.id === cardCategoryFilter) ?? draft.categories[0];
+    const mode =
+      cardModeFilter !== "alle" && activeCategory?.modes.includes(cardModeFilter)
+        ? cardModeFilter
+        : activeCategory?.modes[0] ?? draft.gameModes[0]?.id ?? "massage";
+    const category = activeCategory?.id ?? "";
     const card: MassageCard = {
       id: nextId(`${mode}-${category || "karte"}`, draft.cards.map((item) => item.id)),
       mode,
@@ -225,7 +191,7 @@ export function AdminScreen() {
       task: "Neue Aufgabe beschreiben."
     };
 
-    updateSection("cards", [card, ...draft.cards]);
+    updateCards([card, ...draft.cards]);
     setActiveTab("cards");
   }
 
@@ -239,7 +205,7 @@ export function AdminScreen() {
       ...source,
       id: nextId(source.id.replace(/-\d+$/, ""), draft.cards.map((item) => item.id))
     };
-    updateSection("cards", [card, ...draft.cards]);
+    updateCards([card, ...draft.cards]);
   }
 
   function deleteCard(index: number) {
@@ -247,8 +213,7 @@ export function AdminScreen() {
       return;
     }
 
-    updateSection(
-      "cards",
+    updateCards(
       draft.cards.filter((_, cardIndex) => cardIndex !== index)
     );
   }
@@ -363,6 +328,40 @@ export function AdminScreen() {
     );
   }
 
+  async function loadCardsForCategory(categoryId: string) {
+    if (!categoryId) {
+      return;
+    }
+
+    setCardsLoading(true);
+    setStatus("");
+
+    try {
+      const cards = await fetchCardsByCategory(categoryId);
+      const categoryLabel = draft?.categories.find((category) => category.id === categoryId)?.name ?? categoryId;
+      setDraft((current) => (current ? { ...current, cards } : current));
+      setCardCategoryFilter(categoryId);
+      setCardDraftDirty(false);
+      setStatus(`${categoryLabel} geladen.`);
+    } catch (error: unknown) {
+      setStatus(error instanceof Error ? error.message : "Karten konnten nicht geladen werden.");
+    } finally {
+      setCardsLoading(false);
+    }
+  }
+
+  function changeCardCategory(categoryId: string) {
+    if (categoryId === cardCategoryFilter) {
+      return;
+    }
+
+    if (cardDraftDirty && !window.confirm("Ungespeicherte Kartenänderungen verwerfen und Kategorie wechseln?")) {
+      return;
+    }
+
+    void loadCardsForCategory(categoryId);
+  }
+
   async function saveSection(section: EditableContentSection) {
     if (!draft) {
       return;
@@ -372,8 +371,19 @@ export function AdminScreen() {
     setStatus("");
 
     try {
-      const savedData = await saveContentSection(section, draft[section]);
-      setDraft(savedData);
+      if (section === "cards") {
+        if (!cardCategoryFilter) {
+          throw new Error("Bitte zuerst eine Kategorie auswählen.");
+        }
+
+        const savedData = await saveCardsByCategory(cardCategoryFilter, draft.cards);
+        const cards = await fetchCardsByCategory(cardCategoryFilter);
+        setDraft({ ...savedData, cards });
+        setCardDraftDirty(false);
+      } else {
+        const savedData = await saveContentSection(section, draft[section]);
+        setDraft({ ...savedData, cards: draft.cards });
+      }
       setStatus(`${tabs.find((tab) => tab.id === section)?.label ?? "Inhalte"} gespeichert.`);
     } catch (error: unknown) {
       setStatus(error instanceof Error ? error.message : "Speichern fehlgeschlagen.");
@@ -428,8 +438,8 @@ export function AdminScreen() {
       </header>
 
       <section className="admin-stats" aria-label="Inhaltsübersicht">
-        <span>{draft.cards.length} Karten</span>
-        <span>{draft.cards.filter((card) => card.finalCard).length} Finalkarten</span>
+        <span>{draft.cardStats.total} Karten</span>
+        <span>{draft.cardStats.finals} Finalkarten</span>
         <span>{draft.categories.length} Kategorien</span>
         <span>{draft.gameLengths.length} Spiellängen</span>
         <span>{draft.cardSets.length} Kartensets</span>
@@ -455,7 +465,7 @@ export function AdminScreen() {
                 type="button"
                 className="admin-save-button"
                 onClick={() => saveSection(editableActiveTab)}
-                disabled={savingSection === editableActiveTab}
+                disabled={savingSection === editableActiveTab || (editableActiveTab === "cards" && cardsLoading)}
               >
                 {savingSection === editableActiveTab ? <RefreshCcw aria-hidden="true" size={17} /> : <Save aria-hidden="true" size={17} />}
                 Speichern
@@ -557,37 +567,59 @@ export function AdminScreen() {
                   <Plus aria-hidden="true" size={17} />
                   Karte
                 </button>
-                <select value={cardModeFilter} onChange={(event) => setCardModeFilter(event.target.value)} aria-label="Modus filtern">
-                  <option value="alle">Alle Modi</option>
-                  {draft.gameModes.map((mode) => (
-                    <option key={mode.id} value={mode.id}>
-                      {mode.label}
-                    </option>
-                  ))}
-                </select>
-                <select value={cardRankFilter} onChange={(event) => setCardRankFilter(event.target.value)} aria-label="Rang filtern">
-                  <option value="alle">Alle Ränge</option>
-                  {draft.intensities.map((intensity) => (
-                    <option key={intensity.level} value={String(intensity.level)}>
-                      {intensity.label}
-                    </option>
-                  ))}
-                </select>
-                <select value={cardCategoryFilter} onChange={(event) => setCardCategoryFilter(event.target.value)} aria-label="Kategorie filtern">
-                  <option value="alle">Alle Kategorien</option>
-                  {draft.categories.map((category) => (
-                    <option key={category.id} value={category.id}>
-                      {category.name}
-                    </option>
-                  ))}
-                </select>
-                <select value={cardFinalFilter} onChange={(event) => setCardFinalFilter(event.target.value)} aria-label="Finalkarten filtern">
-                  <option value="alle">Alle Karten</option>
-                  <option value="final">Nur Finalkarten</option>
-                  <option value="normal">Ohne Finalkarten</option>
-                </select>
-                <input value={cardSearch} onChange={(event) => setCardSearch(event.target.value)} placeholder="Karten suchen" />
+                <label className="admin-toolbar-field">
+                  <span>Modus</span>
+                  <select value={cardModeFilter} onChange={(event) => setCardModeFilter(event.target.value)} aria-label="Modus filtern">
+                    <option value="alle">Alle Modi</option>
+                    {draft.gameModes.map((mode) => (
+                      <option key={mode.id} value={mode.id}>
+                        {mode.label}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="admin-toolbar-field">
+                  <span>Rang</span>
+                  <select value={cardRankFilter} onChange={(event) => setCardRankFilter(event.target.value)} aria-label="Rang filtern">
+                    <option value="alle">Alle Ränge</option>
+                    {draft.intensities.map((intensity) => (
+                      <option key={intensity.level} value={String(intensity.level)}>
+                        {intensity.label}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="admin-toolbar-field">
+                  <span>Geladene Kategorie</span>
+                  <select
+                    value={cardCategoryFilter}
+                    onChange={(event) => changeCardCategory(event.target.value)}
+                    aria-label="Kategorie laden"
+                    disabled={cardsLoading}
+                  >
+                    {draft.categories.map((category) => (
+                      <option key={category.id} value={category.id}>
+                        {category.name} ({cardSummaryByCategory.get(category.id)?.total ?? 0})
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="admin-toolbar-field">
+                  <span>Finale</span>
+                  <select value={cardFinalFilter} onChange={(event) => setCardFinalFilter(event.target.value)} aria-label="Finalkarten filtern">
+                    <option value="alle">Alle Karten</option>
+                    <option value="final">Nur Finalkarten</option>
+                    <option value="normal">Ohne Finalkarten</option>
+                  </select>
+                </label>
+                <label className="admin-toolbar-field">
+                  <span>Suche</span>
+                  <input value={cardSearch} onChange={(event) => setCardSearch(event.target.value)} placeholder="Karten suchen" />
+                </label>
               </div>
+
+              {cardsLoading && <div className="admin-save-footer">Kategorie wird geladen.</div>}
+              {!cardsLoading && visibleCards.length === 0 && <div className="admin-save-footer">Keine Karten in dieser Ansicht.</div>}
 
               <div className="admin-card-list">
                 {visibleCards.map(({ card, index }) => {

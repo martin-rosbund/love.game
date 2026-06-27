@@ -1,0 +1,188 @@
+[
+  {
+    "id": "massage-nacken-01",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege die Fingerspitzen an den Haaransatz und streiche langsam bis zu den Schultern hinunter."
+  },
+  {
+    "id": "massage-nacken-02",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere den Nacken mit winzigen Kreisen und lasse jede Bewegung weich in die Schultern auslaufen."
+  },
+  {
+    "id": "massage-nacken-03",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wechsle zwischen Daumendruck und zarten Fingerkuppen, während {receiver} entscheidet, ob links oder rechts mehr Aufmerksamkeit bekommt."
+  },
+  {
+    "id": "massage-nacken-04",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Ziehe mit beiden Daumen langsame Bahnen vom Nackenansatz nach außen und lasse die Schultern danach fallen."
+  },
+  {
+    "id": "massage-nacken-05",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere knapp unterhalb des Haaransatzes und streiche danach hauchzart über dieselbe Stelle."
+  },
+  {
+    "id": "massage-nacken-06",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Bitte {receiver}, den Kopf langsam zu drehen; begleite die Bewegung mit sanftem Druck entlang der Nackenmuskeln."
+  },
+  {
+    "id": "massage-nacken-07",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Baue Spannung auf: zehn Sekunden fester Druck, zehn Sekunden nur leicht berühren, dann die Seite wechseln."
+  },
+  {
+    "id": "massage-nacken-08",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere den Nacken so langsam, dass jede Bewegung wie ein einzelner, bewusster Satz wirkt."
+  }
+]

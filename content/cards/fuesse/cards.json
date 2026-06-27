@@ -1,0 +1,596 @@
+[
+  {
+    "id": "massage-fuesse-01",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Halte einen Fuß mit beiden Händen und streiche langsam von der Ferse zu den Zehen."
+  },
+  {
+    "id": "massage-fuesse-02",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere die Fußsohle mit dem Daumen in kleinen Kreisen und bleibe bei jeder angenehmen Stelle länger."
+  },
+  {
+    "id": "massage-fuesse-03",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Ziehe jeden Zeh sanft einzeln lang und beende jeden mit einer kleinen Kreisbewegung."
+  },
+  {
+    "id": "massage-fuesse-04",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Knete die Fußgewölbe mit beiden Daumen und lass {receiver} per Handzeichen mehr oder weniger Druck wünschen."
+  },
+  {
+    "id": "massage-fuesse-05",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wechsle zwischen kräftigem Druck an der Ferse und sehr leichten Linien über den Spann."
+  },
+  {
+    "id": "massage-fuesse-06",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere beide Füße abwechselnd so, dass nie klar ist, welcher als Nächstes Aufmerksamkeit bekommt."
+  },
+  {
+    "id": "massage-fuesse-07",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere Fußsohle, Knöchel und Wade zu einer langsamen, sehr genauen Massagekette."
+  },
+  {
+    "id": "massage-fuesse-08",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Suche drei empfindliche Punkte am Fuß und massiere jeden mit einem anderen Rhythmus."
+  },
+  {
+    "id": "massage-fuesse-09",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "06:00",
+    "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Schenke beiden Füßen eine lange Zusatzmassage mit warmem Halten, tiefem Sohlen-Druck und einem sehr sanften Abschluss."
+  },
+  {
+    "id": "liebespiel-fuesse-01",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "romantisch",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Halte einen Fuß von {receiver} und zeichne mit dem Daumen einen langsamen Kreis auf die Sohle."
+  },
+  {
+    "id": "liebespiel-fuesse-02",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "romantisch",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Küsse oder streiche über den Spann und halte danach den Fuß warm in beiden Händen."
+  },
+  {
+    "id": "liebespiel-fuesse-03",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lass {receiver} die Augen schließen und erraten, ob du mit Fingerkuppe, Handfläche oder Mund berührst."
+  },
+  {
+    "id": "liebespiel-fuesse-04",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wandere von den Zehen zum Knöchel und zurück, jedes Mal einen Hauch langsamer."
+  },
+  {
+    "id": "liebespiel-fuesse-05",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Mache aus jedem Zeh eine kleine eigene Szene: Streicheln, massierne, Pause, nächster Zeh."
+  },
+  {
+    "id": "liebespiel-fuesse-06",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Verwöhne den Fuß und die Wade von {receiver} intensiv."
+  },
+  {
+    "id": "liebespiel-fuesse-08",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "05:00",
+    "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Verwöhne Füße, Knöchel und Beine fünf Minuten lang mit Blickkontakt, Pausen und langsam steigender Spannung."
+  },
+  {
+    "id": "liebesspiel-experiment-03",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Küsst den Fußrücken und massiere die Zehenspitzen mit kreisenden Bewegungen deiner Handfläche."
+  },
+  {
+    "id": "liebesspiel-experiment-09",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lecke den Fußrücken und die Beine, als würdest du sie verehren."
+  },
+  {
+    "id": "liebesspiel-experiment-15",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "03:15",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Setze einen Fuß in deine Handfläche und massiere die Sohle mit Daumenpressung."
+  },
+  {
+    "id": "liebesspiel-experiment-21",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "03:30",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Küsse die Füße vom Knöchel bis zu den Zehen."
+  },
+  {
+    "id": "liebesspiel-experiment-27",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "03:15",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Setze den Fuß sanft in die Handfläche und drücke ihn leicht an."
+  },
+  {
+    "id": "liebesspiel-experiment-33",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "04:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "divers"
+    ],
+    "task": "Reibe deinen Penis an den Fußrücken während du die Beine massierst."
+  },
+  {
+    "id": "liebesspiel-experiment-37",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "03:30",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streichel die Füße liebevoll mit deinen eigenen Füßen."
+  },
+  {
+    "id": "libesspiel-experiment-71",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "4:00",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "task": "Legt einen Fuß in den Intimberiech des jeweils anderen und testet euch aus."
+  },
+  {
+    "id": "libesspiel-experiment-71",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "4:00",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "task": "Legt einen Fuß in den Intimberiech des jeweils anderen und testet aus wie der jeweils andere reagiert."
+  },
+  {
+    "id": "libesspiel-experiment-73",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "2:00",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "divers"
+    ],
+    "task": "Dringe in {receiver} ein paar Mal ganz langsam ein während du ihre Füße liebkost."
+  }
+]

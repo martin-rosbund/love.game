@@ -1,0 +1,397 @@
+[
+  {
+    "id": "massage-ruecken-01",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche mit warmen Handflächen langsam vom unteren Rücken bis zu den Schultern und finde ein Tempo, bei dem {receiver} tiefer ausatmet."
+  },
+  {
+    "id": "massage-ruecken-02",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege beide Hände für einen Moment still auf den Rücken von {receiver}, bevor du mit breiten, ruhigen Kreisen beginnst."
+  },
+  {
+    "id": "massage-ruecken-03",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere rechts und links neben der Wirbelsäule in kleinen Spiralen, ohne direkt auf die Wirbelsäule zu drücken."
+  },
+  {
+    "id": "massage-ruecken-04",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Zeichne mit den Fingerspitzen eine langsame Linie über den Rücken und folge ihr danach mit kräftigeren Handballenbewegungen."
+  },
+  {
+    "id": "massage-ruecken-05",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Knete die Schulterblätter mit Daumen und Handballen, erst sanft, dann etwas tiefer, wenn {receiver} es mag."
+  },
+  {
+    "id": "massage-ruecken-06",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wechsle zwischen festen Druckpunkten und federleichten Berührungen, sodass {receiver} nie ganz weiß, was als Nächstes kommt."
+  },
+  {
+    "id": "massage-ruecken-07",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Arbeite dich in drei langsamen Wellen vom Kreuzbein bis zum Nacken hoch und halte nach jeder Welle einen Moment inne."
+  },
+  {
+    "id": "massage-ruecken-08",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Bitte {receiver}, drei Stellen am Rücken zu nennen; massiere jede Stelle mit einer anderen Technik: kreisen, kneten, streichen."
+  },
+  {
+    "id": "massage-ruecken-09",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "06:00",
+    "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere Schultern, Rücken und Lendenbereich zu einer langen Zusatzmassage mit ruhigem Anfang, kräftiger Mitte und sehr langsamem Ausklang."
+  },
+  {
+    "id": "liebespiel-ruecken-01",
+    "mode": "liebespiel",
+    "category": "ruecken",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "romantisch",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche {receiver} mit nur zwei Fingerspitzen über den Rücken nach unten und lasse jede Linie kurz vor dem Ziel enden."
+  },
+  {
+    "id": "liebespiel-ruecken-02",
+    "mode": "liebespiel",
+    "category": "ruecken",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "romantisch",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Schreibe ein geheimes Wort auf den Rücken von {receiver}; wenn es erraten wird, darf {receiver} eine Massage erhalten."
+  },
+  {
+    "id": "liebespiel-ruecken-03",
+    "mode": "liebespiel",
+    "category": "ruecken",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Küsse entlang einer Schulterlinie."
+  },
+  {
+    "id": "liebespiel-ruecken-04",
+    "mode": "liebespiel",
+    "category": "ruecken",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wechsle zwischen Nähe und Abstand: eine leichte Berührung, drei Sekunden Pause, eine intime Berührung."
+  },
+  {
+    "id": "liebespiel-ruecken-05",
+    "mode": "liebespiel",
+    "category": "ruecken",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere langsam vom Nacken bis zum unteren Rücken und frage {receiver}, ob die Massage wiederholt oder verändert werden soll."
+  },
+  {
+    "id": "liebespiel-ruecken-06",
+    "mode": "liebespiel",
+    "category": "ruecken",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Nutze deine Fingerspitzen um den Intimbereich von {receiver} zu erkunden."
+  },
+  {
+    "id": "liebespiel-ruecken-07",
+    "mode": "liebespiel",
+    "category": "ruecken",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Drücke {receiver} sanft näher an dich und verwöhne den Rücken mit langsamen, fordernden und dann wieder ganz leichten Berührungen."
+  },
+  {
+    "id": "liebespiel-ruecken-08",
+    "mode": "liebespiel",
+    "category": "ruecken",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lass {receiver} eine Rückenstelle wählen, die du lang so intensiv und langsam wie möglich verwöhnst."
+  }
+]
