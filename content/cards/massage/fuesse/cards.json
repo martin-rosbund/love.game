@@ -1,0 +1,213 @@
+[
+  {
+    "id": "massage-fuesse-01",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Halte einen Fuß mit beiden Händen und streiche langsam von der Ferse zu den Zehen."
+  },
+  {
+    "id": "massage-fuesse-02",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere die Fußsohle mit dem Daumen in kleinen Kreisen und bleibe bei jeder angenehmen Stelle länger."
+  },
+  {
+    "id": "massage-fuesse-03",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Ziehe jeden Zeh sanft einzeln lang und beende jeden mit einer kleinen Kreisbewegung."
+  },
+  {
+    "id": "massage-fuesse-04",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Knete die Fußgewölbe mit beiden Daumen und lass {receiver} per Handzeichen mehr oder weniger Druck wünschen."
+  },
+  {
+    "id": "massage-fuesse-05",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wechsle zwischen kräftigem Druck an der Ferse und sehr leichten Linien über den Spann."
+  },
+  {
+    "id": "massage-fuesse-06",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere beide Füße abwechselnd so, dass nie klar ist, welcher als Nächstes Aufmerksamkeit bekommt."
+  },
+  {
+    "id": "massage-fuesse-07",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere Fußsohle, Knöchel und Wade zu einer langsamen, sehr genauen Massagekette."
+  },
+  {
+    "id": "massage-fuesse-08",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Suche drei empfindliche Punkte am Fuß und massiere jeden mit einem anderen Rhythmus."
+  },
+  {
+    "id": "massage-fuesse-09",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "06:00",
+    "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Schenke beiden Füßen eine lange Zusatzmassage mit warmem Halten, tiefem Sohlen-Druck und einem sehr sanften Abschluss."
+  }
+]

@@ -3,8 +3,8 @@ import type { ReactNode } from "react";
 import { ArrowLeft, Check, Copy, Plus, RefreshCcw, Save, Trash2 } from "lucide-react";
 import {
   fetchAdminGameData,
-  fetchCardsByCategory,
-  saveCardsByCategory,
+  fetchCardsByModeCategory,
+  saveCardsByModeCategory,
   saveContentSection,
   type AdminGameData,
   type EditableContentSection
@@ -83,7 +83,7 @@ export function AdminScreen() {
   const [status, setStatus] = useState("");
   const [savingSection, setSavingSection] = useState<EditableContentSection | null>(null);
   const [activeTab, setActiveTab] = useState<AdminTab>("statistics");
-  const [cardModeFilter, setCardModeFilter] = useState("alle");
+  const [cardModeFilter, setCardModeFilter] = useState("");
   const [cardRankFilter, setCardRankFilter] = useState("alle");
   const [cardCategoryFilter, setCardCategoryFilter] = useState("");
   const [cardFinalFilter, setCardFinalFilter] = useState("alle");
@@ -96,11 +96,14 @@ export function AdminScreen() {
 
     try {
       const data = await fetchAdminGameData();
-      const categoryId = data.categories.some((category) => category.id === cardCategoryFilter)
+      const modeId = data.gameModes.some((mode) => mode.id === cardModeFilter) ? cardModeFilter : data.gameModes[0]?.id ?? "";
+      const categoriesForMode = getCategoriesForMode(data.categories, modeId);
+      const categoryId = categoriesForMode.some((category) => category.id === cardCategoryFilter)
         ? cardCategoryFilter
-        : data.categories[0]?.id ?? "";
-      const cards = categoryId ? await fetchCardsByCategory(categoryId) : [];
+        : categoriesForMode[0]?.id ?? "";
+      const cards = modeId && categoryId ? await fetchCardsByModeCategory(modeId, categoryId) : [];
       setDraft({ ...data, cards });
+      setCardModeFilter(modeId);
       setCardCategoryFilter(categoryId);
       setCardDraftDirty(false);
       setStatus("Inhalte geladen.");
@@ -116,8 +119,9 @@ export function AdminScreen() {
   const moodOptions = useMemo(() => draft?.moods.map((mood) => ({ id: mood.id, label: mood.label })) ?? [], [draft]);
   const modeOptions = useMemo(() => draft?.gameModes.map((mode) => ({ id: mode.id, label: mode.label })) ?? [], [draft]);
   const categoryOptions = useMemo(() => draft?.categories.map((category) => ({ id: category.id, label: category.name })) ?? [], [draft]);
-  const cardSummaryByCategory = useMemo(() => {
-    return new Map(draft?.cardSummaries.map((summary) => [summary.categoryId, summary]) ?? []);
+  const loadedCategoryOptions = useMemo(() => getCategoriesForMode(draft?.categories ?? [], cardModeFilter), [cardModeFilter, draft]);
+  const cardSummaryByBucket = useMemo(() => {
+    return new Map(draft?.cardSummaries.map((summary) => [`${summary.modeId}\u0000${summary.categoryId}`, summary]) ?? []);
   }, [draft]);
 
   const visibleCards = useMemo(() => {
@@ -129,7 +133,6 @@ export function AdminScreen() {
 
     return draft.cards
       .map((card, index) => ({ card, index }))
-      .filter(({ card }) => cardModeFilter === "alle" || card.mode === cardModeFilter)
       .filter(({ card }) => cardRankFilter === "alle" || String(card.intensity) === cardRankFilter)
       .filter(({ card }) => {
         if (cardFinalFilter === "alle") {
@@ -145,7 +148,7 @@ export function AdminScreen() {
 
         return [card.id, card.category, card.task].some((value) => value.toLocaleLowerCase("de-DE").includes(search));
       });
-  }, [cardFinalFilter, cardModeFilter, cardRankFilter, cardSearch, draft]);
+  }, [cardFinalFilter, cardRankFilter, cardSearch, draft]);
 
   const contentStats = draft?.cardStats ?? null;
 
@@ -172,11 +175,8 @@ export function AdminScreen() {
       return;
     }
 
-    const activeCategory = draft.categories.find((category) => category.id === cardCategoryFilter) ?? draft.categories[0];
-    const mode =
-      cardModeFilter !== "alle" && activeCategory?.modes.includes(cardModeFilter)
-        ? cardModeFilter
-        : activeCategory?.modes[0] ?? draft.gameModes[0]?.id ?? "massage";
+    const activeCategory = loadedCategoryOptions.find((category) => category.id === cardCategoryFilter) ?? loadedCategoryOptions[0];
+    const mode = cardModeFilter || activeCategory?.modes[0] || draft.gameModes[0]?.id || "massage";
     const category = activeCategory?.id ?? "";
     const card: MassageCard = {
       id: nextId(`${mode}-${category || "karte"}`, draft.cards.map((item) => item.id)),
@@ -328,8 +328,8 @@ export function AdminScreen() {
     );
   }
 
-  async function loadCardsForCategory(categoryId: string) {
-    if (!categoryId) {
+  async function loadCardsForModeCategory(modeId: string, categoryId: string) {
+    if (!modeId || !categoryId) {
       return;
     }
 
@@ -337,17 +337,35 @@ export function AdminScreen() {
     setStatus("");
 
     try {
-      const cards = await fetchCardsByCategory(categoryId);
+      const cards = await fetchCardsByModeCategory(modeId, categoryId);
+      const modeLabel = draft?.gameModes.find((mode) => mode.id === modeId)?.label ?? modeId;
       const categoryLabel = draft?.categories.find((category) => category.id === categoryId)?.name ?? categoryId;
       setDraft((current) => (current ? { ...current, cards } : current));
+      setCardModeFilter(modeId);
       setCardCategoryFilter(categoryId);
       setCardDraftDirty(false);
-      setStatus(`${categoryLabel} geladen.`);
+      setStatus(`${modeLabel} / ${categoryLabel} geladen.`);
     } catch (error: unknown) {
       setStatus(error instanceof Error ? error.message : "Karten konnten nicht geladen werden.");
     } finally {
       setCardsLoading(false);
     }
+  }
+
+  function changeCardMode(modeId: string) {
+    if (!draft || modeId === cardModeFilter) {
+      return;
+    }
+
+    if (cardDraftDirty && !window.confirm("Ungespeicherte Kartenänderungen verwerfen und Modus wechseln?")) {
+      return;
+    }
+
+    const categoriesForMode = getCategoriesForMode(draft.categories, modeId);
+    const categoryId = categoriesForMode.some((category) => category.id === cardCategoryFilter)
+      ? cardCategoryFilter
+      : categoriesForMode[0]?.id ?? "";
+    void loadCardsForModeCategory(modeId, categoryId);
   }
 
   function changeCardCategory(categoryId: string) {
@@ -359,7 +377,7 @@ export function AdminScreen() {
       return;
     }
 
-    void loadCardsForCategory(categoryId);
+    void loadCardsForModeCategory(cardModeFilter, categoryId);
   }
 
   async function saveSection(section: EditableContentSection) {
@@ -372,12 +390,12 @@ export function AdminScreen() {
 
     try {
       if (section === "cards") {
-        if (!cardCategoryFilter) {
-          throw new Error("Bitte zuerst eine Kategorie auswählen.");
+        if (!cardModeFilter || !cardCategoryFilter) {
+          throw new Error("Bitte zuerst Modus und Kategorie auswählen.");
         }
 
-        const savedData = await saveCardsByCategory(cardCategoryFilter, draft.cards);
-        const cards = await fetchCardsByCategory(cardCategoryFilter);
+        const savedData = await saveCardsByModeCategory(cardModeFilter, cardCategoryFilter, draft.cards);
+        const cards = await fetchCardsByModeCategory(cardModeFilter, cardCategoryFilter);
         setDraft({ ...savedData, cards });
         setCardDraftDirty(false);
       } else {
@@ -568,9 +586,8 @@ export function AdminScreen() {
                   Karte
                 </button>
                 <label className="admin-toolbar-field">
-                  <span>Modus</span>
-                  <select value={cardModeFilter} onChange={(event) => setCardModeFilter(event.target.value)} aria-label="Modus filtern">
-                    <option value="alle">Alle Modi</option>
+                  <span>Geladener Modus</span>
+                  <select value={cardModeFilter} onChange={(event) => changeCardMode(event.target.value)} aria-label="Modus laden" disabled={cardsLoading}>
                     {draft.gameModes.map((mode) => (
                       <option key={mode.id} value={mode.id}>
                         {mode.label}
@@ -597,9 +614,9 @@ export function AdminScreen() {
                     aria-label="Kategorie laden"
                     disabled={cardsLoading}
                   >
-                    {draft.categories.map((category) => (
+                    {loadedCategoryOptions.map((category) => (
                       <option key={category.id} value={category.id}>
-                        {category.name} ({cardSummaryByCategory.get(category.id)?.total ?? 0})
+                        {category.name} ({cardSummaryByBucket.get(`${cardModeFilter}\u0000${category.id}`)?.total ?? 0})
                       </option>
                     ))}
                   </select>

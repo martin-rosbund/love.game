@@ -30,13 +30,13 @@ async function writeJson(fileName, data) {
   await writeFile(filePath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
 }
 
-function cardFilePath(categoryId) {
-  return path.join(cardsDir, categoryId, "cards.json");
+function cardFilePath(modeId, categoryId) {
+  return path.join(cardsDir, modeId, categoryId, "cards.json");
 }
 
-async function readCardsForCategory(categoryId) {
+async function readCardsForModeCategory(modeId, categoryId) {
   try {
-    const raw = await readFile(cardFilePath(categoryId), "utf8");
+    const raw = await readFile(cardFilePath(modeId, categoryId), "utf8");
     return JSON.parse(raw);
   } catch (error) {
     if (error?.code === "ENOENT") {
@@ -47,12 +47,38 @@ async function readCardsForCategory(categoryId) {
   }
 }
 
-async function readCardsByCategories(categories) {
-  const categoryCards = await Promise.all(categories.map((category) => readCardsForCategory(category.id)));
-  const cards = categoryCards.flat();
+async function readLegacyCardsForCategory(categoryId) {
+  try {
+    const raw = await readFile(path.join(cardsDir, categoryId, "cards.json"), "utf8");
+    return JSON.parse(raw);
+  } catch (error) {
+    if (error?.code === "ENOENT") {
+      return [];
+    }
+
+    throw error;
+  }
+}
+
+async function readCardsByModeCategories(gameModes, categories) {
+  const cardGroups = await Promise.all(
+    gameModes.flatMap((mode) =>
+      categories
+        .filter((category) => category.modes.includes(mode.id))
+        .map((category) => readCardsForModeCategory(mode.id, category.id))
+    )
+  );
+  const cards = cardGroups.flat();
 
   if (cards.length > 0) {
     return cards;
+  }
+
+  const legacyCategoryCards = await Promise.all(categories.map((category) => readLegacyCardsForCategory(category.id)));
+  const legacyCards = legacyCategoryCards.flat();
+
+  if (legacyCards.length > 0) {
+    return legacyCards;
   }
 
   try {
@@ -66,26 +92,30 @@ async function readCardsByCategories(categories) {
   }
 }
 
-async function writeCardsForCategory(categoryId, cards) {
-  const categoryDir = path.join(cardsDir, categoryId);
+async function writeCardsForModeCategory(modeId, categoryId, cards) {
+  const categoryDir = path.join(cardsDir, modeId, categoryId);
   await mkdir(categoryDir, { recursive: true });
-  await writeFile(cardFilePath(categoryId), `${JSON.stringify(cards, null, 2)}\n`, "utf8");
+  await writeFile(cardFilePath(modeId, categoryId), `${JSON.stringify(cards, null, 2)}\n`, "utf8");
 }
 
-async function writeCardsForCategories(categoryIds, cards) {
-  const cardsByCategory = new Map();
+async function writeCardsForModeCategories(cardBuckets, cards) {
+  const cardsByBucket = new Map();
 
-  for (const categoryId of categoryIds) {
-    cardsByCategory.set(categoryId, []);
+  for (const bucket of cardBuckets) {
+    cardsByBucket.set(`${bucket.modeId}\u0000${bucket.categoryId}`, { ...bucket, cards: [] });
   }
 
   for (const card of cards) {
-    if (cardsByCategory.has(card.category)) {
-      cardsByCategory.get(card.category).push(card);
+    const key = `${card.mode}\u0000${card.category}`;
+
+    if (cardsByBucket.has(key)) {
+      cardsByBucket.get(key).cards.push(card);
     }
   }
 
-  await Promise.all([...cardsByCategory].map(([categoryId, categoryCards]) => writeCardsForCategory(categoryId, categoryCards)));
+  await Promise.all(
+    [...cardsByBucket.values()].map((bucket) => writeCardsForModeCategory(bucket.modeId, bucket.categoryId, bucket.cards))
+  );
 }
 
 function isTime(value) {
@@ -299,7 +329,7 @@ async function loadRawGameData() {
     readJson("intensities.json"),
     readJson("themes.json")
   ]);
-  const cards = await readCardsByCategories(categories);
+  const cards = await readCardsByModeCategories(gameModes, categories);
 
   return { gameModes, categories, cards, cardSets, gameLengths, cardOptionCounts, moods, intensities, themes };
 }
@@ -390,15 +420,20 @@ function buildCardStats(data) {
 }
 
 function buildCardSummaries(data) {
-  return data.categories.map((category) => {
-    const cards = data.cards.filter((card) => card.category === category.id);
+  return data.gameModes.flatMap((mode) =>
+    data.categories
+      .filter((category) => category.modes.includes(mode.id))
+      .map((category) => {
+        const cards = data.cards.filter((card) => card.mode === mode.id && card.category === category.id);
 
-    return {
-      categoryId: category.id,
-      total: cards.length,
-      finals: cards.filter((card) => card.finalCard).length
-    };
-  });
+        return {
+          modeId: mode.id,
+          categoryId: category.id,
+          total: cards.length,
+          finals: cards.filter((card) => card.finalCard).length
+        };
+      })
+  );
 }
 
 function buildAdminGameData(data) {
@@ -410,9 +445,19 @@ function buildAdminGameData(data) {
   };
 }
 
-function validateCategoryId(categoryId, categories) {
-  if (!categories.some((category) => category.id === categoryId)) {
+function validateModeCategory(modeId, categoryId, gameModes, categories) {
+  if (!gameModes.some((mode) => mode.id === modeId)) {
+    throw new Error(`Unknown mode "${modeId}".`);
+  }
+
+  const category = categories.find((item) => item.id === categoryId);
+
+  if (!category) {
     throw new Error(`Unknown category "${categoryId}".`);
+  }
+
+  if (!category.modes.includes(modeId)) {
+    throw new Error(`Category "${categoryId}" cannot be used with mode "${modeId}".`);
   }
 }
 
@@ -513,39 +558,43 @@ app.get("/api/admin/game-data", async (_request, response, next) => {
   }
 });
 
-app.get("/api/admin/cards/:categoryId", async (request, response, next) => {
+app.get("/api/admin/cards/:modeId/:categoryId", async (request, response, next) => {
   try {
     const data = await loadGameData();
-    validateCategoryId(request.params.categoryId, data.categories);
-    response.json(data.cards.filter((card) => card.category === request.params.categoryId));
+    validateModeCategory(request.params.modeId, request.params.categoryId, data.gameModes, data.categories);
+    response.json(data.cards.filter((card) => card.mode === request.params.modeId && card.category === request.params.categoryId));
   } catch (error) {
     next(error);
   }
 });
 
-app.put("/api/admin/cards/:categoryId", async (request, response, next) => {
+app.put("/api/admin/cards/:modeId/:categoryId", async (request, response, next) => {
   try {
+    const modeId = request.params.modeId;
     const categoryId = request.params.categoryId;
 
     if (!Array.isArray(request.body)) {
-      response.status(400).json({ message: `Category "${categoryId}" must be saved as an array.` });
+      response.status(400).json({ message: `Cards for "${modeId}/${categoryId}" must be saved as an array.` });
       return;
     }
 
     const nextData = await loadRawGameData();
-    validateCategoryId(categoryId, nextData.categories);
+    validateModeCategory(modeId, categoryId, nextData.gameModes, nextData.categories);
 
-    const touchedCategoryIds = new Set([categoryId]);
+    const touchedBuckets = new Map([[`${modeId}\u0000${categoryId}`, { modeId, categoryId }]]);
 
     for (const card of request.body) {
-      if (typeof card?.category === "string") {
-        touchedCategoryIds.add(card.category);
+      if (typeof card?.mode === "string" && typeof card?.category === "string") {
+        touchedBuckets.set(`${card.mode}\u0000${card.category}`, { modeId: card.mode, categoryId: card.category });
       }
     }
 
-    nextData.cards = [...nextData.cards.filter((card) => card.category !== categoryId), ...request.body];
+    nextData.cards = [
+      ...nextData.cards.filter((card) => !(card.mode === modeId && card.category === categoryId)),
+      ...request.body
+    ];
     validateGameData(nextData);
-    await writeCardsForCategories(touchedCategoryIds, nextData.cards);
+    await writeCardsForModeCategories(touchedBuckets.values(), nextData.cards);
     response.json(buildAdminGameData(await loadGameData()));
   } catch (error) {
     next(error);

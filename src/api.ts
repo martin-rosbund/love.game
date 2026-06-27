@@ -32,6 +32,7 @@ export type AdminCardStats = {
 };
 
 export type CardCategorySummary = {
+  modeId: string;
   categoryId: string;
   total: number;
   finals: number;
@@ -62,8 +63,8 @@ export async function fetchAdminGameData(): Promise<AdminGameData> {
   return response.json();
 }
 
-export async function fetchCardsByCategory(categoryId: string): Promise<MassageCard[]> {
-  const response = await fetch(`/api/admin/cards/${encodeURIComponent(categoryId)}`);
+export async function fetchCardsByModeCategory(modeId: string, categoryId: string): Promise<MassageCard[]> {
+  const response = await fetch(`/api/admin/cards/${encodeURIComponent(modeId)}/${encodeURIComponent(categoryId)}`);
 
   if (!response.ok) {
     const payload = (await response.json().catch(() => null)) as { message?: string } | null;
@@ -92,8 +93,8 @@ export async function saveContentSection(section: EditableContentSection, items:
   return response.json();
 }
 
-export async function saveCardsByCategory(categoryId: string, items: MassageCard[]): Promise<AdminGameData> {
-  const response = await fetch(`/api/admin/cards/${encodeURIComponent(categoryId)}`, {
+export async function saveCardsByModeCategory(modeId: string, categoryId: string, items: MassageCard[]): Promise<AdminGameData> {
+  const response = await fetch(`/api/admin/cards/${encodeURIComponent(modeId)}/${encodeURIComponent(categoryId)}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json"

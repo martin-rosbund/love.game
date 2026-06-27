@@ -28,7 +28,7 @@ Die lokale Content-Verwaltung ist unter `http://127.0.0.1:5173/admin` erreichbar
 - `content/moods.json`: Spielstimmungen, nach denen Karten gefiltert werden
 - `content/intensities.json`: Kartenraenge fuer die Fortschrittskurve: Standard, Selten, Einzigartig, Legendaer
 - `content/themes.json`: auswählbare Oberflaechenthemes
-- `content/cards/<kategorie>/cards.json`: Karten pro Kategorie mit Aufgabe, Zeit, Finalkarten-Flag, Kategorie und Rollen-Einschraenkungen
+- `content/cards/<mode>/<kategorie>/cards.json`: Karten pro Spielmodus und Kategorie mit Aufgabe, Zeit, Finalkarten-Flag, Kategorie und Rollen-Einschraenkungen
 
 Der Modus `massage` enthaelt 50 Karten fuer Ruecken, Nacken, Kopf, Brust, Beine und Fuesse.
 Der Modus `liebespiel` enthaelt 50 Karten fuer Ruecken, Beine, Fuesse, Brueste, Koerper und Mund.
@@ -52,7 +52,7 @@ Kartenschema:
 }
 ```
 
-Die `category` muss einer ID aus `categories.json` entsprechen. Die Zeit wird im Format `mm:ss` gepflegt.
-Karten liegen in Kategorieordnern wie `content/cards/ruecken/cards.json`; im Admin-Editor wird immer nur eine Kategorie geladen und gespeichert.
+Die `mode` muss einer ID aus `gameModes.json` entsprechen, und die `category` muss einer ID aus `categories.json` entsprechen. Die Zeit wird im Format `mm:ss` gepflegt.
+Karten liegen in Ordnern wie `content/cards/massage/ruecken/cards.json`; im Admin-Editor wird immer nur ein Modus mit einer Kategorie geladen und gespeichert.
 `receiverGenders` beschreibt, wer die Karte erhalten kann. `giverGenders` beschreibt, wer sie ausfuehren kann. Erlaubt sind `mann`, `frau` und `divers`.
 In Aufgaben koennen `{giver}` und `{receiver}` als Namensplatzhalter verwendet werden. Wenn keine Platzhalter gesetzt sind, fuegt die App die Namen automatisch vor die Aufgabe.
