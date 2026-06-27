@@ -650,5 +650,193 @@
       "divers"
     ],
     "task": "Massiere Ihre Schamlippen mit der Zunge während du einen Finger ihre Vagina erkundest."
+  },
+  {
+    "id": "liebespiel-mund-i1-01",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche mit dem Daumen sanft ueber Wange und Kieferlinie von {receiver}, bevor du einen langsamen Kuss anbietest."
+  },
+  {
+    "id": "liebespiel-mund-i1-02",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Kuesse {receiver} kurz und weich, dann halte inne und laechle, bevor du den naechsten Kuss noch langsamer machst."
+  },
+  {
+    "id": "liebespiel-mund-i2-01",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wechsle zwischen kleinen Kuessen an Mundwinkeln und Wange, ohne sofort dorthin zurueckzukehren, wo {receiver} dich erwartet."
+  },
+  {
+    "id": "liebespiel-mund-i2-02",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Kuesse {receiver} langsam und unterbrich immer wieder fuer einen Atemzug, damit die Spannung zwischen euch stehen bleibt."
+  },
+  {
+    "id": "liebespiel-mund-i3-01",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Kuesse erst sanft, dann etwas fordernder, und lasse deine Haende dabei ruhig an Gesicht, Nacken oder Taille bleiben."
+  },
+  {
+    "id": "liebespiel-mund-i3-02",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Beruehre die Lippen von {receiver} mit deinen nur kurz, ziehe dich zurueck und lass den naechsten Kuss bewusst wachsen."
+  },
+  {
+    "id": "liebespiel-mund-i4-01",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Gib {receiver} eine langsame, intensive Kussfolge, bei der du Tempo, Druck und Pausen so fuehrst, dass alles dichter wird."
+  },
+  {
+    "id": "liebespiel-mund-i4-02",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Kuesse mit voller Aufmerksamkeit und halte zwischendurch so nah inne, dass der naechste Kontakt fast von allein passiert."
   }
 ]

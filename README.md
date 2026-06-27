@@ -30,8 +30,8 @@ Die lokale Content-Verwaltung ist unter `http://127.0.0.1:5173/admin` erreichbar
 - `content/themes.json`: auswählbare Oberflaechenthemes
 - `content/cards/<mode>/<kategorie>/cards.json`: Karten pro Spielmodus und Kategorie mit Aufgabe, Zeit, Finalkarten-Flag, Kategorie und Rollen-Einschraenkungen
 
-Der Modus `massage` enthaelt 50 Karten fuer Ruecken, Nacken, Kopf, Brust, Beine und Fuesse.
-Der Modus `liebespiel` enthaelt 50 Karten fuer Ruecken, Beine, Fuesse, Brueste, Koerper und Mund.
+Der Modus `massage` enthaelt 98 Karten fuer Ruecken, Nacken, Kopf, Brust, Beine und Fuesse.
+Der Modus `liebespiel` enthaelt 183 Karten fuer Ruecken, Beine, Fuesse, Brueste, Koerper, Mund und Fantasie.
 Vordefinierte Kartensets sind `Entspannung`, `After Work`, `Ganzkoerper` und `Fuesse & Beine`.
 Im Spielstart wird nur das Kartenset ausgewaehlt; Stimmungen werden im Editor an Karten und Kartensets gepflegt.
 

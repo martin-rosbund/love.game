@@ -184,5 +184,193 @@
       "divers"
     ],
     "task": "Bitte {receiver}, beim Ausatmen die Schultern loszulassen, und begleite jedes Ausatmen mit einer breiten, warmen Streichung."
+  },
+  {
+    "id": "massage-brust-i1-01",
+    "mode": "massage",
+    "category": "brust",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege eine warme Hand auf den oberen Brustkorb von {receiver} und begleite ein paar ruhige Atemzuege mit sanftem Streichen."
+  },
+  {
+    "id": "massage-brust-i1-02",
+    "mode": "massage",
+    "category": "brust",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere vorsichtig um Brustbein und Schluesselbeine herum, langsam und respektvoll, ohne Druck auf empfindliche Stellen."
+  },
+  {
+    "id": "massage-brust-i2-01",
+    "mode": "massage",
+    "category": "brust",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche vom Brustbein zu den Schultern und zurueck, als wuerdest du Raum fuer tiefere Atemzuege schaffen."
+  },
+  {
+    "id": "massage-brust-i2-02",
+    "mode": "massage",
+    "category": "brust",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere mit flachen Haenden in kleinen Kreisen rund um den oberen Brustkorb und frage, ob der Druck angenehm bleibt."
+  },
+  {
+    "id": "massage-brust-i3-01",
+    "mode": "massage",
+    "category": "brust",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Verbinde langsame Striche ueber Brustkorb, Schultern und Nacken, sodass jede Bewegung weich in die naechste uebergeht."
+  },
+  {
+    "id": "massage-brust-i3-02",
+    "mode": "massage",
+    "category": "brust",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege eine Hand warm auf das Herz von {receiver} und massiere mit der anderen die Schluesselbeinlinie besonders langsam."
+  },
+  {
+    "id": "massage-brust-i4-01",
+    "mode": "massage",
+    "category": "brust",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Fuehre eine lange, nahe Massage ueber Brustkorb, Schultern und Halsansatz, mit viel Waerme und bewusst gesetzten Pausen."
+  },
+  {
+    "id": "massage-brust-i4-02",
+    "mode": "massage",
+    "category": "brust",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wechsle zwischen ruhigem Halt am Brustkorb und hauchzarten Linien Richtung Hals, immer so langsam, dass {receiver} folgen kann."
   }
 ]

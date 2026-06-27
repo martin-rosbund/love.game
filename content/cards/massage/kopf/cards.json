@@ -184,5 +184,193 @@
       "divers"
     ],
     "task": "Halte den Kopf von {receiver} sanft in deinen Händen und bewege nur die Daumen in fast hypnotischen Kreisen."
+  },
+  {
+    "id": "massage-kopf-i1-01",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere die Kopfhaut von {receiver} mit ruhigen Fingerspitzenkreisen, als wuerdest du Gedanken vorsichtig entwirren."
+  },
+  {
+    "id": "massage-kopf-i1-02",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche mit beiden Daumen ueber die Stirn nach aussen und lasse jede Bewegung weich an den Schlaefen enden."
+  },
+  {
+    "id": "massage-kopf-i2-01",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wechsle zwischen sanftem Haarewuscheln und langsamen Kreisen an den Schlaefen, bis {receiver} ein Lieblings-Tempo findet."
+  },
+  {
+    "id": "massage-kopf-i2-02",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere den Hinterkopf mit kleinen Bewegungen und ziehe danach die Fingerspitzen langsam durch das Haar."
+  },
+  {
+    "id": "massage-kopf-i3-01",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Halte den Kopf von {receiver} behutsam in deinen Haenden und massiere Stirn, Schlaefen und Haaransatz in einem warmen Ritual."
+  },
+  {
+    "id": "massage-kopf-i3-02",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lasse deine Finger langsam durch das Haar gleiten und verweile genau dort, wo {receiver} unwillkuerlich naeher sinkt."
+  },
+  {
+    "id": "massage-kopf-i4-01",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere die Kopfhaut intensiv und langsam, dann halte inne und streiche nur noch hauchzart ueber Haaransatz und Nacken."
+  },
+  {
+    "id": "massage-kopf-i4-02",
+    "mode": "massage",
+    "category": "kopf",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Bitte {receiver}, die Augen geschlossen zu lassen, und fuehre jede Beruehrung am Kopf so langsam aus, dass die Erwartung spuerbar wird."
   }
 ]

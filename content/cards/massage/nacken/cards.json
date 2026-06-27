@@ -184,5 +184,193 @@
       "divers"
     ],
     "task": "Massiere den Nacken so langsam, dass jede Bewegung wie ein einzelner, bewusster Satz wirkt."
+  },
+  {
+    "id": "massage-nacken-i1-01",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege deine Finger sanft an den Nacken von {receiver} und male kleine Kreise, ohne Druck auf die Wirbelsaeule zu geben."
+  },
+  {
+    "id": "massage-nacken-i1-02",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche vom Haaransatz langsam zu den Schultern und halte kurz inne, wenn {receiver} sichtbar loslaesst."
+  },
+  {
+    "id": "massage-nacken-i2-01",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Knete den Nacken in ruhigem Rhythmus und wechsle nach jeder Runde auf federleichte Fingerspitzen am Haaransatz."
+  },
+  {
+    "id": "massage-nacken-i2-02",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere die Linie zwischen Nacken und Schultern, waehrend du {receiver} bittest, bei jedem Ausatmen etwas mehr Gewicht abzugeben."
+  },
+  {
+    "id": "massage-nacken-i3-01",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Ziehe langsame Bahnen vom Nacken zu den Schluesselbeinen und lasse die Haende dort warm und ruhig ruhen."
+  },
+  {
+    "id": "massage-nacken-i3-02",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wechsle zwischen festem Daumendruck an den Schultern und kaum spuerbaren Beruehrungen am Nacken, bis {receiver} naeher kommen will."
+  },
+  {
+    "id": "massage-nacken-i4-01",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere den Nacken tief und langsam, dann hauche eine Linie vom Haaransatz bis zur Schulter, ohne den Kontakt ganz zu verlieren."
+  },
+  {
+    "id": "massage-nacken-i4-02",
+    "mode": "massage",
+    "category": "nacken",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Fuehre {receiver} mit einer Hand am Nacken in eine entspannte Haltung und schenke jede Bewegung bewusst, nah und langsam."
   }
 ]

@@ -108,5 +108,193 @@
       "divers"
     ],
     "task": "Blase den Penis von {receiver} während sich {receiver} mit der Hand befriedigt, bis zum Orgasmus."
+  },
+  {
+    "id": "liebespiel-fantasie-i1-01",
+    "mode": "liebespiel",
+    "category": "fantasie",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Fluestere {receiver} eine harmlose kleine Fantasie ins Ohr: ein Ort, eine Stimmung, eine Beruehrung, und spiele sie mit Haenden nach."
+  },
+  {
+    "id": "liebespiel-fantasie-i1-02",
+    "mode": "liebespiel",
+    "category": "fantasie",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Bitte {receiver}, eine Farbe fuer die naechste Beruehrung zu waehlen, und uebersetze sie in Tempo, Druck und Naehe."
+  },
+  {
+    "id": "liebespiel-fantasie-i2-01",
+    "mode": "liebespiel",
+    "category": "fantasie",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Erfinde eine kurze Szene, in der ihr euch neu begegnet, und beruehre {receiver} so vorsichtig, als waere alles ein erstes Mal."
+  },
+  {
+    "id": "liebespiel-fantasie-i2-02",
+    "mode": "liebespiel",
+    "category": "fantasie",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lasse {receiver} ein Wort nennen und mache daraus eine einminuetige Beruehrung: langsam, frech, warm oder geheimnisvoll."
+  },
+  {
+    "id": "liebespiel-fantasie-i3-01",
+    "mode": "liebespiel",
+    "category": "fantasie",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Beschreibe leise, was deine Haende als Naechstes tun werden, und warte jedes Mal einen Moment, bevor du es wirklich tust."
+  },
+  {
+    "id": "liebespiel-fantasie-i3-02",
+    "mode": "liebespiel",
+    "category": "fantasie",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Spiele mit Erwartung: kuendige eine Beruehrung an, aendere kurz die Richtung und schenke sie dann noch intensiver."
+  },
+  {
+    "id": "liebespiel-fantasie-i4-01",
+    "mode": "liebespiel",
+    "category": "fantasie",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Fuehre {receiver} durch eine kleine Fantasie aus Stimme, Naehe und Beruehrung, immer langsam genug, dass jedes Detail ankommt."
+  },
+  {
+    "id": "liebespiel-fantasie-i4-02",
+    "mode": "liebespiel",
+    "category": "fantasie",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lasse {receiver} zwischen zwei sinnlichen Wegen waehlen und setze die Wahl mit voller Ruhe, Waerme und knisternden Pausen um."
   }
 ]

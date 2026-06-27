@@ -209,5 +209,193 @@
       "divers"
     ],
     "task": "Massiere Schultern, Rücken und Lendenbereich zu einer langen Zusatzmassage mit ruhigem Anfang, kräftiger Mitte und sehr langsamem Ausklang."
+  },
+  {
+    "id": "massage-ruecken-i1-01",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege beide Handflaechen warm auf den unteren Ruecken von {receiver} und streiche langsam nach aussen, bis der Atem ruhiger wird."
+  },
+  {
+    "id": "massage-ruecken-i1-02",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere mit weichen Kreisen links und rechts neben der Wirbelsaeule und frage {receiver}, welcher Druck gerade gut tut."
+  },
+  {
+    "id": "massage-ruecken-i2-01",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wechsle zwischen breiten Handballenstrichen und kleinen Daumenkreisen am oberen Ruecken, immer etwas langsamer als erwartet."
+  },
+  {
+    "id": "massage-ruecken-i2-02",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Bitte {receiver}, eine verspannte Stelle zu zeigen, und schenke ihr zwei Minuten geduldige, liebevolle Aufmerksamkeit."
+  },
+  {
+    "id": "massage-ruecken-i3-01",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche mit warmen Haenden vom Kreuzbein bis zum Nacken und lasse jeden Zug am Ende einen Moment wie eine Umarmung stehen."
+  },
+  {
+    "id": "massage-ruecken-i3-02",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere die Schulterblaetter mit tieferen Bewegungen und folge danach federleicht der Spur deiner Haende ueber den ganzen Ruecken."
+  },
+  {
+    "id": "massage-ruecken-i4-01",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Arbeite dich in langsamen Wellen ueber den gesamten Ruecken, erst fest und beruhigend, dann hauchzart und nah am Nacken ausklingend."
+  },
+  {
+    "id": "massage-ruecken-i4-02",
+    "mode": "massage",
+    "category": "ruecken",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Bitte {receiver}, die Augen zu schliessen, und kombiniere kraeftige Druckpunkte mit so leichten Beruehrungen, dass jede Pause knistert."
   }
 ]

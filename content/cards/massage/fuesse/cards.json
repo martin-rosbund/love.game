@@ -209,5 +209,193 @@
       "divers"
     ],
     "task": "Schenke beiden Füßen eine lange Zusatzmassage mit warmem Halten, tiefem Sohlen-Druck und einem sehr sanften Abschluss."
+  },
+  {
+    "id": "massage-fuesse-i1-01",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Halte einen Fuss von {receiver} warm in beiden Haenden und massiere die Sohle mit ruhigen Daumenkreisen."
+  },
+  {
+    "id": "massage-fuesse-i1-02",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 1,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Streiche jeden Zeh einzeln sanft aus und massiere danach den Fussballen mit gleichmaessigem Druck."
+  },
+  {
+    "id": "massage-fuesse-i2-01",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere Fusssohlen und Fersen abwechselnd fest und weich, bis {receiver} dir das angenehmste Tempo verr?t."
+  },
+  {
+    "id": "massage-fuesse-i2-02",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Ziehe mit den Daumen langsame Linien von der Ferse zu den Zehen und schliesse jede Linie mit einem kleinen Kreis ab."
+  },
+  {
+    "id": "massage-fuesse-i3-01",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere beide Fuesse nacheinander besonders langsam und lasse deine Haende danach ueber die Knoechel zu den Waden gleiten."
+  },
+  {
+    "id": "massage-fuesse-i3-02",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Wechsle zwischen kraeftigem Druck an der Fusssohle und zarten Beruehrungen am Spann, bis {receiver} unwillkuerlich laechelt."
+  },
+  {
+    "id": "massage-fuesse-i4-01",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Verwoehne die Fuesse mit tiefer, langsamer Massage und fuehre die Beruehrung danach wie eine Spur die Waden hinauf."
+  },
+  {
+    "id": "massage-fuesse-i4-02",
+    "mode": "massage",
+    "category": "fuesse",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Halte den Blickkontakt, waehrend du Fuss, Knoechel und Wade abwechselnd fest massierst und hauchzart beruehrst."
   }
 ]
