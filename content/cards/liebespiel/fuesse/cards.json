@@ -138,7 +138,7 @@
     "task": "Verwöhne den Fuß und die Wade von {receiver} intensiv."
   },
   {
-    "id": "liebespiel-fuesse-08",
+    "id": "liebespiel-fuesse-07",
     "mode": "liebespiel",
     "category": "fuesse",
     "time": "05:00",
@@ -163,7 +163,7 @@
     "task": "Verwöhne Füße, Knöchel und Beine fünf Minuten lang mit Blickkontakt, Pausen und langsam steigender Spannung."
   },
   {
-    "id": "liebesspiel-experiment-03",
+    "id": "liebespiel-fuesse-08",
     "mode": "liebespiel",
     "category": "fuesse",
     "time": "03:00",
@@ -185,7 +185,7 @@
     "task": "Küsst den Fußrücken und massiere die Zehenspitzen mit kreisenden Bewegungen deiner Handfläche."
   },
   {
-    "id": "liebesspiel-experiment-09",
+    "id": "liebespiel-fuesse-09",
     "mode": "liebespiel",
     "category": "fuesse",
     "time": "03:00",
@@ -207,7 +207,7 @@
     "task": "Lecke den Fußrücken und die Beine, als würdest du sie verehren."
   },
   {
-    "id": "liebesspiel-experiment-15",
+    "id": "liebespiel-fuesse-10",
     "mode": "liebespiel",
     "category": "fuesse",
     "time": "03:15",
@@ -229,7 +229,7 @@
     "task": "Setze einen Fuß in deine Handfläche und massiere die Sohle mit Daumenpressung."
   },
   {
-    "id": "liebesspiel-experiment-21",
+    "id": "liebespiel-fuesse-11",
     "mode": "liebespiel",
     "category": "fuesse",
     "time": "03:30",
@@ -251,7 +251,7 @@
     "task": "Küsse die Füße vom Knöchel bis zu den Zehen."
   },
   {
-    "id": "liebesspiel-experiment-27",
+    "id": "liebespiel-fuesse-12",
     "mode": "liebespiel",
     "category": "fuesse",
     "time": "03:15",
@@ -273,7 +273,7 @@
     "task": "Setze den Fuß sanft in die Handfläche und drücke ihn leicht an."
   },
   {
-    "id": "liebesspiel-experiment-33",
+    "id": "liebespiel-fuesse-13",
     "mode": "liebespiel",
     "category": "fuesse",
     "time": "04:00",
@@ -294,7 +294,7 @@
     "task": "Reibe deinen Penis an den Fußrücken während du die Beine massierst."
   },
   {
-    "id": "liebesspiel-experiment-37",
+    "id": "liebespiel-fuesse-14",
     "mode": "liebespiel",
     "category": "fuesse",
     "time": "03:30",
@@ -316,7 +316,7 @@
     "task": "Streichel die Füße liebevoll mit deinen eigenen Füßen."
   },
   {
-    "id": "libesspiel-experiment-71",
+    "id": "liebespiel-fuesse-15",
     "mode": "liebespiel",
     "category": "fuesse",
     "time": "4:00",
@@ -339,7 +339,7 @@
     "task": "Legt einen Fuß in den Intimberiech des jeweils anderen und testet euch aus."
   },
   {
-    "id": "libesspiel-experiment-71",
+    "id": "liebespiel-fuesse-16",
     "mode": "liebespiel",
     "category": "fuesse",
     "time": "4:00",
@@ -362,7 +362,7 @@
     "task": "Legt einen Fuß in den Intimberiech des jeweils anderen und testet aus wie der jeweils andere reagiert."
   },
   {
-    "id": "libesspiel-experiment-73",
+    "id": "liebespiel-fuesse-17",
     "mode": "liebespiel",
     "category": "fuesse",
     "time": "2:00",
@@ -381,5 +381,221 @@
       "divers"
     ],
     "task": "Dringe in {receiver} ein paar Mal ganz langsam ein während du ihre Füße liebkost."
+  },
+{
+    "id": "liebespiel-fuesse-18",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "01:30",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Küsse den Fußrücken von {receiver} liebevoll und beende mit einem Kuss auf jeden einzelnen Zeh."
+  },
+  {
+    "id": "liebespiel-fuesse-19",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "verspielt",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "mann"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege deinen Fuß zwischen die Beine von {receiver} und reibe mit der Sohle über den Penis und Hoden."
+  },
+  {
+    "id": "liebespiel-fuesse-19",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "verspielt",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "frau"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege deinen Fuß leicht zwischen die Beine von {receiver} und reibe mit der Sohle über die Vagina und dem Schambein."
+  },
+  {
+    "id": "liebespiel-fuesse-19",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "verspielt",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "frau"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege deinen Fuß feste zwischen die Beine von {receiver} und reibe mit der Sohle und den Zehen über die Vagina."
+  },
+  {
+    "id": "liebespiel-fuesse-20",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "heiss",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege deine Füße vorsichtig um den Penis von {receiver} und ziehe seine Vorhaut langsam vor und zurück."
+  },
+  {
+    "id": "liebespiel-fuesse-21",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "heiss",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege deine Füße feste um den Penis und Hoden von {receiver} und massierte seine Hoden und Penis mit den Zehen."
+  },
+  {
+    "id": "liebespiel-fuesse-22",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "06:30",
+    "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "heiss",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "divers"
+    ],
+    "task": "Halte die Füße von {receiver} in dein Gesicht während ihr Sex habt. Küsse und Lecke die Füße bis du kommst."
+  },
+  {
+    "id": "liebespiel-fuesse-23",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "06:00",
+    "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "heiss",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Öle den Penis von {receiver} ein und gib ihn einen Footjob bis er zwischen deinen Füßen kommt."
+  },
+  {
+    "id": "liebespiel-fuesse-24",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "01:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "heiss",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege den Penis von {receiver} zwischen deine Füße und macht beide ein Foto von der Szene."
+  },
+  {
+    "id": "liebespiel-fuesse-25",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "03:00",
+    "finalCard": true,
+    "intensity": 3,
+    "moods": [
+      "verspielt",
+      "entspannend"
+    ],
+    "receiverGenders": [
+      "frau"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Befriedige {receiver} mit deinen Füßen während du ihre Füße parallel massierst."
   }
 ]

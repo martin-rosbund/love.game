@@ -184,7 +184,7 @@
     "task": "Lass {receiver} ein Bein über deine Hand legen und verwöhne es mit festen, langsamen und sehr bewussten Bewegungen."
   },
   {
-    "id": "liebesspiel-experiment-04",
+    "id": "liebespiel-beine-09",
     "mode": "liebespiel",
     "category": "beine",
     "time": "03:30",
@@ -206,7 +206,7 @@
     "task": "Fahre mit der Zunge von den Knöcheln bis zum Intimbereich."
   },
   {
-    "id": "liebesspiel-experiment-10",
+    "id": "liebespiel-beine-10",
     "mode": "liebespiel",
     "category": "beine",
     "time": "03:00",
@@ -228,7 +228,7 @@
     "task": "Umarme die Oberschenkel und presse dich eng an den Partner, während du ihre Haut streichelst."
   },
   {
-    "id": "liebesspiel-experiment-16",
+    "id": "liebespiel-beine-11",
     "mode": "liebespiel",
     "category": "beine",
     "time": "02:30",
@@ -250,7 +250,7 @@
     "task": "Küsst das Knie und fahre mit der Zunge den Oberschenkel hinauf bis zum Intimbereich."
   },
   {
-    "id": "liebesspiel-experiment-22",
+    "id": "liebespiel-beine-12",
     "mode": "liebespiel",
     "category": "beine",
     "time": "03:00",
@@ -272,7 +272,7 @@
     "task": "Umarme die Oberschenkel und drücke den Partner sanft auf das Bett."
   },
   {
-    "id": "liebesspiel-experiment-28",
+    "id": "liebespiel-beine-13",
     "mode": "liebespiel",
     "category": "beine",
     "time": "02:45",
@@ -294,7 +294,7 @@
     "task": "Küsse das Knie und fahre mit der Zunge sanft den Oberschenkel hinauf."
   },
   {
-    "id": "liebesspiel-experiment-34",
+    "id": "liebespiel-beine-14",
     "mode": "liebespiel",
     "category": "beine",
     "time": "02:45",
@@ -316,7 +316,7 @@
     "task": "Umarme die Oberschenkel und presse dich eng an den Partner, während du die Haut streichelst."
   },
   {
-    "id": "liebesspiel-experiment-38",
+    "id": "liebespiel-beine-15",
     "mode": "liebespiel",
     "category": "beine",
     "time": "03:15",
@@ -336,5 +336,65 @@
       "divers"
     ],
     "task": "Massiere die Waden liebevoll mit deinen Händen."
+  },
+{
+    "id": "liebespiel-beine-16",
+    "mode": "liebespiel",
+    "category": "beine",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "entspannend",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "mann"
+    ],
+    "giverGenders": [
+      "frau",
+      "divers"
+    ],
+    "task": "Lege deine Oberschenkel sanft um den Penis des Partners und reibe sie in langsamen, kreisenden Bewegungen entlang der Eichel und des Schafts."
+  },
+{
+    "id": "liebespiel-beine-17",
+    "mode": "liebespiel",
+    "category": "beine",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann"
+    ],
+    "giverGenders": [
+      "frau",
+      "divers"
+    ],
+    "task": "Klemme den Penis zwischen deine geschlossenen Oberschenkel und presse sie langsam zusammen, mal fester, mal schwächer."
+  },
+ {
+    "id": "liebespiel-beine-18",
+    "mode": "liebespiel",
+    "category": "beine",
+    "time": "03:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "frau"
+    ],
+    "giverGenders": [
+      "mann",
+      "divers"
+    ],
+    "task": "Reibe deinen Oberschenkeln rhythmisch über die Vagina des Partners in leicht kreisenden Bewegungen."
   }
 ]

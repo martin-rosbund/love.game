@@ -1,6 +1,6 @@
 [
   {
-    "id": "liebespiel-fuesse-07",
+    "id": "liebespiel-koerper-01",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "03:00",
@@ -23,7 +23,7 @@
     "task": "Lass {receiver} entscheiden, ob diese Runde zart, frech oder langsam gefährlich werden soll, und bleibe bei dieser Stimmung."
   },
   {
-    "id": "liebespiel-koerper-01",
+    "id": "liebespiel-koerper-02",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "01:30",
@@ -46,7 +46,7 @@
     "task": "Lege dich oder setze dich nah zu {receiver} und halte zehn Atemzüge lang warmen Körperkontakt."
   },
   {
-    "id": "liebespiel-koerper-02",
+    "id": "liebespiel-koerper-03",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "01:30",
@@ -69,7 +69,7 @@
     "task": "Zeichne mit deiner Hand eine langsame Acht auf eine beliebige Körperstelle, die {receiver} dir anbietet."
   },
   {
-    "id": "liebespiel-koerper-03",
+    "id": "liebespiel-koerper-04",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "02:00",
@@ -92,7 +92,7 @@
     "task": "Wähle drei Körperstellen und verwöhne jede mit einer anderen Art von Nähe: halten, streichen, Küssen."
   },
   {
-    "id": "liebespiel-koerper-04",
+    "id": "liebespiel-koerper-05",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "02:00",
@@ -115,7 +115,7 @@
     "task": "Lass {receiver} per Handzeichen entscheiden: näher, langsamer oder frecher."
   },
   {
-    "id": "liebespiel-koerper-05",
+    "id": "liebespiel-koerper-06",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "02:30",
@@ -138,7 +138,7 @@
     "task": "Verwöhne {receiver} von den Schultern bis zur Hüfte in einer einzigen, nicht unterbrochenen Bewegung."
   },
   {
-    "id": "liebespiel-koerper-06",
+    "id": "liebespiel-koerper-07",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "02:30",
@@ -161,7 +161,7 @@
     "task": "Mache eine Berührung so langsam, dass sie fast stillsteht, und ändere nur alle zehn Sekunden den Druck."
   },
   {
-    "id": "liebespiel-koerper-07",
+    "id": "liebespiel-koerper-08",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "03:00",
@@ -184,7 +184,7 @@
     "task": "Spiele mit Erwartung: Berühre den Intimbereich, ganz sanft und leicht. {receiver} muss parallel sagen was sich gut anfühlt."
   },
   {
-    "id": "liebespiel-koerper-08",
+    "id": "liebespiel-koerper-09",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "03:00",
@@ -207,7 +207,7 @@
     "task": "Ziehe {receiver} für eine lange Umarmung an dich und verwandle sie langsam in ein sinnliches Erkunden."
   },
   {
-    "id": "liebespiel-koerper-09",
+    "id": "liebespiel-koerper-10",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "05:00",
@@ -232,7 +232,7 @@
     "task": "{giver} verwöhnt {receiver} fünf Minuten lang von Kopf bis Fuß, mit einer Mischung aus Nähe, Pausen, Mut und sehr bewusster Zärtlichkeit."
   },
   {
-    "id": "liebesspiel-experiment-06",
+    "id": "liebespiel-koerper-11",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "02:30",
@@ -254,7 +254,7 @@
     "task": "Fahre mit den Fingerspitzen über die Haut des Rückens und der Schulterblätter."
   },
   {
-    "id": "liebesspiel-experiment-12",
+    "id": "liebespiel-koerper-12",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "02:30",
@@ -276,7 +276,7 @@
     "task": "Küsst das Schlüsselbein und den Nacken in einer langsamen, wellenförmigen Bewegung."
   },
   {
-    "id": "liebesspiel-experiment-18",
+    "id": "liebespiel-koerper-13",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "03:00",
@@ -298,7 +298,7 @@
     "task": "Schlinge deine Arme um den Partner und schmiege dich eng an ihn, während du sanft atmetest."
   },
   {
-    "id": "liebesspiel-experiment-24",
+    "id": "liebespiel-koerper-14",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "03:30",
@@ -320,7 +320,7 @@
     "task": "Fahre mit dem Mund von der Wirbelsäule zu den Schultern und massiere das Nackenbein."
   },
   {
-    "id": "liebesspiel-experiment-30",
+    "id": "liebespiel-koerper-15",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "03:00",
@@ -340,7 +340,7 @@
     "task": "Schmiege dich eng an den Partner und dringe in sie ein. Verweilt still während ihr euch anschaut."
   },
   {
-    "id": "liebesspiel-experiment-40",
+    "id": "liebespiel-koerper-16",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "03:45",
@@ -362,7 +362,7 @@
     "task": "Fahre mit der Hand von den Schultern zur Taille und massiere die Hüfte."
   },
   {
-    "id": "liebesspiel-experiment-42",
+    "id": "liebespiel-koerper-17",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "10:00",
@@ -384,7 +384,7 @@
     "task": "Befriedige den Partner mit der Hand und mache intensiv weiter nach dem erstem Orgasmus bis zum zweiten, ohne Pause."
   },
   {
-    "id": "liebesspiel-experiment-45",
+    "id": "liebespiel-koerper-18",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "05:00",
@@ -406,7 +406,7 @@
     "task": "Habt Sex miteinander und kündigt eure Orgasmen an, erst wenn beide gekommen sind dürft ihr aufhören."
   },
   {
-    "id": "liebesspiel-experiment-46",
+    "id": "liebespiel-koerper-19",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "03:00",
@@ -428,7 +428,7 @@
     "task": "Befriedigt euch nacheinander und kündigt eure Orgasmen kurz vorher an, und verweigter ihn euch gegenseitig."
   },
   {
-    "id": "liebesspiel-experiment-47",
+    "id": "liebespiel-koerper-20",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "10:00",
@@ -448,7 +448,7 @@
     "task": "Reibe deinen Penis an der Klitoris von {receiver} bis du kommst, lecke danach {receiver} bis zum Orgasmus."
   },
   {
-    "id": "liebesspiel-experiment-48",
+    "id": "liebespiel-koerper-21",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "03:00",
@@ -470,7 +470,7 @@
     "task": "Befriedigt euch gleichzeitig selbst und schaut euch beim zum Orgasmus tief in die Augen."
   },
   {
-    "id": "liebesspiel-experiment-51",
+    "id": "liebespiel-koerper-22",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "02:00",
@@ -492,7 +492,7 @@
     "task": "Befriedige dich und {receiver} gleichzeitig, {receiver} darf entspannt zugucken."
   },
   {
-    "id": "liebesspiel-experiment-52",
+    "id": "liebespiel-koerper-23",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "02:00",
@@ -514,7 +514,7 @@
     "task": "Mache ein Foto vom Genital vom {receiver}."
   },
   {
-    "id": "liebesspiel-experiment-53",
+    "id": "liebespiel-koerper-24",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "02:00",
@@ -534,7 +534,7 @@
     "task": "Mache ein Foto, wie deine Vagina den Penis von {receiver} versteckt."
   },
   {
-    "id": "liebesspiel-experiment-54",
+    "id": "liebespiel-koerper-25",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "02:00",
@@ -554,7 +554,7 @@
     "task": "Mache ein Foto, wie dein Penis in der Vagina von {receiver} ist."
   },
   {
-    "id": "libesspiel-experiment-55",
+    "id": "liebespiel-koerper-26",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "20:00",
@@ -577,7 +577,7 @@
     "task": "Binde die Hände und Füße von {receiver} zusammen und befriedige {receiver} mit viel Massageöl intensiv ohne dass sich {receiver} bewegen kann."
   },
   {
-    "id": "libesspiel-experiment-56",
+    "id": "liebespiel-koerper-27",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "2:00",
@@ -598,7 +598,7 @@
     "task": "Stimmuliere die Vagina von {receiver} mit einem Massagestab ununterbrochen, nutze Massageöl dabei."
   },
   {
-    "id": "libesspiel-experiment-67",
+    "id": "liebespiel-koerper-28",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "3:00",
@@ -621,7 +621,7 @@
     "task": "Lege deinen Fuß auf den Intimbereich von {receiver} und reibe deinen Fuß leicht hin und her."
   },
   {
-    "id": "libesspiel-experiment-68",
+    "id": "liebespiel-koerper-29",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "3:00",
@@ -643,7 +643,7 @@
     "task": "Lege deinen Kopf auf den Bauch von {receiver} und lutsche und Sauge an seinem Penis."
   },
   {
-    "id": "libesspiel-experiment-69",
+    "id": "liebespiel-koerper-30",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "3:00",
@@ -666,7 +666,7 @@
     "task": "Lege deinen Kopf auf den Bauch von {receiver} und weise {receiver} sich selbst zu berühren während du genüsslich zuschaust."
   },
   {
-    "id": "libesspiel-experiment-70",
+    "id": "liebespiel-koerper-31",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "2:00",
@@ -689,7 +689,7 @@
     "task": "Lassie dir von {receiver} zeigen, welche Berührungen {receiver} am liebsten mag, und mit welchem Körperteil."
   },
   {
-    "id": "libesspiel-experiment-70",
+    "id": "liebespiel-koerper-32",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "4:00",
@@ -712,7 +712,7 @@
     "task": "Spielt mit all euren vier Händen im Intimbereich von {receiver}."
   },
   {
-    "id": "libesspiel-experiment-72",
+    "id": "liebespiel-koerper-33",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "4:00",
@@ -735,7 +735,7 @@
     "task": "Befriedigt euch im gleichen Tempo gegenseitig mit der Hand, keiner hört auf bis beide gekommen sind."
   },
   {
-    "id": "libesspiel-experiment-74",
+    "id": "liebespiel-koerper-34",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "4:00",
@@ -758,7 +758,7 @@
     "task": "Bringe {receiver} un den Verstand indem du seinen Penis, Hoden und Eickel mit dem Mund und der Zunge bearbeitest. Verweihre in den Orgasmus und lass dich vom ihm befriedigen. Wenn du gekommen bist darf er auf dir kommen."
   },
   {
-    "id": "libesspiel-experiment-74",
+    "id": "liebespiel-koerper-35",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "4:00",
@@ -779,7 +779,7 @@
     "task": "Befriedige {receiver} wie du möchtest, {receiver} muss sich durchgehend lautstark mitteilen."
   },
   {
-    "id": "libesspiel-experiment-74",
+    "id": "liebespiel-koerper-36",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "4:00",
@@ -798,5 +798,116 @@
       "divers"
     ],
     "task": "Befriedige {receiver} wie du möchtest, {receiver} darf sich nichts anmerken lassen."
+  },
+  {
+    "id": "liebespiel-koerper-37",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "4:00",
+    "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Führt einen Bettkampf aus, die person die die andere Person zuerst befriedigt hat gewonnen und darf sich etwas wünschen."
+  },
+  {
+    "id": "liebespiel-koerper-38",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "4:00",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "divers"
+    ],
+    "task": "Führt einen Bettkampf aus, versuche innerhalb des Zeitlimits in die Vagina von {receiver} einzudringen. Wenn es dir nicht gelingt darf sich {receiver} etwas wünschen."
+  },
+  {
+    "id": "liebespiel-koerper-39",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "4:00",
+    "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "frau",
+      "divers"
+    ],
+    "task": "Dominierte {receiver} in der Amazonenstellung bis er kommt."
+  },
+  {
+    "id": "liebespiel-koerper-40",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "4:00",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "task": "Lege deinen Kopf auf den Bauch von {receiver} und verwöhne {receiver} im intimbereich."
+  },
+  {
+    "id": "liebespiel-koerper-41",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "4:00",
+    "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "task": "Spreize deine Beine, {receiver} setzt sich mit den Rücken vorran zwischen deine Beine. Befriedige {receiver} nun von hinten."
   }
 ]

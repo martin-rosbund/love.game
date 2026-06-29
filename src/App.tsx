@@ -119,8 +119,7 @@ function personalizeTask(task: string, activeCard: ActiveCard) {
     return task.replaceAll("{giver}", giver).replaceAll("{receiver}", receiver);
   }
 
-  const firstLetter = task.charAt(0).toLocaleLowerCase("de-DE");
-  return `${giver}, für ${receiver}: ${firstLetter}${task.slice(1)}`;
+  return task;
 }
 
 function triggerHaptic(pattern: number | number[]) {
