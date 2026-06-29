@@ -211,7 +211,7 @@
     "mode": "liebespiel",
     "category": "koerper",
     "time": "05:00",
-    "finalCard": true,
+    "finalCard": false,
     "intensity": 4,
     "moods": [
       "entspannend",
@@ -403,7 +403,7 @@
       "frau",
       "divers"
     ],
-    "task": "Habt Sex miteinander und kundigt eure Orgasmen an, erst wenn beide gekommen sind dürft ihr aufhören."
+    "task": "Habt Sex miteinander und kündigt eure Orgasmen an, erst wenn beide gekommen sind dürft ihr aufhören."
   },
   {
     "id": "liebesspiel-experiment-46",
@@ -489,14 +489,14 @@
       "frau",
       "divers"
     ],
-    "task": "Befriedige duch und {receiver} gleichzeitig, {receiver} darf entspannt zugucken."
+    "task": "Befriedige dich und {receiver} gleichzeitig, {receiver} darf entspannt zugucken."
   },
   {
     "id": "liebesspiel-experiment-52",
     "mode": "liebespiel",
     "category": "koerper",
     "time": "02:00",
-    "finalCard": true,
+    "finalCard": false,
     "intensity": 2,
     "moods": [
       "verspielt"
@@ -518,7 +518,7 @@
     "mode": "liebespiel",
     "category": "koerper",
     "time": "02:00",
-    "finalCard": true,
+    "finalCard": false,
     "intensity": 2,
     "moods": [
       "verspielt"
@@ -580,8 +580,8 @@
     "id": "libesspiel-experiment-56",
     "mode": "liebespiel",
     "category": "koerper",
-    "time": "10:00",
-    "finalCard": true,
+    "time": "2:00",
+    "finalCard": false,
     "intensity": 4,
     "moods": [
       "heiss"

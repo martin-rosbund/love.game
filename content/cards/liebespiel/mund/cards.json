@@ -165,7 +165,7 @@
     "mode": "liebespiel",
     "category": "mund",
     "time": "05:00",
-    "finalCard": true,
+    "finalCard": false,
     "intensity": 4,
     "moods": [
       "entspannend",
