@@ -66,7 +66,7 @@
       "frau",
       "divers"
     ],
-    "task": "Küsse entlang einer Schulterlinie."
+    "task": "Küsse entlang der Schulterlinie."
   },
   {
     "id": "liebespiel-ruecken-04",
@@ -143,7 +143,7 @@
     "category": "ruecken",
     "time": "03:00",
     "finalCard": false,
-    "intensity": 4,
+    "intensity": 2,
     "moods": [
       "verspielt",
       "heiss"

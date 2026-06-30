@@ -20,7 +20,7 @@
       "frau",
       "divers"
     ],
-    "task": "Halte einen Fuß von {receiver} und zeichne mit dem Daumen einen langsamen Kreis auf die Sohle."
+    "task": "Halte einen Fuß von {receiver} und zeichne mit dem Daumen langsam Kreise auf den Fußrücken."
   },
   {
     "id": "liebespiel-fuesse-02",
@@ -143,7 +143,7 @@
     "category": "fuesse",
     "time": "05:00",
     "finalCard": false,
-    "intensity": 4,
+    "intensity": 3,
     "moods": [
       "entspannend",
       "verspielt",
@@ -160,7 +160,7 @@
       "frau",
       "divers"
     ],
-    "task": "Verwöhne Füße, Knöchel und Beine fünf Minuten lang mit Blickkontakt, Pausen und langsam steigender Spannung."
+    "task": "Verwöhne Füße, Knöchel und Beine mit Blickkontakt, Pausen und langsam steigender Spannung."
   },
   {
     "id": "liebespiel-fuesse-08",
@@ -336,7 +336,7 @@
       "mann",
       "divers"
     ],
-    "task": "Legt einen Fuß in den Intimbereich des jeweils anderen und gewegt euch synchron."
+    "task": "Legt einen Fuß in den Intimbereich des jeweils anderen und bewegt eure Füße synchron."
   },
   {
     "id": "liebespiel-fuesse-16",
@@ -531,7 +531,7 @@
       "mann",
       "divers"
     ],
-    "task": "Halte die Füße von {receiver} in dein Gesicht während ihr Sex habt. Küsse und Lecke die Füße bis du kommst."
+    "task": "Halte deine Füße im Gesicht von {receiver} während ihr Sex habt. {receiver} darf deine Füße Küssen."
   },
   {
     "id": "liebespiel-fuesse-23",
@@ -619,5 +619,92 @@
       "divers"
     ],
     "task": "Verwöhne die Brüste von {receiver} mit deinen Füßen intensiv."
+  },
+  {
+    "id": "liebespiel-fuesse-27",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "heiss",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "divers"
+    ],
+    "task": "Halte deine Füße im Gesicht von {receiver} während ihr kurz Sex habt. {receiver} darf deine Füße Küssen."
+  },
+  {
+    "id": "liebespiel-fuesse-28",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "06:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "heiss",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Öle den Penis von {receiver} ein und verwöhne ihn ein bisschen mit deinen Füßen."
+  },
+  {
+    "id": "liebespiel-fuesse-29",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "06:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "heiss",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Öle die Vagina von {receiver} ein und verwöhne sie ein bisschen mit deinen Füßen."
+  },
+  {
+    "id": "liebespiel-fuesse-30",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "06:00",
+    "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "heiss",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Öle die Vagina von {receiver} ein und gib ihr einen Footjob bis sie durch deine Füße kommt."
   }
 ]

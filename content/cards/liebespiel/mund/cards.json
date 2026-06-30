@@ -20,7 +20,7 @@
       "frau",
       "divers"
     ],
-    "task": "Halte das Gesicht von {receiver} sanft und gib drei langsame Küsse auf Stirn, Wange oder Mund."
+    "task": "Halte das Gesicht von {receiver} sanft und gib drei langsame Küsse auf den Mund."
   },
   {
     "id": "liebespiel-mund-02",
@@ -58,7 +58,6 @@
     ],
     "receiverGenders": [
       "mann",
-      "frau",
       "divers"
     ],
     "giverGenders": [
@@ -66,7 +65,7 @@
       "frau",
       "divers"
     ],
-    "task": "Nähere dich einem Kuss dreimal an, ohne ihn sofort zu geben."
+    "task": "Beiße leicht den Penis und die Eichel von {receiver} liebevoll und zärtlich."
   },
   {
     "id": "liebespiel-mund-04",
@@ -267,7 +266,7 @@
       "frau",
       "divers"
     ],
-    "task": "Halte den Hoden sanft in der Handfläche und massiere sie während des Küssens."
+    "task": "Halte den Hoden sanft in der Handfläche und massiere sie während du die Eichel mit deinem Mund massierst."
   },
   {
     "id": "liebespiel-mund-13",
@@ -288,7 +287,7 @@
       "frau",
       "divers"
     ],
-    "task": "Lecke das Frenulum des Penis mit sanftem Druck und variierender Geschwindigkeit."
+    "task": "Lecke das Frenulum vom Penis mit sanftem Druck und variierender Geschwindigkeit."
   },
   {
     "id": "liebespiel-mund-14",
@@ -309,7 +308,7 @@
       "frau",
       "divers"
     ],
-    "task": "Lass deine Zunge die Schamlippen streicheln."
+    "task": "Streichel mit deine Zunge die Schamlippen von {receiver} vorsichtig und langsam."
   },
   {
     "id": "liebespiel-mund-15",
@@ -662,7 +661,7 @@
       "heiss"
     ],
     "receiverGenders": [
-      "frau",
+      "mann",
       "divers"
     ],
     "giverGenders": [
@@ -693,5 +692,69 @@
       "divers"
     ],
     "task": "Lass einen Kuss wandern: Von den Lippen zu der Eichel, langsam hin und wieder zurück, mindestens 3x."
+  },
+  {
+    "id": "liebespiel-mund-33",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 2,
+    "moods": [
+      "verspielt",
+      "romantisch"
+    ],
+    "receiverGenders": [
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Beiße leicht die Schamlippen und die Klitoris von {receiver} liebevoll und zärtlich."
+  },
+  {
+    "id": "liebespiel-mund-34",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "05:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "frau",
+      "divers"
+    ],
+    "task": "Bringe {receiver} durch einen Blowjob bis kurz vorm Orgasmus. Nutze zeitgleich deine Hand am Penisschaft und reibe deine Hand schnell hin und her."
+  },
+  {
+    "id": "liebespiel-mund-35",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "2:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "task": "Setzt dich gemütlich hin, {receiver} darf seinen Penis in deinem Mund hin und her bewegen."
   }
 ]

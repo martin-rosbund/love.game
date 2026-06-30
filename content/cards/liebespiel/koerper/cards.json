@@ -5,22 +5,20 @@
     "category": "koerper",
     "time": "03:00",
     "finalCard": false,
-    "intensity": 4,
+    "intensity": 3,
     "moods": [
       "verspielt",
       "heiss"
     ],
     "receiverGenders": [
-      "mann",
       "frau",
       "divers"
     ],
     "giverGenders": [
       "mann",
-      "frau",
       "divers"
     ],
-    "task": "Lass {receiver} entscheiden, ob diese Runde zart, frech oder langsam gefährlich werden soll, und bleibe bei dieser Stimmung."
+    "task": "Dringe in {receiver} ein und verweile ohne Bewegung währund du {receiver} küsst."
   },
   {
     "id": "liebespiel-koerper-02",
@@ -295,7 +293,7 @@
       "frau",
       "divers"
     ],
-    "task": "Schlinge deine Arme um den Partner und schmiege dich eng an ihn, während du sanft atmetest."
+    "task": "Schlinge deine Arme um den Intimbereich von {receiver} und atme liebevoll in den Schambereich."
   },
   {
     "id": "liebespiel-koerper-14",
@@ -410,7 +408,7 @@
     "mode": "liebespiel",
     "category": "koerper",
     "time": "03:00",
-    "finalCard": true,
+    "finalCard": false,
     "intensity": 4,
     "moods": [
       "verspielt"
@@ -467,7 +465,7 @@
       "frau",
       "divers"
     ],
-    "task": "Befriedigt euch gleichzeitig selbst und schaut euch beim zum Orgasmus tief in die Augen."
+    "task": "Befriedigt euch gleichzeitig selbst und schaut euch beim Orgasmus tief in die Augen."
   },
   {
     "id": "liebespiel-koerper-22",
@@ -489,7 +487,7 @@
       "frau",
       "divers"
     ],
-    "task": "Befriedige dich und {receiver} gleichzeitig, {receiver} darf entspannt zugucken."
+    "task": "Befriedige dich und {receiver} gleichzeitig, {receiver} darf entspannt zugucken oder die Augen schließen."
   },
   {
     "id": "liebespiel-koerper-23",
@@ -511,7 +509,7 @@
       "frau",
       "divers"
     ],
-    "task": "Mache ein Foto vom Genital vom {receiver}."
+    "task": "Mache ein Foto vom Intimbereich vom {receiver}."
   },
   {
     "id": "liebespiel-koerper-24",
@@ -755,7 +753,7 @@
       "mann",
       "divers"
     ],
-    "task": "Bringe {receiver} un den Verstand indem du seinen Penis, Hoden und Eickel mit dem Mund und der Zunge bearbeitest. Verweihre in den Orgasmus und lass dich vom ihm befriedigen. Wenn du gekommen bist darf er auf dir kommen."
+    "task": "Bringe {receiver} un den Verstand indem du seinen Penis, Hoden und Eickel mit dem Mund und der Zunge bearbeitest. Verweihre den Orgasmus in letzter Sekunde und lass dich vom ihm befriedigen."
   },
   {
     "id": "liebespiel-koerper-35",
@@ -820,7 +818,7 @@
       "frau",
       "divers"
     ],
-    "task": "Führt einen Bettkampf aus, die person die die andere Person zuerst befriedigt hat gewonnen und darf sich etwas wünschen."
+    "task": "Führt einen Bettkampf aus, die Person die die andere Person zuerst befriedigt hat gewonnen und darf sich etwas wünschen."
   },
   {
     "id": "liebespiel-koerper-38",
@@ -891,7 +889,7 @@
     "id": "liebespiel-koerper-41",
     "mode": "liebespiel",
     "category": "koerper",
-    "time": "4:00",
+    "time": "10:00",
     "finalCard": true,
     "intensity": 4,
     "moods": [
@@ -909,5 +907,69 @@
       "divers"
     ],
     "task": "Spreize deine Beine, {receiver} setzt sich mit den Rücken vorran zwischen deine Beine. Befriedige {receiver} nun von hinten."
+  },
+  {
+    "id": "liebespiel-koerper-42",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "verspielt",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "frau",
+      "divers"
+    ],
+    "task": "Nimm den Penis von {receiver} in deine Vagina auf und verweile ohne Bewegung währund du seine Hoden knetest."
+  },
+  {
+    "id": "liebespiel-koerper-43",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "10:00",
+    "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "frau",
+      "divers"
+    ],
+    "task": "Reibe deine Vagina an den Penis von {receiver} bis du kommst, blase danach {receiver} bis zum Orgasmus."
+  },
+  {
+    "id": "liebespiel-koerper-44",
+    "mode": "liebespiel",
+    "category": "koerper",
+    "time": "5:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "frau",
+      "mann",
+      "divers"
+    ],
+    "task": "Spreize deine Beine, {receiver} setzt sich mit den Rücken vorran zwischen deine Beine. Verwöhne {receiver} nun etwas von hinten."
   }
 ]
