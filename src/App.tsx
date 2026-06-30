@@ -32,6 +32,21 @@ function shuffle<T>(items: T[]) {
   return copy;
 }
 
+function buildRoundGiverIndexes(totalRounds: number): Array<0 | 1> {
+  const baseRoundsPerPlayer = Math.floor(totalRounds / 2);
+  const extraRoundPlayer = Math.floor(Math.random() * 2) as 0 | 1;
+  const playerRounds: [number, number] = [baseRoundsPerPlayer, baseRoundsPerPlayer];
+
+  if (totalRounds % 2 === 1) {
+    playerRounds[extraRoundPlayer] += 1;
+  }
+
+  return shuffle([
+    ...Array<0>(playerRounds[0]).fill(0),
+    ...Array<1>(playerRounds[1]).fill(1)
+  ]);
+}
+
 function desiredIntensityForRound(roundIndex: number, totalRounds: number) {
   if (roundIndex >= totalRounds - 1) {
     return 4;
@@ -368,6 +383,7 @@ function Timer({
 
 function MassageOptionsView({
   activeCard,
+  currentGiver,
   cardOptions,
   categoryById,
   fallbackCategory,
@@ -388,6 +404,7 @@ function MassageOptionsView({
   onNext
 }: {
   activeCard: ActiveCard | null;
+  currentGiver: Player;
   cardOptions: MassageCard[];
   categoryById: Map<string, Category>;
   fallbackCategory: Category;
@@ -461,7 +478,7 @@ function MassageOptionsView({
         </span>
         <span>
           <RefreshCcw aria-hidden="true" size={15} strokeWidth={2.8} />
-          Abwechselnd
+          Gemischt
         </span>
       </div>
 
@@ -471,6 +488,11 @@ function MassageOptionsView({
             isRevealed ? "is-revealed" : ""
           }`}
         >
+          <div className={`draw-banner ${selectedCardId ? "is-hidden" : ""}`}>
+            <Sparkles aria-hidden="true" size={18} strokeWidth={2.8} />
+            <strong>{currentGiver.name.trim()}</strong>
+          </div>
+
           <div className={`deck-stack ${selectedCardId ? "is-hidden" : ""}`} aria-hidden="true">
             <span />
             <span />
@@ -600,6 +622,7 @@ export default function App() {
   const [activeGameModeId, setActiveGameModeId] = useState("massage");
   const [activeCardSetId, setActiveCardSetId] = useState("ganzkoerper");
   const [activeThemeId, setActiveThemeId] = useState("warm");
+  const [roundGiverIndexes, setRoundGiverIndexes] = useState<Array<0 | 1>>([]);
   const [cardIndex, setCardIndex] = useState(0);
   const [isRevealed, setIsRevealed] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
@@ -635,10 +658,12 @@ export default function App() {
       return null;
     }
 
-    const giver = cardIndex % 2 === 0 ? players[0] : players[1];
-    const receiver = cardIndex % 2 === 0 ? players[1] : players[0];
+    const giverIndex = roundGiverIndexes[cardIndex] ?? 0;
+    const receiverIndex = giverIndex === 0 ? 1 : 0;
+    const giver = players[giverIndex];
+    const receiver = players[receiverIndex];
     return { ...selectedCard, giver, receiver };
-  }, [cardIndex, selectedCard, players]);
+  }, [cardIndex, roundGiverIndexes, selectedCard, players]);
 
   useEffect(() => {
     if (!selectedCard) {
@@ -708,9 +733,13 @@ export default function App() {
       selectedCardSet
     );
     const nextAvailableCards = shuffle(modeCards.filter((card) => !card.finalCard));
-    const firstGiver = nextPlayers[0];
-    const firstReceiver = nextPlayers[1];
+    const nextRoundGiverIndexes = buildRoundGiverIndexes(nextTotalRounds);
+    const firstGiverIndex = nextRoundGiverIndexes[0] ?? 0;
+    const firstReceiverIndex = firstGiverIndex === 0 ? 1 : 0;
+    const firstGiver = nextPlayers[firstGiverIndex];
+    const firstReceiver = nextPlayers[firstReceiverIndex];
     setPlayers(nextPlayers);
+    setRoundGiverIndexes(nextRoundGiverIndexes);
     setAvailableCards(nextAvailableCards);
     setCardOptions(
       buildRoundOptions(
@@ -771,6 +800,7 @@ export default function App() {
     if (cardIndex + 1 >= totalRounds) {
       setCardOptions([]);
       setPlayers(null);
+      setRoundGiverIndexes([]);
       setSelectedCard(null);
       setSelectedCardId(null);
       setIsFinished(true);
@@ -786,8 +816,10 @@ export default function App() {
       data.cards.filter((card) => card.mode === activeGameModeId),
       activeCardSet
     );
-    const nextGiver = nextIndex % 2 === 0 ? players[0] : players[1];
-    const nextReceiver = nextIndex % 2 === 0 ? players[1] : players[0];
+    const nextGiverIndex = roundGiverIndexes[nextIndex] ?? 0;
+    const nextReceiverIndex = nextGiverIndex === 0 ? 1 : 0;
+    const nextGiver = players[nextGiverIndex];
+    const nextReceiver = players[nextReceiverIndex];
     setAvailableCards(nextAvailableCards);
     setCardOptions(
       buildRoundOptions(
@@ -839,6 +871,7 @@ export default function App() {
 
   const activeGameMode = gameModeById.get(activeGameModeId) ?? data.gameModes[0];
   const activeCardSet = cardSetById.get(activeCardSetId) ?? data.cardSets[0];
+  const currentGiver = players[roundGiverIndexes[cardIndex] ?? 0];
   const roundIntensity =
     intensityByLevel.get(activeCard?.intensity ?? desiredIntensityForRound(cardIndex, totalRounds)) ?? data.intensities[0];
   const fallbackCategory =
@@ -847,6 +880,7 @@ export default function App() {
   return (
     <MassageOptionsView
       activeCard={activeCard}
+      currentGiver={currentGiver}
       cardOptions={cardOptions}
       categoryById={categoryById}
       fallbackCategory={fallbackCategory}

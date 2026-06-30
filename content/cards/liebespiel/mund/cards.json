@@ -134,7 +134,7 @@
       "frau",
       "divers"
     ],
-    "task": "Küsse intensiver, dann langsamer, {receiver} darf mit einem Wort das Tempo ändern."
+    "task": "Küsse den Bauch intensiv, erst schnell dann langsamer, {receiver} darf mit einem Wort das Tempo ändern."
   },
   {
     "id": "liebespiel-mund-07",
@@ -181,7 +181,7 @@
       "frau",
       "divers"
     ],
-    "task": "Küsse und Lecken im Intimbereich. {receiver} entscheidet mit kleinen Signalen, wann es zarter oder heißer wird."
+    "task": "Küsse und Lecken {receiver} im Intimbereich schnell und heiß. Setze deine Zunge ein."
   },
   {
     "id": "liebespiel-mund-09",
@@ -756,5 +756,27 @@
       "divers"
     ],
     "task": "Setzt dich gemütlich hin, {receiver} darf seinen Penis in deinem Mund hin und her bewegen."
+  },
+  {
+    "id": "liebespiel-mund-36",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "02:00",
+    "finalCard": true,
+    "intensity": 3,
+    "moods": [
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Macht eine 69er Challenge, die Person die die andere Person zuerst mit dem Mond befriedigt hat, hat gewonnen und darf sich etwas wünschen."
   }
 ]
