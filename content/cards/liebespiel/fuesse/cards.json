@@ -706,5 +706,49 @@
       "divers"
     ],
     "task": "Öle die Vagina von {receiver} ein und gib ihr einen Footjob bis sie durch deine Füße kommt."
+  },
+  {
+    "id": "liebespiel-fuesse-31",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "06:00",
+    "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "heiss",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lege deine Füße ruhig auf den Penis von {receiver}. {receiver} darf nun deine Füße mit den Händen Steuern, bis er kommt."
+  },
+  {
+    "id": "liebespiel-fuesse-31",
+    "mode": "liebespiel",
+    "category": "fuesse",
+    "time": "06:00",
+    "finalCard": true,
+    "intensity": 4,
+    "moods": [
+      "heiss",
+      "verspielt"
+    ],
+    "receiverGenders": [
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "stell dich hin und presse den Penis von {receiver} zwischen deine Waden. {receiver} darf seinen Penis hin und her bewegen bis er kommt."
   }
 ]
