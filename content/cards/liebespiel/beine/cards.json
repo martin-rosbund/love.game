@@ -89,7 +89,7 @@
       "frau",
       "divers"
     ],
-    "task": "Küsse oder berühre die Knie und wandere danach langsam an den Oberschenkeln entlang, ohne Eile."
+    "task": "Küsse oder berühre die Knie und wandere danach langsam an den Oberschenkeln entlang, ohne Eile bis kurz vorm Schambereich."
   },
   {
     "id": "liebespiel-beine-05",
@@ -143,7 +143,7 @@
     "category": "beine",
     "time": "03:00",
     "finalCard": false,
-    "intensity": 4,
+    "intensity": 2,
     "moods": [
       "verspielt",
       "heiss"
@@ -166,7 +166,7 @@
     "category": "beine",
     "time": "03:00",
     "finalCard": false,
-    "intensity": 4,
+    "intensity": 3,
     "moods": [
       "verspielt",
       "heiss"
@@ -181,7 +181,7 @@
       "frau",
       "divers"
     ],
-    "task": "Lass {receiver} ein Bein über deine Hand legen und verwöhne es mit festen, langsamen und sehr bewussten Bewegungen."
+    "task": "Lass {receiver} seine Beine über deine Schultern legen und verwöhne die beine mit festen, langsamen Bewegungen."
   },
   {
     "id": "liebespiel-beine-09",
@@ -225,7 +225,7 @@
       "frau",
       "divers"
     ],
-    "task": "Umarme die Oberschenkel und presse dich eng an den Partner, während du ihre Haut streichelst."
+    "task": "Lege deinen Kopf auf die Oberschenkel und Küsse {receiver} zärtlich."
   },
   {
     "id": "liebespiel-beine-11",
@@ -313,7 +313,7 @@
       "frau",
       "divers"
     ],
-    "task": "Umarme die Oberschenkel und presse dich eng an den Partner, während du die Haut streichelst."
+    "task": "Umarme die Oberschenkel und presse dich eng an den Partner, während du die Beine zärtlich streichelst und küsst."
   },
   {
     "id": "liebespiel-beine-15",

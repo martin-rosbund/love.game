@@ -20,7 +20,7 @@
       "frau",
       "divers"
     ],
-    "task": "Streiche {receiver} mit nur zwei Fingerspitzen über den Rücken nach unten und lasse jede Linie kurz vor dem Ziel enden."
+    "task": "Streiche {receiver} mit nur zwei Fingerspitzen über den Rücken nach unten bis zum Po."
   },
   {
     "id": "liebespiel-ruecken-02",
@@ -177,10 +177,31 @@
       "divers"
     ],
     "giverGenders": [
+      "frau",
+      "divers"
+    ],
+    "task": "Massiere den Rücken von {receiver} mit deinen Brüsten in kreisenden bewegungen."
+  },
+  {
+    "id": "liebespiel-ruecken-09",
+    "mode": "liebespiel",
+    "category": "ruecken",
+    "time": "02:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "heiss"
+    ],
+    "receiverGenders": [
       "mann",
       "frau",
       "divers"
     ],
-    "task": "Lass {receiver} eine Rückenstelle wählen, die du lang so intensiv und langsam wie möglich verwöhnst."
+    "giverGenders": [
+      "mann",
+      "divers"
+    ],
+    "task": "Massiere den Rücken von {receiver} mit deiner Eichel in Kreisenden bewegungen."
   }
 ]

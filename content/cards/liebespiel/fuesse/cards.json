@@ -66,7 +66,7 @@
       "frau",
       "divers"
     ],
-    "task": "Lass {receiver} die Augen schließen und erraten, ob du mit Fingerkuppe, Handfläche oder Mund berührst."
+    "task": "Verbinde {receiver} die Augen. Berühre den Fuß von {receiver} mit Lippen, Finger und Zehen, {receiver} muss erraten welche Körperteile es waren."
   },
   {
     "id": "liebespiel-fuesse-04",
@@ -204,7 +204,7 @@
       "frau",
       "divers"
     ],
-    "task": "Lecke den Fußrücken und die Beine, als würdest du sie verehren."
+    "task": "Küsse und lecke den Fußrücken und die Beine, als würdest du sie verehren."
   },
   {
     "id": "liebespiel-fuesse-10",
@@ -270,7 +270,7 @@
       "frau",
       "divers"
     ],
-    "task": "Setze den Fuß sanft in die Handfläche und drücke ihn leicht an."
+    "task": "Setze den Fuß von {receiver} sanft in deine Handfläche und massiere den Fuß mit Druck."
   },
   {
     "id": "liebespiel-fuesse-13",
@@ -336,7 +336,7 @@
       "mann",
       "divers"
     ],
-    "task": "Legt einen Fuß in den Intimberiech des jeweils anderen und testet euch aus."
+    "task": "Legt einen Fuß in den Intimbereich des jeweils anderen und gewegt euch synchron."
   },
   {
     "id": "liebespiel-fuesse-16",
@@ -359,7 +359,7 @@
       "mann",
       "divers"
     ],
-    "task": "Legt einen Fuß in den Intimberiech des jeweils anderen und testet aus wie der jeweils andere reagiert."
+    "task": "Legt einen Fuß in den Intimbereich des jeweils anderen und leitet den Fuß des anderen mit eurer Hand an."
   },
   {
     "id": "liebespiel-fuesse-17",
@@ -597,5 +597,27 @@
       "divers"
     ],
     "task": "Befriedige {receiver} mit deinen Füßen während du ihre Füße parallel massierst."
+  },
+  {
+    "id": "liebespiel-fuesse-26",
+    "mode": "liebespiel",
+    "category": "brueste",
+    "time": "02:30",
+    "finalCard": false,
+    "intensity": 3,
+    "moods": [
+      "romantisch",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "frau",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Verwöhne die Brüste von {receiver} mit deinen Füßen intensiv."
   }
 ]

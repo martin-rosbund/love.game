@@ -186,7 +186,7 @@ function SetupScreen({
     themeId: string
   ) => void;
 }) {
-  const [playerOne, setPlayerOne] = useState<Player>({ name: "Christne", gender: "frau" });
+  const [playerOne, setPlayerOne] = useState<Player>({ name: "Christine", gender: "frau" });
   const [playerTwo, setPlayerTwo] = useState<Player>({ name: "Martin", gender: "mann" });
   const [selectedMode, setSelectedMode] = useState(data.gameModes[1]?.id ?? "liebesspiel");
   const [selectedCardSet, setSelectedCardSet] = useState(data.cardSets[2]?.id ?? "");

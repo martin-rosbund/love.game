@@ -43,7 +43,7 @@
       "frau",
       "divers"
     ],
-    "task": "Lege dich oder setze dich nah zu {receiver} und halte zehn Atemzüge lang warmen Körperkontakt."
+    "task": "Lege deinen Kopf auf den Bauch von {receiver} und gleiche deinen Atem an."
   },
   {
     "id": "liebespiel-koerper-03",
@@ -120,7 +120,7 @@
     "category": "koerper",
     "time": "02:30",
     "finalCard": false,
-    "intensity": 3,
+    "intensity": 1,
     "moods": [
       "romantisch",
       "heiss"
@@ -158,7 +158,7 @@
       "frau",
       "divers"
     ],
-    "task": "Mache eine Berührung so langsam, dass sie fast stillsteht, und ändere nur alle zehn Sekunden den Druck."
+    "task": "Berühre {receiver} im Intimbereich so langsam mit deiner Hand, dass sie fast stillsteht, und ändere ab und zu den Druck."
   },
   {
     "id": "liebespiel-koerper-08",
@@ -317,7 +317,7 @@
       "frau",
       "divers"
     ],
-    "task": "Fahre mit dem Mund von der Wirbelsäule zu den Schultern und massiere das Nackenbein."
+    "task": "Massiere von der Wirbelsäule zu den Schultern und massiere dann das Nackenbein."
   },
   {
     "id": "liebespiel-koerper-15",

@@ -149,7 +149,6 @@
       "heiss"
     ],
     "receiverGenders": [
-      "mann",
       "frau",
       "divers"
     ],
@@ -158,7 +157,7 @@
       "frau",
       "divers"
     ],
-    "task": "Lass einen Kuss wandern: erst zart, dann mutiger, bis du den Ort der begierde erreichst."
+    "task": "Lass einen Kuss wandern: Von den Lippen zu den Schamlippen, langsam hin und wieder zurück, mindestens 3x."
   },
   {
     "id": "liebespiel-mund-08",
@@ -649,7 +648,7 @@
       "mann",
       "divers"
     ],
-    "task": "Massiere Ihre Schamlippen mit der Zunge während du einen Finger ihre Vagina erkundest."
+    "task": "Massiere die Schamlippen von {receiver} mit der Zunge während du mit einen Finger ihre Vagina erkundest."
   },
   {
     "id": "liebespiel-mund-31",
@@ -672,5 +671,27 @@
       "divers"
     ],
     "task": "Setzt dich gemütlich hin, {receiver} darf sich in dein Mund beglücken."
+  },
+  {
+    "id": "liebespiel-mund-32",
+    "mode": "liebespiel",
+    "category": "mund",
+    "time": "03:00",
+    "finalCard": false,
+    "intensity": 4,
+    "moods": [
+      "verspielt",
+      "heiss"
+    ],
+    "receiverGenders": [
+      "mann",
+      "divers"
+    ],
+    "giverGenders": [
+      "mann",
+      "frau",
+      "divers"
+    ],
+    "task": "Lass einen Kuss wandern: Von den Lippen zu der Eichel, langsam hin und wieder zurück, mindestens 3x."
   }
 ]
