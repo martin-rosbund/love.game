@@ -244,92 +244,99 @@ function SetupScreen({
       </section>
 
       <section className="setup-form" aria-label="Spiel vorbereiten">
-        <PlayerForm label="Person 1" player={playerOne} onChange={setPlayerOne} />
-        <PlayerForm label="Person 2" player={playerTwo} onChange={setPlayerTwo} />
+        <div className="players-grid">
+          <PlayerForm label="Person 1" player={playerOne} onChange={setPlayerOne} />
+          <PlayerForm label="Person 2" player={playerTwo} onChange={setPlayerTwo} />
+        </div>
 
-        <fieldset className="length-panel">
-          <legend>Spielmodus</legend>
-          <div className="mode-grid">
-            {data.gameModes.map((mode) => (
-              <button
-                key={mode.id}
-                type="button"
-                className={selectedMode === mode.id ? "active" : ""}
-                onClick={() => setSelectedMode(mode.id)}
-                style={{ "--option-accent": mode.color } as React.CSSProperties}
-              >
-                <span>{mode.label}</span>
-                <small>{mode.description}</small>
-              </button>
-            ))}
-          </div>
-        </fieldset>
+        <fieldset className="settings-panel">
+          <legend>Einstellungen</legend>
+          <div className="settings-grid">
+            <div className="setting-group setting-group-wide">
+              <span className="setting-heading">Spielmodus</span>
+              <div className="mode-grid compact-mode-grid">
+                {data.gameModes.map((mode) => (
+                  <button
+                    key={mode.id}
+                    type="button"
+                    className={selectedMode === mode.id ? "active" : ""}
+                    onClick={() => setSelectedMode(mode.id)}
+                    style={{ "--option-accent": mode.color } as React.CSSProperties}
+                  >
+                    <span>{mode.label}</span>
+                    <small>{mode.description}</small>
+                  </button>
+                ))}
+              </div>
+            </div>
 
-        <fieldset className="length-panel">
-          <legend>Spiellänge</legend>
-          <div className="length-grid">
-            {data.gameLengths.map((length) => (
-              <button
-                key={length.id}
-                type="button"
-                className={selectedLength === length.id ? "active" : ""}
-                onClick={() => setSelectedLength(length.id)}
-              >
-                <span>{length.label}</span>
-                <strong>{length.cards}</strong>
-              </button>
-            ))}
-          </div>
-        </fieldset>
+            <div className="setting-group">
+              <span className="setting-heading">Spiellänge</span>
+              <div className="length-grid compact-length-grid">
+                {data.gameLengths.map((length) => (
+                  <button
+                    key={length.id}
+                    type="button"
+                    className={selectedLength === length.id ? "active" : ""}
+                    onClick={() => setSelectedLength(length.id)}
+                  >
+                    <span>{length.label}</span>
+                    <strong>{length.cards}</strong>
+                  </button>
+                ))}
+              </div>
+            </div>
 
-        <fieldset className="length-panel">
-          <legend>Kartenset</legend>
-          <div className="mode-grid">
-            {visibleCardSets.map((cardSet) => (
-              <button
-                key={cardSet.id}
-                type="button"
-                className={selectedCardSet === cardSet.id ? "active" : ""}
-                onClick={() => setSelectedCardSet(cardSet.id)}
-              >
-                <span>{cardSet.label}</span>
-                <small>{cardSet.description}</small>
-              </button>
-            ))}
-          </div>
-        </fieldset>
+            <div className="setting-group">
+              <span className="setting-heading">Auswahlkarten</span>
+              <div className="length-grid compact-length-grid">
+                {data.cardOptionCounts.map((optionCount) => (
+                  <button
+                    key={optionCount.id}
+                    type="button"
+                    className={selectedOptionCount === optionCount.id ? "active" : ""}
+                    onClick={() => setSelectedOptionCount(optionCount.id)}
+                  >
+                    <span>{optionCount.label}</span>
+                    <strong>{optionCount.cards}</strong>
+                  </button>
+                ))}
+              </div>
+            </div>
 
-        <fieldset className="length-panel">
-          <legend>Auswahlkarten</legend>
-          <div className="length-grid">
-            {data.cardOptionCounts.map((optionCount) => (
-              <button
-                key={optionCount.id}
-                type="button"
-                className={selectedOptionCount === optionCount.id ? "active" : ""}
-                onClick={() => setSelectedOptionCount(optionCount.id)}
-              >
-                <span>{optionCount.label}</span>
-                <strong>{optionCount.cards}</strong>
-              </button>
-            ))}
-          </div>
-        </fieldset>
+            <div className="setting-group setting-group-wide">
+              <span className="setting-heading">Kartenset</span>
+              <div className="mode-grid compact-cardset-grid">
+                {visibleCardSets.map((cardSet) => (
+                  <button
+                    key={cardSet.id}
+                    type="button"
+                    className={selectedCardSet === cardSet.id ? "active" : ""}
+                    onClick={() => setSelectedCardSet(cardSet.id)}
+                  >
+                    <span>{cardSet.label}</span>
+                    <small>{cardSet.description}</small>
+                  </button>
+                ))}
+              </div>
+            </div>
 
-        <fieldset className="length-panel">
-          <legend>Theme</legend>
-          <div className="option-grid option-grid-four">
-            {data.themes.map((theme) => (
-              <button
-                key={theme.id}
-                type="button"
-                className={selectedTheme === theme.id ? "active" : ""}
-                onClick={() => setSelectedTheme(theme.id)}
-              >
-                <Palette aria-hidden="true" size={17} strokeWidth={2.8} />
-                <span>{theme.label}</span>
-              </button>
-            ))}
+            <div className="setting-group setting-group-wide">
+              <span className="setting-heading">Theme</span>
+              <div className="option-grid option-grid-four compact-theme-grid">
+                {data.themes.map((theme) => (
+                  <button
+                    key={theme.id}
+                    type="button"
+                    className={selectedTheme === theme.id ? "active" : ""}
+                    onClick={() => setSelectedTheme(theme.id)}
+                  >
+                    <Palette aria-hidden="true" size={17} strokeWidth={2.8} />
+                    <span>{theme.label}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </fieldset>
 

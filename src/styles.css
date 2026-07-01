@@ -64,7 +64,7 @@ button:disabled {
   --role-bg: rgba(255, 255, 255, 0.7);
   --shadow-color: rgba(53, 36, 31, 0.22);
   min-height: 100vh;
-  padding: clamp(20px, 4vw, 48px);
+  padding: clamp(18px, 3vw, 36px);
   color: var(--app-text);
 }
 
@@ -136,8 +136,8 @@ button:disabled {
 
 .setup-layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 520px);
-  gap: clamp(28px, 6vw, 96px);
+  grid-template-columns: minmax(280px, 0.78fr) minmax(540px, 700px);
+  gap: clamp(22px, 4vw, 68px);
   align-items: start;
   background: var(--setup-bg);
 }
@@ -145,7 +145,11 @@ button:disabled {
 .setup-copy {
   align-self: start;
   max-width: 760px;
-  padding-top: clamp(4px, 1.5vw, 18px);
+  padding-top: clamp(4px, 1vw, 12px);
+}
+
+.setup-copy h1 {
+  font-size: clamp(2.5rem, 5.8vw, 5.8rem);
 }
 
 .eyebrow {
@@ -184,20 +188,50 @@ h1 {
 
 .setup-form {
   display: grid;
-  gap: 16px;
+  gap: 12px;
 }
 
 .player-panel,
-.length-panel {
+.length-panel,
+.settings-panel {
   min-width: 0;
   margin: 0;
-  padding: 20px;
+  padding: 16px;
   border: 1px solid rgba(46, 34, 37, 0.11);
   border-color: var(--panel-border);
   border-radius: 8px;
   background: var(--panel-bg);
   box-shadow: 0 20px 70px rgba(78, 53, 45, 0.1);
   backdrop-filter: blur(18px);
+}
+
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.setting-group {
+  display: grid;
+  min-width: 0;
+  gap: 8px;
+}
+
+.setting-group-wide {
+  grid-column: 1 / -1;
+}
+
+.setting-heading {
+  color: var(--app-muted);
+  font-size: 0.74rem;
+  font-weight: 950;
+  text-transform: uppercase;
 }
 
 legend {
@@ -316,6 +350,12 @@ textarea:focus {
   margin-top: 14px;
 }
 
+.settings-panel .mode-grid,
+.settings-panel .length-grid,
+.settings-panel .option-grid {
+  margin-top: 0;
+}
+
 .mode-grid button {
   display: grid;
   gap: 6px;
@@ -351,8 +391,43 @@ textarea:focus {
   opacity: 0.78;
 }
 
+.compact-mode-grid,
+.compact-cardset-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.compact-mode-grid button,
+.compact-cardset-grid button {
+  min-height: 66px;
+  padding: 10px 12px;
+}
+
+.compact-cardset-grid {
+  gap: 8px;
+}
+
+.compact-length-grid button {
+  min-height: 64px;
+}
+
+.compact-length-grid strong {
+  font-size: 1.32rem;
+}
+
+.compact-theme-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.compact-theme-grid button {
+  min-height: 42px;
+}
+
 .option-grid-four {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.option-grid-four.compact-theme-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .option-grid button {
@@ -1532,6 +1607,10 @@ textarea:focus {
     font-size: clamp(2.6rem, 13vw, 4.7rem);
   }
 
+  .setup-copy h1 {
+    font-size: clamp(2.4rem, 11vw, 4.2rem);
+  }
+
   .admin-layout {
     grid-template-columns: 1fr;
   }
@@ -1560,11 +1639,26 @@ textarea:focus {
     padding: 16px;
   }
 
+  .players-grid,
+  .settings-grid,
+  .compact-mode-grid,
+  .compact-cardset-grid {
+    grid-template-columns: 1fr;
+  }
+
   .segmented-control,
   .length-grid,
   .option-grid,
   .card-actions {
     grid-template-columns: 1fr;
+  }
+
+  .compact-length-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .option-grid-four.compact-theme-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .game-topbar {
